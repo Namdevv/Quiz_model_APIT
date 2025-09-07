@@ -4,7 +4,9 @@ import seaborn as sns
 from collections import Counter
 from sklearn.metrics import confusion_matrix
 
-def create_comprehensive_charts(results, writing_review, timestamp):
+import os
+
+def create_comprehensive_charts(results, writing_review, timestamp, output_dir=None):
     """
     Tạo biểu đồ phân tích toàn diện với nhiều khía cạnh
     """
@@ -279,6 +281,8 @@ def create_comprehensive_charts(results, writing_review, timestamp):
     
     # Save chart
     chart_filename = f"comprehensive_analysis_{timestamp}.png"
+    if output_dir:
+        chart_filename = os.path.join(output_dir, chart_filename)
     plt.savefig(chart_filename, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
     

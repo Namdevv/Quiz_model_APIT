@@ -1,7 +1,7 @@
 import json
 import os
 
-def save_enhanced_files(results, writing_review, quiz_data, timestamp):
+def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir=None):
     """
     Lưu files với thông tin chi tiết hơn
     """
@@ -59,6 +59,8 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp):
     
     # Save enhanced MCQ analysis
     mcq_filename = f"mcq_detailed_analysis_{timestamp}.json"
+    if output_dir:
+        mcq_filename = os.path.join(output_dir, mcq_filename)
     with open(mcq_filename, "w", encoding="utf-8") as f:
         json.dump(mcq_analysis, f, indent=2, ensure_ascii=False)
     
@@ -89,6 +91,8 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp):
     
     # Save enhanced writing analysis
     writing_filename = f"writing_detailed_analysis_{timestamp}.json"
+    if output_dir:
+        writing_filename = os.path.join(output_dir, writing_filename)
     with open(writing_filename, "w", encoding="utf-8") as f:
         json.dump(writing_analysis, f, indent=2, ensure_ascii=False)
     

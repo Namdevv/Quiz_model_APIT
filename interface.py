@@ -1,4 +1,5 @@
 import json
+import os
 from datetime import datetime
 from typing import Tuple, Optional
 import gradio as gr
@@ -127,7 +128,7 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
                 "question_id": qid,
                 "question": q["question"],
                 "type": "MCQ",
-                "topic": q.get("topic", "Unknown"),
+                "category": q.get("category", "Unknown"),
                 "difficulty": q.get("difficulty", "Unknown"),
                 "options": q.get("options", {}),
                 "gold_answer": gold,
@@ -147,7 +148,7 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
             writing_review.append({
                 "question_id": qid,
                 "question": q["question"],
-                "topic": q.get("topic", "Unknown"),
+                "category": q.get("category", "Unknown"),
                 "difficulty": q.get("difficulty", "Unknown"),
                 "gold_answer": gold,
                 "model_answer": model_answer
@@ -159,14 +160,16 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
     total_writing = len(writing_review)
     accuracy = (correct_mcq / total_mcq) if total_mcq else None
     
-    # Create timestamp
+    # Create timestamp and output directory
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    output_dir = os.path.join("outputs", timestamp)
+    os.makedirs(output_dir, exist_ok=True)
     
     # Create comprehensive analysis chart
-    chart_file = create_comprehensive_charts(results, writing_review, timestamp)
+    chart_file = create_comprehensive_charts(results, writing_review, timestamp, output_dir)
     
     # Save enhanced files
-    mcq_file, writing_file = save_enhanced_files(results, writing_review, quiz_data, timestamp)
+    mcq_file, writing_file = save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir)
     
     # Create main report
     report = {
@@ -184,23 +187,23 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
     }
     
     # Save main report
-    main_report_filename = f"complete_quiz_report_{timestamp}.json"
+    main_report_filename = os.path.join(output_dir, f"complete_quiz_report_{timestamp}.json")
     with open(main_report_filename, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
     
     # Create enhanced summary
-    topic_stats = {}
+    category_stats = {}
     difficulty_stats = {}
     mcq_results = [r for r in results if r["type"] == "MCQ"]
     
     for r in mcq_results:
-        # Topic stats
-        topic = r.get('topic', 'Unknown')
-        if topic not in topic_stats:
-            topic_stats[topic] = {'correct': 0, 'total': 0}
-        topic_stats[topic]['total'] += 1
+        # category stats
+        category = r.get('category', 'Unknown')
+        if category not in category_stats:
+            category_stats[category] = {'correct': 0, 'total': 0}
+        category_stats[category]['total'] += 1
         if r['correct']:
-            topic_stats[topic]['correct'] += 1
+            category_stats[category]['correct'] += 1
             
         # Difficulty stats
         diff = r.get('difficulty', 'Unknown')
@@ -220,12 +223,12 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
 - **Writing Questions:** {total_writing}
 - **MCQ Accuracy:** {accuracy*100:.1f}% ({correct_mcq}/{total_mcq})
 
-## Topic Performance
+## category Performance
 """
     
-    for topic, stats in topic_stats.items():
-        topic_accuracy = stats['correct'] / stats['total'] * 100
-        summary_text += f"- **{topic}:** {topic_accuracy:.1f}% ({stats['correct']}/{stats['total']})\n"
+    for category, stats in category_stats.items():
+        category_accuracy = stats['correct'] / stats['total'] * 100
+        summary_text += f"- **{category}:** {category_accuracy:.1f}% ({stats['correct']}/{stats['total']})\n"
     
     summary_text += "\n## Difficulty Performance\n"
     for diff, stats in difficulty_stats.items():
@@ -248,7 +251,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analyt
     gr.Markdown("# 🚀 APIT Quiz Grader - Advanced Analytics Dashboard")
     gr.Markdown("""
     Upload your quiz JSON file and get comprehensive analysis including:
-    - **Topic Performance Analysis** - Performance breakdown by subject areas
+    - **category Performance Analysis** - Performance breakdown by subject areas
     - **Difficulty Analysis** - How well the model handles different difficulty levels  
     - **Answer Pattern Analysis** - Confusion matrices and answer distribution
     - **Comprehensive Visualizations** - 12+ charts and graphs for deep insights
