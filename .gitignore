@@ -2,3 +2,12 @@
 /venv
 /unsloth_compiled_cache
 
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Gradio temp
+.gradio/
