@@ -26,7 +26,14 @@ def _ensure_model_available():
         os.makedirs(MODEL_PATH, exist_ok=True)
         snapshot_download(repo_id=ADAPTER_REPO, local_dir=MODEL_PATH, local_dir_use_symlinks=False)
         print("✅ Adapter downloaded.")
-        
+
 def load_model():
     _ensure_model_available()
     print("🚀 Loading model, please wait...")
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name=MODEL_PATH,
+        max_seq_length=MAX_SEQ_LENGTH,
+        load_in_4bit=LOAD_IN_4BIT,
+    )
+    print(f"✅ Model loaded successfully from {MODEL_PATH}")
+    return model, tokenizer
