@@ -1,0 +1,374 @@
+[
+  {
+    "question_id": "EQ5001",
+    "question": "Which HTTP method is commonly used to retrieve data from an API?",
+    "answer": "A",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "explanation": "GET is the standard method for retrieving data."
+  },
+  {
+    "question_id": "EQ5002",
+    "question": "What does HTTP status code 404 represent?",
+    "answer": "C",
+    "category": "Contract & Schema Validation",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "OK",
+      "B": "Unauthorized",
+      "C": "Not Found",
+      "D": "Conflict"
+    },
+    "explanation": "404 indicates the requested resource could not be found."
+  },
+  {
+    "question_id": "EQ5003",
+    "question": "What is the purpose of the HTTP POST method?",
+    "answer": "B",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "Retrieve data",
+      "B": "Submit data to create resources",
+      "C": "Update existing resources",
+      "D": "Delete resources"
+    },
+    "explanation": "POST is used to create new resources with data in the request body."
+  },
+  {
+    "question_id": "EQ5004",
+    "question": "Write one simple positive test case for a login API.",
+    "answer": "Send POST /login with valid username and password → expect 200 OK with token.",
+    "category": "Test Case",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Positive test case checks correct credentials."
+  },
+  {
+    "question_id": "EQ5005",
+    "question": "Which of these HTTP status codes means 'Unauthorized'?",
+    "answer": "B",
+    "category": "Authentication & Authorization",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200",
+      "B": "401",
+      "C": "403",
+      "D": "404"
+    },
+    "explanation": "401 Unauthorized indicates missing or invalid credentials."
+  },
+  {
+    "question_id": "EQ5006",
+    "question": "What is a common precondition for testing a user profile endpoint?",
+    "answer": "User must be logged in and have a valid token.",
+    "category": "Test Step",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Preconditions ensure valid context before calling APIs."
+  },
+  {
+    "question_id": "EQ5007",
+    "question": "Which HTTP method is considered idempotent?",
+    "answer": "C",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "POST",
+      "B": "PATCH",
+      "C": "PUT",
+      "D": "CONNECT"
+    },
+    "explanation": "PUT is idempotent because multiple identical requests have the same effect."
+  },
+  {
+    "question_id": "EQ5008",
+    "question": "Write a simple negative test for a register API.",
+    "answer": "Send POST /register without password field → expect 400 Bad Request.",
+    "category": "Error Handling & Negative Testing",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Negative test checks missing required fields."
+  },
+  {
+    "question_id": "EQ5009",
+    "question": "Which HTTP status code means 'OK'?",
+    "answer": "A",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200",
+      "B": "201",
+      "C": "400",
+      "D": "500"
+    },
+    "explanation": "200 OK is the standard success code."
+  },
+  {
+    "question_id": "EQ5010",
+    "question": "What is the role of a schema in API testing?",
+    "answer": "To define the expected structure of request and response data.",
+    "category": "Contract & Schema Validation",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Schemas validate format and fields of API messages."
+  },
+  {
+    "question_id": "EQ5011",
+    "question": "Which HTTP method is used to delete a resource?",
+    "answer": "D",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "explanation": "DELETE removes the resource specified in the URL."
+  },
+  {
+    "question_id": "EQ5012",
+    "question": "Write a simple test step for validating a 201 Created response.",
+    "answer": "Send POST /users with valid data → expect 201 Created and Location header.",
+    "category": "Test Step",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "201 Created confirms resource was successfully created."
+  },
+  {
+    "question_id": "EQ5013",
+    "question": "Which HTTP header is typically used for authentication tokens?",
+    "answer": "B",
+    "category": "Authentication & Authorization",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "Content-Type",
+      "B": "Authorization",
+      "C": "Accept",
+      "D": "Cache-Control"
+    },
+    "explanation": "Authorization header carries credentials or tokens."
+  },
+  {
+    "question_id": "EQ5014",
+    "question": "What is the purpose of mocking in API testing?",
+    "answer": "To simulate external dependencies or services that are unavailable.",
+    "category": "Mocking & Service Virtualization",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Mocking reduces dependencies during testing."
+  },
+  {
+    "question_id": "EQ5015",
+    "question": "Which HTTP status code indicates 'Created'?",
+    "answer": "B",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200",
+      "B": "201",
+      "C": "400",
+      "D": "403"
+    },
+    "explanation": "201 Created confirms successful creation of a resource."
+  },
+  {
+    "question_id": "EQ5016",
+    "question": "Write one easy test case for an API that fetches product list.",
+    "answer": "Send GET /products → expect 200 OK with non-empty array.",
+    "category": "Test Case",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Simple test to check product list retrieval."
+  },
+  {
+    "question_id": "EQ5017",
+    "question": "Which HTTP status indicates 'Internal Server Error'?",
+    "answer": "D",
+    "category": "Error Handling & Negative Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200",
+      "B": "400",
+      "C": "403",
+      "D": "500"
+    },
+    "explanation": "500 indicates unexpected server-side failure."
+  },
+  {
+    "question_id": "EQ5018",
+    "question": "What is the purpose of a precondition in a test case?",
+    "answer": "It specifies the conditions that must be met before a test can run.",
+    "category": "Test Case",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Preconditions ensure valid setup for tests."
+  },
+  {
+    "question_id": "EQ5019",
+    "question": "Which HTTP status is appropriate for forbidden access with valid credentials?",
+    "answer": "C",
+    "category": "Authentication & Authorization",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "401 Unauthorized",
+      "B": "200 OK",
+      "C": "403 Forbidden",
+      "D": "404 Not Found"
+    },
+    "explanation": "403 Forbidden indicates insufficient permissions despite valid login."
+  },
+  {
+    "question_id": "EQ5020",
+    "question": "Write one negative test for file upload with an unsupported format.",
+    "answer": "Send POST /upload with .exe file → expect 415 Unsupported Media Type.",
+    "category": "Error Handling & Negative Testing",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Tests rejection of unsupported file formats."
+  },
+  {
+    "question_id": "EQ5021",
+    "question": "Which HTTP method is typically used for partial updates?",
+    "answer": "B",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "GET",
+      "B": "PATCH",
+      "C": "POST",
+      "D": "DELETE"
+    },
+    "explanation": "PATCH is used to modify part of a resource."
+  },
+  {
+    "question_id": "EQ5022",
+    "question": "What is the purpose of a test case description?",
+    "answer": "To explain the objective and scope of a test scenario.",
+    "category": "Test Case",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Descriptions provide clarity on what the test validates."
+  },
+  {
+    "question_id": "EQ5023",
+    "question": "Which HTTP header indicates the format of request body?",
+    "answer": "A",
+    "category": "Contract & Schema Validation",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "Content-Type",
+      "B": "Authorization",
+      "C": "User-Agent",
+      "D": "Accept-Encoding"
+    },
+    "explanation": "Content-Type defines the media type of request body."
+  },
+  {
+    "question_id": "EQ5024",
+    "question": "Write a test step to validate response time under 1 second.",
+    "answer": "Send GET /status → assert response time < 1000 ms.",
+    "category": "Performance & Load Testing",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Checks performance requirement for response time."
+  },
+  {
+    "question_id": "EQ5025",
+    "question": "Which HTTP status code indicates a conflict, such as duplicate resource creation?",
+    "answer": "D",
+    "category": "Error Handling & Negative Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200 OK",
+      "B": "201 Created",
+      "C": "404 Not Found",
+      "D": "409 Conflict"
+    },
+    "explanation": "409 Conflict is used when request conflicts with current state."
+  },
+  {
+    "question_id": "EQ5026",
+    "question": "Which HTTP status code means 'Bad Request'?",
+    "answer": "C",
+    "category": "Error Handling & Negative Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200",
+      "B": "201",
+      "C": "400",
+      "D": "500"
+    },
+    "explanation": "400 Bad Request indicates invalid syntax or parameters."
+  },
+  {
+    "question_id": "EQ5027",
+    "question": "Write one simple positive test for GET /health endpoint.",
+    "answer": "Send GET /health → expect 200 OK with status=healthy.",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Health checks confirm service availability."
+  },
+  {
+    "question_id": "EQ5028",
+    "question": "Which HTTP method is used to fully update a resource?",
+    "answer": "B",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "POST",
+      "B": "PUT",
+      "C": "PATCH",
+      "D": "DELETE"
+    },
+    "explanation": "PUT replaces an existing resource with new data."
+  },
+  {
+    "question_id": "EQ5029",
+    "question": "What is the purpose of using test data management in API testing?",
+    "answer": "To ensure consistent and reusable datasets for testing across environments.",
+    "category": "Environment & Test Data Management",
+    "difficulty": "Easy",
+    "question_type": "Writing",
+    "explanation": "Test data consistency reduces flakiness in tests."
+  },
+  {
+    "question_id": "EQ5030",
+    "question": "Which HTTP status indicates 'Forbidden'?",
+    "answer": "D",
+    "category": "Authentication & Authorization",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "200",
+      "B": "201",
+      "C": "401",
+      "D": "403"
+    },
+    "explanation": "403 Forbidden means user is authenticated but not authorized."
+  }
+]

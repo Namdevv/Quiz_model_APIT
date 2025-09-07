@@ -1,0 +1,17 @@
+[
+  {
+    "question_id": "EQ5001",
+    "question": "Which HTTP method is commonly used to retrieve data from an API?",
+    "answer": "A",
+    "category": "General Testing",
+    "difficulty": "Easy",
+    "question_type": "MCQ",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "explanation": "GET is the standard method for retrieving data."
+  }
+]
