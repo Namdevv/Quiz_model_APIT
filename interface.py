@@ -119,7 +119,7 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
         # Process MCQ
         if qtype == "MCQ":
             total_mcq += 1
-            raw_ans, norm_ans = normalize_mcq_answer(model_answer)
+            raw_ans, norm_ans = normalize_mcq_answer(model_answer, q.get("options", {}))
             is_correct = grade_mcq(gold, norm_ans)
             if is_correct: 
                 correct_mcq += 1
