@@ -31,7 +31,6 @@ pip install notebook jupyterlab
 echo "==> Installing core ML deps..."
 pip install "datasets>=3.4.1,<4.0.0" "huggingface_hub>=0.34.0" hf_transfer sentencepiece protobuf
 
-w
 pip3 install torch torchvision --index-url https://download.pytorch.org/hl/cu126
 
 echo "==> Installing LLM training stack..."
