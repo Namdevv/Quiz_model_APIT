@@ -145,7 +145,8 @@ def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = Non
 
             dbg("Calling model.generate()...")
             model_answer = ask_model(prompt, timeout_s=timeout_s)
-            dbg(f"Model answer (trimmed): {model_answer[:120].replace('\n',' ')}...")
+            preview = (model_answer or "")[:120].replace("\n", " ")
+            dbg(f"Model answer (trimmed): {preview}...")
 
             # Process MCQ
             if qtype == "MCQ":
