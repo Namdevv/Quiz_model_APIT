@@ -95,7 +95,7 @@ def ask_model(
 # print(normalize_mcq_answer(anwser))
 
 
-def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = None, progress=gr.Progress()):
+def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = None, skip_charts: bool = False, progress=gr.Progress()):
     if quiz_file is None:
         return None, None, None, None, None, "Please upload a quiz file first!", ""
     
@@ -195,7 +195,15 @@ def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = Non
     accuracy = (correct_mcq / total_mcq) if total_mcq else None
     
     # Create comprehensive analysis chart
-    chart_file = create_comprehensive_charts(results, writing_review, timestamp, output_dir)
+    chart_file = None
+    if not skip_charts:
+        dbg("Generating charts...")
+        try:
+            chart_file = create_comprehensive_charts(results, writing_review, timestamp, output_dir)
+            dbg(f"Charts saved to {chart_file}")
+        except Exception as e:
+            dbg(f"Chart generation failed: {e}")
+            chart_file = None
     
     # Save enhanced files
     mcq_file, writing_file = save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir)
@@ -303,6 +311,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analyt
             )
             debug_toggle = gr.Checkbox(label="Enable debug logs", value=False)
             timeout_seconds = gr.Number(label="Generation timeout (seconds, optional)", value=None)
+            skip_charts_toggle = gr.Checkbox(label="Skip chart generation (safe mode)", value=False)
             run_btn = gr.Button(
                 "🔍 Run Comprehensive Analysis", 
                 variant="primary",
@@ -342,7 +351,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analyt
     # Event handler
     run_btn.click(
         fn=run_quiz_ui,
-        inputs=[quiz_file, debug_toggle, timeout_seconds],
+        inputs=[quiz_file, debug_toggle, timeout_seconds, skip_charts_toggle],
         outputs=[
             detailed_output,
             complete_report,

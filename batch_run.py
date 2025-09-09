@@ -10,6 +10,7 @@ def main():
     parser.add_argument("input_json", help="Path to quiz JSON file")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging and write logs to outputs/")
     parser.add_argument("--timeout", type=float, default=None, help="Per-question generation timeout in seconds")
+    parser.add_argument("--skip-charts", action="store_true", help="Skip chart generation to avoid backend issues")
     args = parser.parse_args()
 
     input_path = os.path.abspath(args.input_json)
@@ -27,7 +28,7 @@ def main():
         chart_file,
         summary_text,
         debug_logs,
-    ) = run_quiz_ui(file_like, debug=args.debug, timeout_s=args.timeout)
+    ) = run_quiz_ui(file_like, debug=args.debug, timeout_s=args.timeout, skip_charts=args.skip_charts)
 
     print("Analysis completed. Outputs:")
     print(f"- Complete report: {main_report_filename}")
