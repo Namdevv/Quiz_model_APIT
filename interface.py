@@ -23,6 +23,7 @@ def ask_model(
     top_k: int = 20,
     max_new_tokens: int = 512,
     stream: bool = False,
+    timeout_s: Optional[float] = None,
 ) -> str:
     """
     Gọi model chat và trả về *chính xác* phần sinh mới (không lẫn prompt).
@@ -54,7 +55,7 @@ def ask_model(
         pad_token_id=getattr(tokenizer, "eos_token_id", None),
     )
 
-    if stream:
+    if stream or timeout_s is not None:
         # 2A) Stream có thu hồi
         streamer = TextIteratorStreamer(
             tokenizer,
@@ -68,10 +69,21 @@ def ask_model(
         t.start()
 
         chunks = []
-        for piece in streamer:
-            print(piece, end="", flush=True)  # hiển thị realtime
-            chunks.append(piece)
-        t.join()
+        if timeout_s is not None:
+            import time
+            start_time = time.time()
+            for piece in streamer:
+                print(piece, end="", flush=True)
+                chunks.append(piece)
+                if time.time() - start_time > timeout_s:
+                    # Hết thời gian: trả về những gì đã có
+                    return "".join(chunks).strip() or "[Timeout with no output]"
+            t.join()
+        else:
+            for piece in streamer:
+                print(piece, end="", flush=True)  # hiển thị realtime
+                chunks.append(piece)
+            t.join()
         return "".join(chunks).strip()
 
     # 2B) Không stream: generate bình thường và cắt theo số token
@@ -90,9 +102,9 @@ def ask_model(
 # print(normalize_mcq_answer(anwser))
 
 
-def run_quiz_ui(quiz_file, progress=gr.Progress()):
+def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = None, progress=gr.Progress()):
     if quiz_file is None:
-        return None, None, None, None, None, "Please upload a quiz file first!"
+        return None, None, None, None, None, "Please upload a quiz file first!", ""
     
     with open(quiz_file.name, "r", encoding="utf-8") as f:
         quiz_data = json.load(f)
@@ -101,69 +113,92 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
     total = len(quiz_data)
     correct_mcq, total_mcq = 0, 0
     writing_review = []
+    debug_lines = []
+
+    def dbg(message: str):
+        if debug:
+            ts = datetime.now().strftime('%H:%M:%S')
+            line = f"[{ts}] {message}"
+            print(line, flush=True)
+            debug_lines.append(line)
     
+    # Create timestamp and output directory early to save logs incrementally
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    output_dir = os.path.join("outputs", timestamp)
+    os.makedirs(output_dir, exist_ok=True)
+    log_path = os.path.join(output_dir, f"debug_{timestamp}.log")
+    dbg(f"Loaded quiz with {total} questions from {quiz_file.name}")
+
     # Process each question
     for idx, q in enumerate(quiz_data, start=1):
-        qid = q["question_id"]
-        qtype = q["question_type"]
-        gold = q["answer"]
-        
-        if qtype == "MCQ":
-            options_text = "\n".join([f"{k}. {v}" for k,v in q["options"].items()])
-            prompt = f"Question: {q['question']}\nOptions:\n{options_text}\nAnswer with only A or B or C or D."
-        else:
-            prompt = f"Question: {q['question']}\nAnswer in 1-3 sentences."
-        
-        model_answer = ask_model(prompt)
-        
-        # Process MCQ
-        if qtype == "MCQ":
-            total_mcq += 1
-            raw_ans, norm_ans = normalize_mcq_answer(model_answer, q.get("options", {}))
-            is_correct = grade_mcq(gold, norm_ans)
-            if is_correct: 
-                correct_mcq += 1
-            
-            results.append({
-                "question_id": qid,
-                "question": q["question"],
-                "type": "MCQ",
-                "category": q.get("category", "Unknown"),
-                "difficulty": q.get("difficulty", "Unknown"),
-                "options": q.get("options", {}),
-                "gold_answer": gold,
-                "model_raw_answer": raw_ans,
-                "model_normalized_answer": norm_ans,
-                "correct": is_correct,
-                "explanation": q.get("explanation", "")
-            })
-        else:
-            results.append({
-                "question_id": qid,
-                "type": "Writing",
-                "gold": gold,
-                "model_answer": model_answer
-            })
-            
-            writing_review.append({
-                "question_id": qid,
-                "question": q["question"],
-                "category": q.get("category", "Unknown"),
-                "difficulty": q.get("difficulty", "Unknown"),
-                "gold_answer": gold,
-                "model_answer": model_answer
-            })
-        
-        progress(idx / total, f"Processing {idx}/{total} questions...")
+        try:
+            qid = q["question_id"]
+            qtype = q["question_type"]
+            gold = q["answer"]
+            dbg(f"Q{idx}/{total} [{qtype}] id={qid}")
+
+            if qtype == "MCQ":
+                options_text = "\n".join([f"{k}. {v}" for k,v in q["options"].items()])
+                prompt = f"Question: {q['question']}\nOptions:\n{options_text}\nAnswer with only A or B or C or D."
+            else:
+                prompt = f"Question: {q['question']}\nAnswer in 1-3 sentences."
+
+            dbg("Calling model.generate()...")
+            model_answer = ask_model(prompt, timeout_s=timeout_s)
+            dbg(f"Model answer (trimmed): {model_answer[:120].replace('\n',' ')}...")
+
+            # Process MCQ
+            if qtype == "MCQ":
+                total_mcq += 1
+                raw_ans, norm_ans = normalize_mcq_answer(model_answer, q.get("options", {}))
+                is_correct = grade_mcq(gold, norm_ans)
+                if is_correct:
+                    correct_mcq += 1
+
+                results.append({
+                    "question_id": qid,
+                    "question": q["question"],
+                    "type": "MCQ",
+                    "category": q.get("category", "Unknown"),
+                    "difficulty": q.get("difficulty", "Unknown"),
+                    "options": q.get("options", {}),
+                    "gold_answer": gold,
+                    "model_raw_answer": raw_ans,
+                    "model_normalized_answer": norm_ans,
+                    "correct": is_correct,
+                    "explanation": q.get("explanation", "")
+                })
+            else:
+                results.append({
+                    "question_id": qid,
+                    "type": "Writing",
+                    "gold": gold,
+                    "model_answer": model_answer
+                })
+
+                writing_review.append({
+                    "question_id": qid,
+                    "question": q["question"],
+                    "category": q.get("category", "Unknown"),
+                    "difficulty": q.get("difficulty", "Unknown"),
+                    "gold_answer": gold,
+                    "model_answer": model_answer
+                })
+        except Exception as e:
+            dbg(f"Error at Q{idx}: {e}")
+        finally:
+            # persist logs incrementally
+            if debug:
+                try:
+                    with open(log_path, "w", encoding="utf-8") as lf:
+                        lf.write("\n".join(debug_lines))
+                except Exception:
+                    pass
+            progress(idx / total, f"Processing {idx}/{total} questions...")
     
     # Calculate metrics
     total_writing = len(writing_review)
     accuracy = (correct_mcq / total_mcq) if total_mcq else None
-    
-    # Create timestamp and output directory
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    output_dir = os.path.join("outputs", timestamp)
-    os.makedirs(output_dir, exist_ok=True)
     
     # Create comprehensive analysis chart
     chart_file = create_comprehensive_charts(results, writing_review, timestamp, output_dir)
@@ -190,6 +225,14 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
     main_report_filename = os.path.join(output_dir, f"complete_quiz_report_{timestamp}.json")
     with open(main_report_filename, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
+
+    # Finalize debug logs
+    if debug:
+        try:
+            with open(log_path, "w", encoding="utf-8") as lf:
+                lf.write("\n".join(debug_lines))
+        except Exception:
+            pass
     
     # Create enhanced summary
     category_stats = {}
@@ -244,7 +287,7 @@ def run_quiz_ui(quiz_file, progress=gr.Progress()):
     """
     
     return (report, main_report_filename, mcq_file, writing_file, 
-            chart_file, summary_text)
+            chart_file, summary_text, "\n".join(debug_lines))
 
 # ---- Enhanced UI ----
 with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analytics") as demo:
@@ -264,6 +307,8 @@ with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analyt
                 file_types=[".json"],
                 height=120
             )
+            debug_toggle = gr.Checkbox(label="Enable debug logs", value=False)
+            timeout_seconds = gr.Number(label="Generation timeout (seconds, optional)", value=None)
             run_btn = gr.Button(
                 "🔍 Run Comprehensive Analysis", 
                 variant="primary",
@@ -288,6 +333,10 @@ with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analyt
                 complete_report = gr.File(label="📋 Complete Report JSON")
                 mcq_results = gr.File(label="📈 MCQ Detailed Analysis")
                 writing_results = gr.File(label="✍️ Writing Detailed Analysis")
+
+    with gr.Row():
+        with gr.Column():
+            logs_output = gr.Textbox(label="🛠 Debug Logs", lines=12)
     
     with gr.Row():
         with gr.Column():
@@ -299,14 +348,15 @@ with gr.Blocks(theme=gr.themes.Soft(), title="APIT Quiz Grader - Advanced Analyt
     # Event handler
     run_btn.click(
         fn=run_quiz_ui,
-        inputs=[quiz_file],
+        inputs=[quiz_file, debug_toggle, timeout_seconds],
         outputs=[
             detailed_output,
             complete_report,
             mcq_results,
             writing_results,
             chart_output,
-            summary_output
+            summary_output,
+            logs_output,
         ]
     )
 

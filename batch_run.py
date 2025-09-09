@@ -8,6 +8,8 @@ from interface import run_quiz_ui
 def main():
     parser = argparse.ArgumentParser(description="Run quiz analysis headlessly (no Gradio)")
     parser.add_argument("input_json", help="Path to quiz JSON file")
+    parser.add_argument("--debug", action="store_true", help="Enable debug logging and write logs to outputs/")
+    parser.add_argument("--timeout", type=float, default=None, help="Per-question generation timeout in seconds")
     args = parser.parse_args()
 
     input_path = os.path.abspath(args.input_json)
@@ -24,13 +26,17 @@ def main():
         writing_file,
         chart_file,
         summary_text,
-    ) = run_quiz_ui(file_like)
+        debug_logs,
+    ) = run_quiz_ui(file_like, debug=args.debug, timeout_s=args.timeout)
 
     print("Analysis completed. Outputs:")
     print(f"- Complete report: {main_report_filename}")
     print(f"- MCQ detailed analysis: {mcq_file}")
     print(f"- Writing detailed analysis: {writing_file}")
     print(f"- Comprehensive chart: {chart_file}")
+    if args.debug and debug_logs:
+        print("\n--- Debug logs (tail) ---")
+        print("\n".join(debug_logs.splitlines()[-50:]))
 
 
 if __name__ == "__main__":
