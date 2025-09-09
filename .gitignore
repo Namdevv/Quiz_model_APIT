@@ -9,4 +9,5 @@
 *.pyc
 
 # Gradio temp
-.gradio/
+/.gradio
+/.venv
