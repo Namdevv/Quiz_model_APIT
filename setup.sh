@@ -31,14 +31,16 @@ pip install notebook jupyterlab
 echo "==> Installing core ML deps..."
 pip install "datasets>=3.4.1,<4.0.0" "huggingface_hub>=0.34.0" hf_transfer sentencepiece protobuf
 
-
-pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+w
+pip3 install torch torchvision --index-url https://download.pytorch.org/hl/cu126
 
 echo "==> Installing LLM training stack..."
 pip install xformers==0.0.32.post2
 pip install --no-deps bitsandbytes accelerate peft trl triton cut_cross_entropy unsloth_zoo
 pip install unsloth
 pip install "transformers==4.55.4"
+pip install gradio matplotlib seaborn scikit-learn
 
 echo
 echo "✅ Setup hoàn tất!"
+echo "• Kích hoạt venv: source \"$VENV_DIR/bin/activate\""
