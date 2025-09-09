@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix
 
 import os
 
-def create_comprehensive_charts(results, writing_review, timestamp, output_dir=None):
+def create_comprehensive_charts(results, writing_review, timestamp, output_dir=None, model_tag: str | None = None):
     """
     Tạo biểu đồ phân tích toàn diện với nhiều khía cạnh
     """
@@ -283,6 +283,8 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
     
     # Save chart
     chart_filename = f"comprehensive_analysis_{timestamp}.png"
+    if model_tag:
+        chart_filename = f"comprehensive_analysis_{model_tag}_{timestamp}.png"
     if output_dir:
         chart_filename = os.path.join(output_dir, chart_filename)
     plt.savefig(chart_filename, dpi=300, bbox_inches='tight', facecolor='white')

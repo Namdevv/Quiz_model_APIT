@@ -6,6 +6,7 @@ import gradio as gr
 import torch
 
 from model import load_model
+from config import MODEL_PATH
 from charts import create_comprehensive_charts  
 from save_utils import save_enhanced_files      
 from utils import normalize_mcq_answer, grade_mcq, clear_cuda_cache
@@ -115,11 +116,14 @@ def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = Non
             print(line, flush=True)
             debug_lines.append(line)
     
+    # Model tag for filenames/metadata
+    model_tag = os.path.basename(str(MODEL_PATH).rstrip(os.sep)).replace(" ", "_")
+
     # Create timestamp and output directory early to save logs incrementally
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     output_dir = os.path.join("outputs", timestamp)
     os.makedirs(output_dir, exist_ok=True)
-    log_path = os.path.join(output_dir, f"debug_{timestamp}.log")
+    log_path = os.path.join(output_dir, f"debug_{model_tag}_{timestamp}.log")
     dbg(f"Loaded quiz with {total} questions from {quiz_file.name}")
 
     # Process each question
@@ -197,18 +201,19 @@ def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = Non
     if not skip_charts:
         dbg("Generating charts...")
         try:
-            chart_file = create_comprehensive_charts(results, writing_review, timestamp, output_dir)
+            chart_file = create_comprehensive_charts(results, writing_review, timestamp, output_dir, model_tag=model_tag)
             dbg(f"Charts saved to {chart_file}")
         except Exception as e:
             dbg(f"Chart generation failed: {e}")
             chart_file = None
     
     # Save enhanced files
-    mcq_file, writing_file = save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir)
+    mcq_file, writing_file = save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir, model_tag=model_tag)
     
     # Create main report
     report = {
         "timestamp": timestamp,
+        "model": model_tag,
         "summary": {
             "total_questions": total,
             "mcq_questions": total_mcq,
@@ -222,7 +227,7 @@ def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = Non
     }
     
     # Save main report
-    main_report_filename = os.path.join(output_dir, f"complete_quiz_report_{timestamp}.json")
+    main_report_filename = os.path.join(output_dir, f"complete_quiz_report_{model_tag}_{timestamp}.json")
     with open(main_report_filename, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
