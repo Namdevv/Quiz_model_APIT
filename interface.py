@@ -137,17 +137,7 @@ def run_quiz_ui(quiz_file, debug: bool = False, timeout_s: Optional[float] = Non
                 prompt = f"Question: {q['question']}\nAnswer in 1-3 sentences."
 
             dbg("Calling model.generate()...")
-            if qtype == "MCQ":
-                # Constrain MCQ to be short and allow timeout for safety
-                model_answer = ask_model(
-                    prompt,
-                    temperature=0.0,
-                    max_new_tokens=8,
-                    timeout_s=timeout_s,
-                )
-            else:
-                # Let Writing complete without timeout to avoid truncation
-                model_answer = ask_model(prompt, timeout_s=None)
+            model_answer = ask_model(prompt)
 
             # Process MCQ
             if qtype == "MCQ":
