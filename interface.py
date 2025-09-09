@@ -55,6 +55,10 @@ def ask_model(
         pad_token_id=getattr(tokenizer, "eos_token_id", None),
     )
 
+    # Use built-in generation timeout to prevent hangs
+    if timeout_s is not None:
+        gen_kwargs["max_time"] = timeout_s
+
     if stream or timeout_s is not None:
         # 2A) Stream có thu hồi
         streamer = TextIteratorStreamer(
@@ -69,21 +73,10 @@ def ask_model(
         t.start()
 
         chunks = []
-        if timeout_s is not None:
-            import time
-            start_time = time.time()
-            for piece in streamer:
-                print(piece, end="", flush=True)
-                chunks.append(piece)
-                if time.time() - start_time > timeout_s:
-                    # Hết thời gian: trả về những gì đã có
-                    return "".join(chunks).strip() or "[Timeout with no output]"
-            t.join()
-        else:
-            for piece in streamer:
-                print(piece, end="", flush=True)  # hiển thị realtime
-                chunks.append(piece)
-            t.join()
+        for piece in streamer:
+            print(piece, end="", flush=True)  # hiển thị realtime
+            chunks.append(piece)
+        t.join()
         return "".join(chunks).strip()
 
     # 2B) Không stream: generate bình thường và cắt theo số token
