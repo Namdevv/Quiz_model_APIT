@@ -1,7 +1,7 @@
 import json
 import os
 
-def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir=None):
+def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_dir=None, model_tag: str | None = None):
     """
     Lưu files với thông tin chi tiết hơn
     """
@@ -11,6 +11,7 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_di
     mcq_analysis = {
         "metadata": {
             "timestamp": timestamp,
+            "model": model_tag,
             "total_mcq_questions": len(mcq_results),
             "overall_accuracy": sum(1 for r in mcq_results if r["correct"]) / len(mcq_results) if mcq_results else 0
         },
@@ -59,6 +60,8 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_di
     
     # Save enhanced MCQ analysis
     mcq_filename = f"mcq_detailed_analysis_{timestamp}.json"
+    if model_tag:
+        mcq_filename = f"mcq_detailed_analysis_{model_tag}_{timestamp}.json"
     if output_dir:
         mcq_filename = os.path.join(output_dir, mcq_filename)
     with open(mcq_filename, "w", encoding="utf-8") as f:
@@ -68,6 +71,7 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_di
     writing_analysis = {
         "metadata": {
             "timestamp": timestamp,
+            "model": model_tag,
             "total_writing_questions": len(writing_review),
         },
         "category_distribution": {},
@@ -91,6 +95,8 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_di
     
     # Save enhanced writing analysis
     writing_filename = f"writing_detailed_analysis_{timestamp}.json"
+    if model_tag:
+        writing_filename = f"writing_detailed_analysis_{model_tag}_{timestamp}.json"
     if output_dir:
         writing_filename = os.path.join(output_dir, writing_filename)
     with open(writing_filename, "w", encoding="utf-8") as f:
