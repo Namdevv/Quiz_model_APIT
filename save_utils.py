@@ -14,24 +14,24 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_di
             "total_mcq_questions": len(mcq_results),
             "overall_accuracy": sum(1 for r in mcq_results if r["correct"]) / len(mcq_results) if mcq_results else 0
         },
-        "topic_analysis": {},
+        "category_analysis": {},
         "difficulty_analysis": {},
         "detailed_results": mcq_results
     }
     
-    # Analyze by topic
-    topic_stats = {}
+    # Analyze by category
+    category_stats = {}
     for r in mcq_results:
-        topic = r.get('topic', 'Unknown')
-        if topic not in topic_stats:
-            topic_stats[topic] = {'correct': 0, 'total': 0, 'questions': []}
-        topic_stats[topic]['total'] += 1
-        topic_stats[topic]['questions'].append(r['question_id'])
+        category = r.get('category', 'Unknown')
+        if category not in category_stats:
+            category_stats[category] = {'correct': 0, 'total': 0, 'questions': []}
+        category_stats[category]['total'] += 1
+        category_stats[category]['questions'].append(r['question_id'])
         if r['correct']:
-            topic_stats[topic]['correct'] += 1
+            category_stats[category]['correct'] += 1
     
-    for topic, stats in topic_stats.items():
-        mcq_analysis['topic_analysis'][topic] = {
+    for category, stats in category_stats.items():
+        mcq_analysis['category_analysis'][category] = {
             'accuracy': stats['correct'] / stats['total'],
             'correct_count': stats['correct'],
             'total_count': stats['total'],
@@ -70,20 +70,20 @@ def save_enhanced_files(results, writing_review, quiz_data, timestamp, output_di
             "timestamp": timestamp,
             "total_writing_questions": len(writing_review),
         },
-        "topic_distribution": {},
+        "category_distribution": {},
         "difficulty_distribution": {},
         "detailed_results": writing_review
     }
     
-    # Analyze writing questions by topic and difficulty if available
+    # Analyze writing questions by category and difficulty if available
     writing_questions = [q for q in quiz_data if q.get('question_type') == 'Writing']
     for q in writing_questions:
-        topic = q.get('topic', 'Unknown')
+        category = q.get('category', 'Unknown')
         diff = q.get('difficulty', 'Unknown')
         
-        if topic not in writing_analysis['topic_distribution']:
-            writing_analysis['topic_distribution'][topic] = 0
-        writing_analysis['topic_distribution'][topic] += 1
+        if category not in writing_analysis['category_distribution']:
+            writing_analysis['category_distribution'][category] = 0
+        writing_analysis['category_distribution'][category] += 1
         
         if diff not in writing_analysis['difficulty_distribution']:
             writing_analysis['difficulty_distribution'][diff] = 0

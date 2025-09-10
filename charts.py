@@ -49,25 +49,25 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
         ax2.text(bar.get_x() + bar.get_width()/2., height + 0.1,
                 f'{int(height)}', ha='center', va='bottom', fontweight='bold')
     
-    # 3. Accuracy by Topic
+    # 3. Accuracy by category
     ax3 = plt.subplot(3, 4, 3)
-    topic_stats = {}
+    category_stats = {}
     for r in mcq_results:
-        topic = r.get('topic', 'Unknown')
-        if topic not in topic_stats:
-            topic_stats[topic] = {'correct': 0, 'total': 0}
-        topic_stats[topic]['total'] += 1
+        category = r.get('category', 'Unknown')
+        if category not in category_stats:
+            category_stats[category] = {'correct': 0, 'total': 0}
+        category_stats[category]['total'] += 1
         if r['correct']:
-            topic_stats[topic]['correct'] += 1
+            category_stats[category]['correct'] += 1
     
-    if topic_stats:
-        topics = list(topic_stats.keys())
-        accuracies = [topic_stats[topic]['correct'] / topic_stats[topic]['total'] * 100 
-                     for topic in topics]
+    if category_stats:
+        categorys = list(category_stats.keys())
+        accuracies = [category_stats[category]['correct'] / category_stats[category]['total'] * 100 
+                     for category in categorys]
         
-        bars = ax3.barh(topics, accuracies, color='skyblue', alpha=0.8)
+        bars = ax3.barh(categorys, accuracies, color='skyblue', alpha=0.8)
         ax3.set_xlabel('Accuracy (%)')
-        ax3.set_title('Accuracy by Topic', fontweight='bold')
+        ax3.set_title('Accuracy by category', fontweight='bold')
         ax3.set_xlim(0, 100)
         
         # Add percentage labels
@@ -103,16 +103,16 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
             ax4.text(bar.get_x() + bar.get_width()/2., height + 1,
                     f'{height:.1f}%', ha='center', va='bottom', fontweight='bold')
     
-    # 5. Topic Distribution (Donut Chart)
+    # 5. category Distribution (Donut Chart)
     ax5 = plt.subplot(3, 4, 5)
-    topic_counts = Counter(r.get('topic', 'Unknown') for r in mcq_results)
-    if topic_counts:
-        wedges, texts, autotexts = ax5.pie(topic_counts.values(), 
-                                          labels=topic_counts.keys(),
+    category_counts = Counter(r.get('category', 'Unknown') for r in mcq_results)
+    if category_counts:
+        wedges, texts, autotexts = ax5.pie(category_counts.values(), 
+                                          labels=category_counts.keys(),
                                           autopct='%1.1f%%',
                                           startangle=90,
                                           wedgeprops=dict(width=0.5))
-        ax5.set_title('Questions by Topic\n(Distribution)', fontweight='bold')
+        ax5.set_title('Questions by category\n(Distribution)', fontweight='bold')
     
     # 6. Difficulty Distribution
     ax6 = plt.subplot(3, 4, 6)
@@ -154,22 +154,22 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
         ax7.set_xticklabels(options)
         ax7.legend()
     
-    # 8. Performance Heatmap (Topic vs Difficulty)
+    # 8. Performance Heatmap (category vs Difficulty)
     ax8 = plt.subplot(3, 4, 8)
-    if topic_stats and difficulty_stats:
+    if category_stats and difficulty_stats:
         # Create matrix for heatmap
-        topics_list = list(topic_stats.keys())
+        categorys_list = list(category_stats.keys())
         difficulties_list = list(difficulty_stats.keys())
         
         # Create performance matrix
         performance_matrix = []
-        for topic in topics_list:
-            topic_results = [r for r in mcq_results if r.get('topic') == topic]
+        for category in categorys_list:
+            category_results = [r for r in mcq_results if r.get('category') == category]
             row = []
             for diff in difficulties_list:
-                topic_diff_results = [r for r in topic_results if r.get('difficulty') == diff]
-                if topic_diff_results:
-                    accuracy = sum(1 for r in topic_diff_results if r['correct']) / len(topic_diff_results) * 100
+                category_diff_results = [r for r in category_results if r.get('difficulty') == diff]
+                if category_diff_results:
+                    accuracy = sum(1 for r in category_diff_results if r['correct']) / len(category_diff_results) * 100
                 else:
                     accuracy = 0
                 row.append(accuracy)
@@ -178,13 +178,13 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
         if performance_matrix:
             sns.heatmap(performance_matrix, 
                        xticklabels=difficulties_list,
-                       yticklabels=topics_list,
+                       yticklabels=categorys_list,
                        annot=True, 
                        fmt='.1f',
                        cmap='RdYlGn',
                        ax=ax8,
                        cbar_kws={'label': 'Accuracy (%)'})
-            ax8.set_title('Performance Heatmap\n(Topic vs Difficulty)', fontweight='bold')
+            ax8.set_title('Performance Heatmap\n(category vs Difficulty)', fontweight='bold')
     
     # 9. Confidence Analysis (Based on raw answer length - proxy for confidence)
     ax9 = plt.subplot(3, 4, 9)
@@ -213,10 +213,10 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
     total_questions = len(mcq_results) + len(writing_review)
     mcq_accuracy = correct_count / len(mcq_results) * 100 if mcq_results else 0
     
-    most_difficult_topic = min(topic_stats.items(), 
-                              key=lambda x: x[1]['correct']/x[1]['total'])[0] if topic_stats else "N/A"
-    easiest_topic = max(topic_stats.items(), 
-                       key=lambda x: x[1]['correct']/x[1]['total'])[0] if topic_stats else "N/A"
+    most_difficult_category = min(category_stats.items(), 
+                              key=lambda x: x[1]['correct']/x[1]['total'])[0] if category_stats else "N/A"
+    easiest_category = max(category_stats.items(), 
+                       key=lambda x: x[1]['correct']/x[1]['total'])[0] if category_stats else "N/A"
     
     summary_text = f"""
     QUIZ PERFORMANCE SUMMARY
@@ -229,10 +229,10 @@ def create_comprehensive_charts(results, writing_review, timestamp, output_dir=N
     MCQ Accuracy: {mcq_accuracy:.1f}%
     Correct Answers: {correct_count}/{len(mcq_results)}
     
-    Most Challenging Topic: {most_difficult_topic}
-    Easiest Topic: {easiest_topic}
+    Most Challenging category: {most_difficult_category}
+    Easiest category: {easiest_category}
     
-    Topics Covered: {len(topic_stats)}
+    categorys Covered: {len(category_stats)}
     Difficulty Levels: {len(difficulty_stats)}
     """
     
