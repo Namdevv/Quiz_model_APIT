@@ -1,7 +1,7 @@
-BASE_MODEL = "./models/Llama-3.2-3B-Instruct"
-MODEL_PATH = "./models/Llama-3.2-3B-Instruct"
-BASE_MODEL_REPO = "unsloth/Llama-3.2-3B-Instruct"
-ADAPTER_REPO = "Namtran0912/Llama-3.2-3B-Instruct-lora-adapter-10ep"
+BASE_MODEL = "./models/unsloth/Meta-Llama-3.1-8B-Instruct"
+MODEL_PATH = "./models/unsloth/Meta-Llama-3.1-8B-Instruct-lora-adapter-v1"
+BASE_MODEL_REPO = "unsloth/Meta-Llama-3.1-8B-Instruct"
+ADAPTER_REPO = "Namtran0912/Meta-Llama-3.1-8B-Instruct-lora-adapter-v1"
 MAX_SEQ_LENGTH = 1024
 LOAD_IN_4BIT = True
 
