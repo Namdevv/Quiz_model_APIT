@@ -1,0 +1,1965 @@
+{
+  "metadata": {
+    "timestamp": "20250912_092343",
+    "model": "Qwen2.5-7B-Instruct-lora-adapter-v1",
+    "total_writing_questions": 242
+  },
+  "category_distribution": {
+    "Test Case": 84,
+    "Test Step": 12,
+    "Error Handling & Negative Testing": 28,
+    "Contract & Schema Validation": 22,
+    "Mocking & Service Virtualization": 8,
+    "Performance & Load Testing": 2,
+    "General Testing": 16,
+    "Environment & Test Data Management": 6,
+    "Authentication & Authorization": 22,
+    "Security Testing": 14,
+    "Observability & Monitoring": 4,
+    "Advanced Testing Strategies": 24
+  },
+  "difficulty_distribution": {
+    "Easy": 94,
+    "Intermediate": 60,
+    "Hard": 60,
+    "Very Hard": 28
+  },
+  "detailed_results": [
+    {
+      "question_id": "EQ5004",
+      "question": "Write one simple positive test case for a login API.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /login with valid username and password → expect 200 OK with token.",
+      "model_answer": "A simple positive test case for a login API would be: Given a user with valid email \"test@example.com\" and password \"Test123\", when the login API is called with these credentials, then the API should return a successful response with a status code of 200 and include a valid authentication token in the response body."
+    },
+    {
+      "question_id": "EQ5006",
+      "question": "What is a common precondition for testing a user profile endpoint?",
+      "category": "Test Step",
+      "difficulty": "Easy",
+      "gold_answer": "User must be logged in and have a valid token.",
+      "model_answer": "A common precondition for testing a user profile endpoint is ensuring that a user with valid credentials exists and is accessible through the system, as the endpoint typically requires authentication to retrieve or update user profile information. Additionally, verifying that the necessary database entries and user roles are correctly set up is crucial for the successful execution of tests."
+    },
+    {
+      "question_id": "EQ5008",
+      "question": "Write a simple negative test for a register API.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /register without password field → expect 400 Bad Request.",
+      "model_answer": "A simple negative test for a register API would be to provide an already registered email address, expecting the API to return an error indicating that the email is already in use. Another example would be to submit a registration request with missing or invalid required fields, expecting the API to reject the request and return appropriate validation errors."
+    },
+    {
+      "question_id": "EQ5010",
+      "question": "What is the role of a schema in API testing?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "To define the expected structure of request and response data.",
+      "model_answer": "In API testing, a schema defines the structure and expected format of the data being exchanged, ensuring that the responses from the API match the specified format and helping to validate the correctness of the API's output."
+    },
+    {
+      "question_id": "EQ5012",
+      "question": "Write a simple test step for validating a 201 Created response.",
+      "category": "Test Step",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /users with valid data → expect 201 Created and Location header.",
+      "model_answer": "A simple test step for validating a 201 Created response would be to send a POST request to create a new resource and then verify that the HTTP status code returned is 201 Created using an assertion in your testing framework."
+    },
+    {
+      "question_id": "EQ5014",
+      "question": "What is the purpose of mocking in API testing?",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Easy",
+      "gold_answer": "To simulate external dependencies or services that are unavailable.",
+      "model_answer": "The purpose of mocking in API testing is to simulate the behavior of dependent services or components so that the tests can be isolated and run independently of the actual service availability, thus allowing for more reliable and faster test execution. Mocking helps in testing the interaction between components without relying on external systems, which can be slow or unavailable during testing phases."
+    },
+    {
+      "question_id": "EQ5016",
+      "question": "Write one easy test case for an API that fetches product list.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /products → expect 200 OK with non-empty array.",
+      "model_answer": "A simple test case for an API that fetches a product list could be: \"Verify that the API returns a non-empty JSON array of products when queried with valid credentials and filters (e.g., category='Electronics', price_range='Under100').\""
+    },
+    {
+      "question_id": "EQ5018",
+      "question": "What is the purpose of a precondition in a test case?",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "It specifies the conditions that must be met before a test can run.",
+      "model_answer": "The purpose of a precondition in a test case is to specify the conditions that must be true at the start of the test for it to be valid and effective, ensuring that the test results accurately reflect the software's behavior under expected circumstances. Preconditions help in isolating and identifying specific issues by controlling the environment in which the test is performed."
+    },
+    {
+      "question_id": "EQ5020",
+      "question": "Write one negative test for file upload with an unsupported format.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /upload with .exe file → expect 415 Unsupported Media Type.",
+      "model_answer": "A negative test case for file upload with an unsupported format would be uploading a file in the .exe extension, attempting to upload it, and verifying that the upload fails with an appropriate error message indicating that the file format is not supported."
+    },
+    {
+      "question_id": "EQ5022",
+      "question": "What is the purpose of a test case description?",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "To explain the objective and scope of a test scenario.",
+      "model_answer": "A test case description serves to provide a clear and concise overview of what the test is intended to verify or validate, including the scenario being tested, expected outcomes, and any preconditions. It acts as a roadmap for testers, ensuring that tests are performed consistently and comprehensively across different testing phases."
+    },
+    {
+      "question_id": "EQ5024",
+      "question": "Write a test step to validate response time under 1 second.",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /status → assert response time < 1000 ms.",
+      "model_answer": "To validate the response time is under 1 second, you can use a load testing tool like JMeter or LoadRunner to send a request to the server and measure the time it takes for the server to respond, then assert that this time is less than 1000 milliseconds."
+    },
+    {
+      "question_id": "EQ5027",
+      "question": "Write one simple positive test for GET /health endpoint.",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /health → expect 200 OK with status=healthy.",
+      "model_answer": "A simple positive test for the GET /health endpoint would be to send a GET request to http://localhost/health (or the appropriate URL) and verify that the response status code is 200 OK, indicating that the service is healthy and responsive. Additionally, you might check that the response body contains a success message or a specific JSON structure indicating health status."
+    },
+    {
+      "question_id": "EQ5029",
+      "question": "What is the purpose of using test data management in API testing?",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Easy",
+      "gold_answer": "To ensure consistent and reusable datasets for testing across environments.",
+      "model_answer": "The purpose of using test data management in API testing is to ensure that tests are reliable and consistent across different environments by providing controlled and relevant data, thus helping to identify issues early in the development cycle. It also helps in maintaining data privacy and compliance with regulations by securely managing sensitive information."
+    },
+    {
+      "question_id": "EQ5031",
+      "question": "Write one easy negative test case for an API expecting JSON format.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /api with Content-Type: text/plain → expect 415 Unsupported Media Type.",
+      "model_answer": "A negative test case for an API expecting JSON format would be sending a request with a plain text body instead of JSON, such as \"This is not JSON,\" which clearly does not match the expected content type and should result in a validation error response."
+    },
+    {
+      "question_id": "EQ5033",
+      "question": "What is the role of assertions in API testing?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "To verify that the actual response matches the expected result.",
+      "model_answer": "Assertions in API testing are used to verify that the API's responses meet expected criteria, such as correct data formats, valid status codes, and accurate response times, ensuring the API functions as intended under various conditions. They help catch issues early in the development process by validating the API's behavior against predefined expectations."
+    },
+    {
+      "question_id": "EQ5035",
+      "question": "Write a test case to check DELETE /users/{id} works correctly.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send DELETE /users/123 → expect 204 No Content, then GET /users/123 → 404 Not Found.",
+      "model_answer": "To test the DELETE /users/{id} endpoint, send a DELETE request to `http://api.example.com/users/123` (where `123` is the user ID), and verify that the response status code is 204 No Content, indicating successful deletion, and that the user with ID `123` no longer exists in the database."
+    },
+    {
+      "question_id": "EQ5037",
+      "question": "What does HTTP status 201 Created indicate?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "A new resource has been successfully created.",
+      "model_answer": "The HTTP status code 201 Created indicates that the request has succeeded and that a new resource has been created as a result of the request. This typically means that the server has fulfilled the request and the newly created resource can be referenced by a URI (Uniform Resource Identifier)."
+    },
+    {
+      "question_id": "EQ5039",
+      "question": "Write one simple test for GET /users/{id} returning correct response.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /users/123 → expect 200 OK with correct user data.",
+      "model_answer": "To test that the GET /users/{id} endpoint returns the correct user data, you can send a GET request to `/users/1` (assuming `1` is an existing user ID) and verify that the response contains the expected user details such as name, email, and other relevant information."
+    },
+    {
+      "question_id": "EQ5041",
+      "question": "What is the purpose of a 200 OK response?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "It confirms that the request has succeeded.",
+      "model_answer": "The 200 OK response is used to indicate that the server has successfully fulfilled the client's request. This status code is sent in response to an HTTP request and signifies that there were no errors during the processing of the request."
+    },
+    {
+      "question_id": "EQ5043",
+      "question": "Write one negative test to validate response for an invalid endpoint.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /unknown → expect 404 Not Found.",
+      "model_answer": "A negative test to validate the response for an invalid endpoint would involve sending a request to a non-existent URL and expecting to receive a 404 Not Found status code along with an appropriate error message indicating that the requested resource could not be found."
+    },
+    {
+      "question_id": "EQ5045",
+      "question": "What does a test case assertion do?",
+      "category": "Test Step",
+      "difficulty": "Easy",
+      "gold_answer": "It checks that the actual result matches the expected outcome.",
+      "model_answer": "A test case assertion checks whether the actual outcome of a test case matches the expected outcome, thereby validating that the software meets its specified requirements or functionality at specific points during testing."
+    },
+    {
+      "question_id": "EQ5047",
+      "question": "Write one positive test for file upload endpoint.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /upload with valid image.jpg → expect 201 Created and fileId returned.",
+      "model_answer": "A positive test for the file upload endpoint would involve uploading a valid image file (e.g., a PNG or JPEG) with correct metadata and checking that the response status code is 200 OK, indicating successful upload, and that the file appears in the expected directory on the server."
+    },
+    {
+      "question_id": "EQ5049",
+      "question": "What is the role of 415 Unsupported Media Type?",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "It indicates the server refuses to process the request because of unsupported format.",
+      "model_answer": "The \"415 Unsupported Media Type\" HTTP status code indicates that the server cannot handle the media type of the request body sent in the request. This typically occurs when the client sends a resource with a content type that the server does not support, requiring the client to send the data in a supported format."
+    },
+    {
+      "question_id": "EQ5052",
+      "question": "Write a simple positive test for checking product details API.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /products/101 → expect 200 OK with product JSON fields present.",
+      "model_answer": "To write a simple positive test for checking a product details API, you can send a GET request to the API endpoint with a valid product ID and verify that the response contains the expected product details such as name, price, and description without any errors."
+    },
+    {
+      "question_id": "EQ5054",
+      "question": "What is the purpose of using Authorization headers in API testing?",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "gold_answer": "To provide credentials or tokens required to access secured endpoints.",
+      "model_answer": "The purpose of using Authorization headers in API testing is to verify that only authenticated users with the appropriate credentials can access protected resources, ensuring security and validating that authentication mechanisms are working correctly."
+    },
+    {
+      "question_id": "EQ5056",
+      "question": "Write a negative test case for an API requiring authentication.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /profile without Authorization header → expect 401 Unauthorized.",
+      "model_answer": "A negative test case for an API requiring authentication would involve sending a request to a protected endpoint without providing valid authentication credentials, expecting the response to deny access or return an unauthorized error status (e.g., HTTP 401)."
+    },
+    {
+      "question_id": "EQ5058",
+      "question": "What is the role of 500 Internal Server Error in API testing?",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "It indicates unexpected failures in the server during request processing.",
+      "model_answer": "The 500 Internal Server Error is an HTTP status code indicating that the server encountered an unexpected condition that prevented it from fulfilling the request. In API testing, this error is crucial to identify backend server issues or logic errors that need to be addressed to ensure the API functions correctly under various scenarios."
+    },
+    {
+      "question_id": "EQ5060",
+      "question": "Write one positive test case for an API returning list of orders.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /orders → expect 200 OK with array of order objects.",
+      "model_answer": "A positive test case for an API returning a list of orders would be verifying that the API returns a successful response status code (e.g., 200 OK) along with a well-formed JSON array containing at least one order object that includes all required fields such as order ID, customer name, and total amount."
+    },
+    {
+      "question_id": "EQ5062",
+      "question": "What is the function of response headers in API testing?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "They provide metadata about the response, such as content type and caching info.",
+      "model_answer": "In API testing, response headers provide metadata about the response data such as content type, encoding, size, and other properties, which help in validating the response format, ensuring proper caching, and managing session information. They are crucial for understanding the nature of the returned data and for setting up subsequent requests correctly."
+    },
+    {
+      "question_id": "EQ5064",
+      "question": "Write one negative test for creating a duplicate resource.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /users with existing email → expect 409 Conflict.",
+      "model_answer": "A negative test for creating a duplicate resource would involve attempting to create a new resource with an identifier that already exists in the system, and then verifying that the creation fails and an appropriate error message is returned indicating that the resource already exists."
+    },
+    {
+      "question_id": "EQ5066",
+      "question": "What is the role of 202 Accepted in APIs?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "It indicates that the request is accepted for processing but not completed yet.",
+      "model_answer": "The \"202 Accepted\" HTTP status code indicates that a request has been accepted for processing, but the processing has not been completed. It is typically used in situations where a user request cannot be completed at the time it is received, and the server will process the request later or as an asynchronous operation."
+    },
+    {
+      "question_id": "EQ5068",
+      "question": "Write one easy positive test for checking API response schema.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /users → expect 200 OK and response fields match schema definition.",
+      "model_answer": "An easy positive test for checking an API response schema would be to verify that the response contains all the expected fields listed in the schema, such as ensuring that a \"user\" endpoint returns fields like \"id,\" \"name,\" and \"email\" as specified."
+    },
+    {
+      "question_id": "EQ5070",
+      "question": "What is the purpose of response body in API testing?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "To provide the actual data returned from an endpoint.",
+      "model_answer": "The purpose of the response body in API testing is to verify that the data returned from the API call matches the expected results, ensuring the correctness and reliability of the API's data transmission. It checks for accurate data, proper formatting, and correct status codes to ensure the API functions as intended."
+    },
+    {
+      "question_id": "EQ5072",
+      "question": "Write one test case for verifying logout functionality.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "1) Login to get token. 2) POST /logout with token → expect 200 OK. 3) Retry GET /profile with same token → expect 401 Unauthorized.",
+      "model_answer": "A test case for verifying the logout functionality could be: \"As a user, I should be able to successfully log out of the system by clicking the logout button, and upon clicking, I am redirected to the login page with a confirmation message indicating that I have been logged out.\""
+    },
+    {
+      "question_id": "EQ5074",
+      "question": "What does a 415 Unsupported Media Type error validate?",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "That the server rejects unsupported request body formats.",
+      "model_answer": "A 415 Unsupported Media Type error indicates that the server拒绝处理请求中的媒体类型，即服务器无法处理请求中指定的媒体类型。这通常是因为客户端发送的数据格式（如JSON、XML等）与服务器期望的格式不匹配。"
+    },
+    {
+      "question_id": "EQ5077",
+      "question": "Write one simple positive test for GET /status endpoint.",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /status → expect 200 OK with message='Service running'.",
+      "model_answer": "A simple positive test for the GET /status endpoint would be to verify that the response status code is 200 OK and that the response body contains a valid status message indicating that the service is operational."
+    },
+    {
+      "question_id": "EQ5079",
+      "question": "What does a 204 No Content response mean?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "It means the request was successful but no data is returned.",
+      "model_answer": "A 204 No Content HTTP status code indicates that the server has successfully processed the request but is not returning any content. This is commonly used for requests that modify state and do not return an entity, such as PUT and DELETE requests."
+    },
+    {
+      "question_id": "EQ5081",
+      "question": "Write a negative test case for sending an invalid Content-Type header.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /users with Content-Type: application/xml → expect 415 Unsupported Media Type.",
+      "model_answer": "A negative test case for sending an invalid Content-Type header would involve attempting to submit data with a Content-Type such as \"application/x-invalid\" or any other unrecognized format, expecting the server to reject the request due to the invalid content type."
+    },
+    {
+      "question_id": "EQ5083",
+      "question": "What is the purpose of the Accept header in API requests?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "It specifies the expected response format such as JSON or XML.",
+      "model_answer": "The Accept header in API requests is used to specify the media types that the client will accept as a response. This allows the server to return the most appropriate representation of the resource, such as JSON or XML, based on the client's capabilities and preferences."
+    },
+    {
+      "question_id": "EQ5085",
+      "question": "Write a simple test case for a successful logout API call.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /logout with valid token → expect 200 OK, then GET /profile with same token → 401 Unauthorized.",
+      "model_answer": "A simple test case for a successful logout API call would involve sending a POST request to the logout endpoint with the appropriate authentication token, and then verifying that the response status code is 200 (OK) and that the response body indicates a successful logout."
+    },
+    {
+      "question_id": "EQ5087",
+      "question": "What is the meaning of 401 Unauthorized in API testing?",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "gold_answer": "It means the client must provide valid authentication credentials.",
+      "model_answer": "In API testing, a 401 Unauthorized response indicates that the request was detected by the server but the server did not accept the credentials provided with the request, meaning authentication is required and has failed or has not been provided."
+    },
+    {
+      "question_id": "EQ5089",
+      "question": "Write one easy positive test case for checking profile details API.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send GET /profile with valid token → expect 200 OK and correct user data.",
+      "model_answer": "A simple positive test case for the profile details API would be to verify that when a user's valid profile ID is passed, the API returns the correct user profile information including name, email, and other relevant details without any errors."
+    },
+    {
+      "question_id": "EQ5091",
+      "question": "What is the purpose of 302 Found in APIs?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "It indicates temporary redirection to another URL.",
+      "model_answer": "The 302 Found status code in APIs indicates that the resource requested has temporarily been assigned a different URL, which should be used for subsequent requests. This redirect helps in maintaining the functionality and user experience by allowing resources to be moved without breaking existing bookmarks or links."
+    },
+    {
+      "question_id": "EQ5093",
+      "question": "Write a test case for negative login attempt with wrong password.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /login with valid username but wrong password → expect 401 Unauthorized.",
+      "model_answer": "A test case for a negative login attempt with a wrong password could be: \"Given a user attempts to log in with the correct username but an incorrect password, then the system should display an error message indicating the password is invalid and deny access to the account.\""
+    },
+    {
+      "question_id": "EQ5095",
+      "question": "What does 422 Unprocessable Entity indicate?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "That the request is syntactically correct but semantically invalid.",
+      "model_answer": "The status code 422 Unprocessable Entity indicates that the server understood the client's request but was unable to process it due to semantic errors in the request, such as invalid syntax or an incomplete list of constraints. Unlike a 400 Bad Request, the specific issue with a 422 status is that while the request is syntactically valid, there is some issue with the semantics of the request."
+    },
+    {
+      "question_id": "EQ5097",
+      "question": "Write a positive test for POST /users endpoint.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Send POST /users with valid user details → expect 201 Created with userId.",
+      "model_answer": "A positive test for the POST /users endpoint would verify that a valid user can be successfully created with the correct HTTP status code (e.g., 201 Created), and that the response includes the newly created user's details such as their unique ID and other relevant information."
+    },
+    {
+      "question_id": "EQ5099",
+      "question": "What does the term 'happy path' mean in testing?",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "It refers to the expected successful execution scenario.",
+      "model_answer": "The term 'happy path' in testing refers to the scenario where all conditions and steps proceed as expected without any errors or exceptions, representing the smoothest possible flow through a system or process. It is used to verify that the application works correctly under ideal conditions before more complex or error-prone scenarios are tested."
+    },
+    {
+      "question_id": "EQ2002",
+      "question": "Explain how you would design a negative test case for an API endpoint that requires OAuth2 Bearer tokens.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "gold_answer": "One negative test is sending the request with an expired token and expecting a 401 Unauthorized error.",
+      "model_answer": "To design a negative test case for an API endpoint requiring OAuth2 Bearer tokens, I would verify that the endpoint correctly rejects requests without a valid Bearer token or with an expired, invalid, or malformed token, ensuring the API enforces strict authentication policies."
+    },
+    {
+      "question_id": "EQ2004",
+      "question": "Provide one happy-path and one error-path test case for a payment refund API endpoint.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Happy path: valid transaction ID returns 200 OK with refund confirmation. Error path: invalid transaction ID returns 404 Not Found.",
+      "model_answer": "Happy-path test case: A customer successfully requests a refund for an existing payment with all required parameters (such as payment ID, amount, and customer details) correctly provided, and the API returns a success response indicating the refund has been processed.\n\nError-path test case: A customer attempts to request a refund for a non-existent payment ID, leading the API to return an error response indicating that the payment ID is invalid or the payment does not exist."
+    },
+    {
+      "question_id": "EQ2006",
+      "question": "How would you validate schema changes in a backward-compatible API upgrade?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "gold_answer": "Compare the new schema with the old one to ensure no required fields are removed and existing data types remain unchanged.",
+      "model_answer": "To validate schema changes in a backward-compatible API upgrade, you can implement versioning in your API to distinguish between different schema versions and use schema validation tools or libraries to ensure that the new schema does not break compatibility with older clients. Additionally, testing the API with a suite of test cases covering various scenarios and edge cases is crucial to confirm that the upgrade maintains compatibility."
+    },
+    {
+      "question_id": "EQ2008",
+      "question": "Explain how mocking can be used to test a payment API without calling the real bank service.",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "gold_answer": "Mocking simulates the bank’s responses (success, failure) so tests can run without making real financial transactions.",
+      "model_answer": "Mocking in testing involves substituting complex dependencies with simpler, controlled alternatives (mocks) to isolate the code being tested. By using mocks for the payment API's interaction with the bank service, you can simulate the bank's responses and control the flow of the test, ensuring that the API behaves correctly under various conditions without actually needing to communicate with the real bank service."
+    },
+    {
+      "question_id": "EQ2010",
+      "question": "Design one boundary test and one invalid test for an API field `age` (range 18–65).",
+      "category": "Test Step",
+      "difficulty": "Intermediate",
+      "gold_answer": "Boundary test: age=18 and age=65 return 200 OK. Invalid test: age=17 or age=66 return 400 Bad Request.",
+      "model_answer": "For the boundary tests, you would test the minimum and maximum values of the range, so you would test with `age = 18` and `age = 65`. For an invalid test, you could use a value outside the specified range, such as `age = -1`, to check how the API handles invalid input."
+    },
+    {
+      "question_id": "EQ2012",
+      "question": "Explain how you would simulate a network timeout error in API testing.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Introduce artificial network delay or configure client timeout lower than server response time to trigger timeout handling.",
+      "model_answer": "To simulate a network timeout error in API testing, you can configure your testing tool or framework to introduce artificial delays in the network communication, such as setting a very high timeout value or using a network emulator that introduces packet loss and delays. Alternatively, you can use a tool like `curl` with the `-m` option to specify a maximum time to wait for the entire transfer to complete, effectively simulating a timeout."
+    },
+    {
+      "question_id": "EQ2014",
+      "question": "Give one example of an API precondition and one step that follows it.",
+      "category": "Test Step",
+      "difficulty": "Intermediate",
+      "gold_answer": "Precondition: User must be logged in with a valid token. Step: Call profile API with the token to fetch user data.",
+      "model_answer": "An example of an API precondition is ensuring that the user providing authentication credentials has the necessary permissions to access a resource. The step that follows this precondition might be the API server checking these permissions before granting access to the requested data or service."
+    },
+    {
+      "question_id": "EQ2016",
+      "question": "Write one test case to validate that API rate limiting is enforced correctly.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send 110 requests within 1 minute when the limit is 100 requests/minute; expect 429 Too Many Requests for excess calls.",
+      "model_answer": "To validate API rate limiting, a test case could involve sending multiple requests to the API within a specified time frame, then checking if the response returned after the threshold is exceeded matches the expected error indicating rate limit exceeded, such as a specific HTTP status code (e.g., 429 Too Many Requests) and an appropriate error message."
+    },
+    {
+      "question_id": "EQ2018",
+      "question": "Explain one advantage of using service virtualization in API testing.",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "gold_answer": "It allows testing APIs that depend on unavailable or costly third-party services by simulating their behavior.",
+      "model_answer": "One advantage of using service virtualization in API testing is that it allows testers to simulate responses from dependent systems even when those systems are unavailable or difficult to access, thus enabling isolated testing of the API under various conditions without relying on a fully integrated system environment."
+    },
+    {
+      "question_id": "EQ2020",
+      "question": "Describe how to design one positive and one boundary test case for a login API requiring username and password.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Positive: valid username and password return 200 OK with token. Boundary: username at max length returns 200 OK if valid.",
+      "model_answer": "A positive test case for the login API could involve using valid credentials that exist in the system, ensuring the API returns a successful authentication response. A boundary test case would involve entering the shortest possible valid username and password allowed by the system's constraints to check if the API handles edge cases correctly without errors."
+    },
+    {
+      "question_id": "EQ2022",
+      "question": "Write one test step to validate that an API correctly returns 415 Unsupported Media Type.",
+      "category": "Test Step",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send a POST request with Content-Type: text/plain to an endpoint expecting application/json, expect 415.",
+      "model_answer": "To validate that an API correctly returns a 415 Unsupported Media Type response, send a request with a content type that is not supported by the API and ensure that the server responds with a status code of 415 along with a proper error message indicating that the media type is not supported."
+    },
+    {
+      "question_id": "EQ2024",
+      "question": "Describe one way to test observability when an API experiences a slow database query.",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "gold_answer": "Inject artificial DB slowness and confirm that tracing/logging captures the delay and propagates metrics.",
+      "model_answer": "To test observability during slow database queries in an API, you can instrument the code to log detailed metrics such as query duration and query text at the point where the database call is made, then correlate these logs with application performance monitoring data to identify which specific queries are causing delays and how they impact overall API performance."
+    },
+    {
+      "question_id": "EQ2026",
+      "question": "Explain how you would test API idempotency for a retry scenario.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send the same POST request twice with the same idempotency key; confirm only one resource is created.",
+      "model_answer": "To test API idempotency in a retry scenario, I would send the same request multiple times with the expectation that the API should produce the same result and not cause any side effects beyond the initial successful execution, ensuring the state of the system remains consistent regardless of the number of retries."
+    },
+    {
+      "question_id": "EQ2028",
+      "question": "Give one boundary and one invalid test for a file upload API accepting max 5 MB files.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Boundary: upload 5 MB file, expect 200 OK. Invalid: upload 6 MB file, expect 413 Payload Too Large.",
+      "model_answer": "A valid boundary for a file upload API accepting up to 5 MB files would be a file exactly 5 MB in size. An invalid test would involve uploading a file that exceeds this limit, such as a 10 MB file."
+    },
+    {
+      "question_id": "EQ2030",
+      "question": "Write a test case to validate proper error handling when an API is called with a missing required field `email`.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send POST /register without email field; expect 400 Bad Request with validation error message.",
+      "model_answer": "To validate proper error handling for a missing required field `email` in an API call, the test case should send a POST request without including the `email` field and verify that the response includes an appropriate error message indicating the `email` field is required and a non-zero HTTP status code (e.g., 400 Bad Request)."
+    },
+    {
+      "question_id": "EQ2032",
+      "question": "How would you design a test to validate retry logic when an API occasionally returns 503?",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Configure mock service to return 503 for first two requests, then 200 OK on third. Validate client retries correctly.",
+      "model_answer": "To validate retry logic for an API that occasionally returns 503 errors, design a test that simulates API calls under conditions where the responses are randomly interspersed with 503 errors, and monitor the system's ability to correctly retry the failed requests within the specified retry parameters until a successful response is received."
+    },
+    {
+      "question_id": "EQ2034",
+      "question": "Write a test case that validates log correlation using a trace ID header.",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send GET /orders with X-Trace-ID header, confirm logs include the same trace ID across service boundaries.",
+      "model_answer": "To validate log correlation using a trace ID header, write a test case where you send a request to the application with a custom header containing a trace ID, then check if the logs generated during this request include the same trace ID throughout the log entries related to this request."
+    },
+    {
+      "question_id": "EQ2036",
+      "question": "Design one intermediate-level test case for validating API rate limiting when multiple clients are involved.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Simulate two clients each sending 60 requests in a minute when limit is 100 total; confirm excess requests get 429 Too Many Requests.",
+      "model_answer": "Design an API rate limiting test case where multiple client instances simultaneously attempt to make requests within the specified time frame of the rate limit. Verify that only the number of requests permitted by the rate limit are successfully processed, and the rest are properly rejected with an appropriate error code and message."
+    },
+    {
+      "question_id": "EQ2038",
+      "question": "Describe one positive and one negative test case for an API endpoint that sends SMS codes.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Positive: send SMS to valid phone number, expect 200 OK. Negative: send SMS to invalid number format, expect 400 Bad Request.",
+      "model_answer": "A positive test case for an API endpoint that sends SMS codes would involve successfully submitting a valid request with correct parameters, such as the recipient's phone number and country code, and receiving a confirmation of successful SMS delivery. A negative test case would involve sending a request with an invalid or missing phone number, resulting in an error response indicating the validation failure or inability to send the SMS."
+    },
+    {
+      "question_id": "EQ2040",
+      "question": "Explain one advantage of mocking external APIs when testing failure scenarios.",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "gold_answer": "It allows deterministic simulation of errors (timeouts, 500s) without depending on real external failures.",
+      "model_answer": "Mocking external APIs allows you to simulate error responses or delays, enabling you to test how your application handles failures under controlled conditions without relying on the actual API's unpredictable behavior. This ensures that your application can gracefully manage errors and maintains robustness and reliability in production-like scenarios."
+    },
+    {
+      "question_id": "EQ2042",
+      "question": "Write one test case to validate error handling when API returns malformed JSON.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Simulate API returning incomplete JSON body; client should raise parsing error or return proper 500-level error message.",
+      "model_answer": "To validate error handling for malformed JSON responses, a test case could be designed to send a request to the API with a deliberately incorrect or improperly formatted JSON payload, and then verify that the system correctly identifies the error and responds with an appropriate error message or status code indicating the invalid JSON format."
+    },
+    {
+      "question_id": "EQ2044",
+      "question": "Design one test step to confirm rate limiting headers (e.g., X-RateLimit-Remaining) are present.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send requests close to limit and verify X-RateLimit-Remaining decreases until exhausted.",
+      "model_answer": "To confirm rate-limiting headers are present, send a request to the API endpoint and then verify that the response includes headers such as `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`."
+    },
+    {
+      "question_id": "EQ2046",
+      "question": "Describe one advantage of separating test data from test logic in API testing.",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "gold_answer": "It allows the same test logic to be reused with different datasets across environments, improving maintainability.",
+      "model_answer": "Separating test data from test logic in API testing allows for greater flexibility and reusability, as the same set of tests can be run with different data sets, ensuring that the tests remain robust and can cover various scenarios without needing to modify the test scripts themselves."
+    },
+    {
+      "question_id": "EQ2048",
+      "question": "Write a test case for validating graceful degradation when API cache is unavailable.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Simulate cache outage, API should still return data from DB though slower, not fail completely.",
+      "model_answer": "To validate graceful degradation when the API cache is unavailable, a test case could involve intentionally disabling the cache during testing and then verifying that the system still functions correctly by checking if the API requests are handled through alternative means (like direct database queries) without any service interruption or error responses."
+    },
+    {
+      "question_id": "EQ2050",
+      "question": "Explain one way to validate logging for sensitive fields such as passwords.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Check logs after login requests and confirm sensitive values like passwords are redacted or masked.",
+      "model_answer": "To validate logging for sensitive fields like passwords, you can mask or hash the sensitive data before logging it, ensuring that even if the logs are compromised, the actual password is not revealed. Alternatively, you can implement a logging policy that excludes sensitive fields entirely from log entries or limits their storage duration and access controls."
+    },
+    {
+      "question_id": "EQ2052",
+      "question": "Provide one negative and one boundary test case for a currency field that must match ISO 4217 codes.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Boundary: use valid code ‘USD’. Negative: use invalid code ‘USDX’, expect 400 Bad Request.",
+      "model_answer": "A negative test case for a currency field matching ISO 4217 codes would be entering \"XYZ\" as the currency code, which is not a valid code according to the standard. A boundary test case would involve using the longest valid code, such as \"XAF\" (Central African Franc), to check if the system handles the maximum length correctly without errors."
+    },
+    {
+      "question_id": "EQ2054",
+      "question": "Write one test case to validate API behavior under network packet loss.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Simulate 30% packet loss using a network emulator; API client should retry or fail gracefully with clear error.",
+      "model_answer": "To validate API behavior under network packet loss, you can design a test case where you intentionally introduce a 10% packet loss between the client and server during API calls, then verify that the API retries the request as expected and eventually returns the correct response without data corruption or loss of functionality."
+    },
+    {
+      "question_id": "EQ2056",
+      "question": "Describe one method to verify test data cleanup after API test execution.",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "gold_answer": "Insert a test record, run test, then query DB to confirm cleanup job removed it.",
+      "model_answer": "After executing an API test, you can verify the cleanup of test data by checking if the test data no longer exists in the database or the system state has been restored to its initial condition, often by querying the relevant tables or endpoints designed for retrieving specific data used in tests. Alternatively, you can use a teardown script within your testing framework to explicitly delete the test data and then confirm its removal through assertions or queries."
+    },
+    {
+      "question_id": "EQ2058",
+      "question": "Write a test case to verify proper rollback when a multi-step transaction partially fails.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Perform transaction with 3 steps; force failure in step 2; verify no partial data persists from step 1.",
+      "model_answer": "To verify proper rollback in a multi-step transaction that partially fails, write a test case where you initiate a series of database operations (e.g., insert, update, delete), introduce an error in the middle of the process to simulate a failure, and then confirm that all operations before the failure are rolled back while subsequent ones are not committed."
+    },
+    {
+      "question_id": "EQ2060",
+      "question": "Explain one approach to validating error messages follow a consistent JSON schema across all endpoints.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "gold_answer": "Send invalid inputs to multiple endpoints and check if error response follows standard schema {code, message, details}.",
+      "model_answer": "One approach to validating error messages follow a consistent JSON schema across all endpoints is to define a standardized schema for error responses and use a tool or library to automatically validate each response against this schema, ensuring uniformity and consistency in error message structure and content across the API."
+    },
+    {
+      "question_id": "EQ3002",
+      "question": "Write a test case that validates login, token refresh, and accessing a protected API using the refreshed token.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /login with valid creds → 200 OK with token. 2) Wait until token nearly expires. 3) POST /refresh with refresh token → 200 OK with new token. 4) Call protected API with new token → 200 OK.",
+      "model_answer": "To validate the login, token refresh, and accessing a protected API with the refreshed token, the test case should include: 1) successfully logging in to obtain an initial access token, 2) using the initial token to request a new access token after it expires, and 3) successfully accessing the protected API with the refreshed token."
+    },
+    {
+      "question_id": "EQ3004",
+      "question": "Design a chained test validating that a failed login attempt still prevents refresh token generation.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "Attempt POST /login with wrong password → 401. Try POST /refresh without a valid refresh token → expect 401 Unauthorized.",
+      "model_answer": "To validate that a failed login attempt prevents refresh token generation, you should design a test case where the login credentials are incorrect, and the system should return an authentication failure response without generating any new refresh tokens. This ensures that only valid login attempts can lead to the creation of new refresh tokens."
+    },
+    {
+      "question_id": "EQ3006",
+      "question": "Explain how you would validate correct mapping of business codes (e.g., ORDER_001) to HTTP status codes in API responses.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "gold_answer": "Send requests triggering each business error, verify that ORDER_001 → 409 Conflict, ORDER_002 → 404 Not Found, etc., as per mapping table.",
+      "model_answer": "To validate the correct mapping of business codes like ORDER_001 to HTTP status codes in API responses, I would develop a script that fetches API responses and checks if the business codes are consistently associated with their appropriate HTTP status codes, such as 200 for success or 404 for not found, ensuring consistency and accuracy in the mappings."
+    },
+    {
+      "question_id": "EQ3008",
+      "question": "Write one hard-level test case chaining order creation, payment, and refund APIs.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /orders → 201 Created. 2) POST /payment with orderId → 200 OK. 3) POST /refund with same orderId → 200 OK and refund processed.",
+      "model_answer": "To test the integration of order creation, payment, and refund APIs, you would first create an order using the order creation API, then use the returned order ID to initiate a payment through the payment API, and finally, after the payment has been successfully processed, trigger a refund using the refund API with the same order ID, ensuring that the refund is processed correctly and all related transactions are updated accordingly."
+    },
+    {
+      "question_id": "EQ3010",
+      "question": "Explain one test case that validates token refresh works across multiple microservices.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "Login to Auth service → get token → refresh token → call Service A and Service B with new token → both return 200 OK.",
+      "model_answer": "In a multi-microservice environment, a valid test case for token refresh would involve simulating a scenario where a microservice requests access to a resource using an expired JWT token, which is then intercepted and refreshed by an authentication service before being forwarded to the appropriate resource service, ensuring uninterrupted access."
+    },
+    {
+      "question_id": "EQ3012",
+      "question": "Write a test that validates mapping of validation error codes to HTTP 400 responses.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "gold_answer": "Send invalid payloads like missing required fields → expect HTTP 400 with app code VALIDATION_ERR_01.",
+      "model_answer": "To validate the mapping of validation error codes to HTTP 400 responses, you can write a unit test where you simulate invalid input data and assert that the API returns an HTTP 400 status code along with the expected error code in the response body."
+    },
+    {
+      "question_id": "EQ3014",
+      "question": "Design a test case validating expired refresh tokens cannot issue new access tokens.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login to get refresh token. 2) Expire token manually or wait. 3) Call /refresh → expect 401 Unauthorized.",
+      "model_answer": "To validate that expired refresh tokens cannot issue new access tokens, the test case should simulate a refresh token request with a known expired token and verify that the authentication server returns an appropriate error response indicating the token has expired."
+    },
+    {
+      "question_id": "EQ3016",
+      "question": "Explain one multi-hop chained test that validates session invalidation after logout.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login to get token. 2) Call protected endpoint → 200 OK. 3) Call /logout. 4) Call protected endpoint again → expect 401 Unauthorized.",
+      "model_answer": "In a multi-hop chained test for validating session invalidation after logout, the process involves multiple authentication hops where each hop relies on the session token from the previous hop; after logging out from the first system, subsequent systems should then invalidate their respective sessions to ensure secure disconnection across all hops."
+    },
+    {
+      "question_id": "EQ3018",
+      "question": "Write a test case chaining signup, email verification, and login endpoints.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /signup → 201 Created with verification link. 2) GET /verify with token → 200 OK. 3) POST /login → 200 OK with access token.",
+      "model_answer": "To write a test case for chaining the signup, email verification, and login endpoints, you would first send a POST request to the signup endpoint with valid user data, then use the generated email and verification token to send a GET request to the email verification endpoint, and finally, send a POST request to the login endpoint with the verified user's credentials to successfully log in."
+    },
+    {
+      "question_id": "EQ3020",
+      "question": "Design one hard-level chained test validating a password reset flow.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /forgot-password with email → 200 OK. 2) GET /reset-link with token → 200 OK. 3) POST /reset-password with new password → 200 OK. 4) Login with new password → 200 OK.",
+      "model_answer": "A hard-level chained test for a password reset flow might involve verifying that the user can initiate a password reset request, receive a reset link via the specified email address, follow the link to enter a new password, and then successfully log in with the new credentials within a limited time frame, while also checking for rate limiting on reset requests and ensuring the session is properly invalidated after a successful login."
+    },
+    {
+      "question_id": "EQ3022",
+      "question": "Write a chained test case for validating user creation, profile update, and profile retrieval.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /users → 201 with userId. 2) PUT /users/{id} with updated data → 200. 3) GET /users/{id} → 200 with updated fields.",
+      "model_answer": "To create a chained test case for validating user creation, profile update, and profile retrieval, start by testing the successful creation of a new user with valid data, then proceed to update the user's profile with new information, and finally, verify that the updated profile data is correctly retrieved."
+    },
+    {
+      "question_id": "EQ3024",
+      "question": "Explain one test to validate refresh token cannot be used after logout.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "Login to get refresh token → logout → attempt POST /refresh with old token → expect 401 Unauthorized.",
+      "model_answer": "To validate that a refresh token cannot be used after logout, you can implement a logout endpoint that revokes the associated refresh token by removing or marking it as invalid in the token storage system (e.g., database or cache). This ensures that subsequent attempts to use the revoked refresh token will fail due to its invalidation."
+    },
+    {
+      "question_id": "EQ3026",
+      "question": "Write a test case validating correct mapping of internal error code AUTH_EXPIRED to HTTP status.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "gold_answer": "Trigger expired token → expect HTTP 401 Unauthorized with app code AUTH_EXPIRED.",
+      "model_answer": "A test case for validating the correct mapping of the internal error code AUTH_EXPIRED to an HTTP status could be: \"Verify that when an AUTH_EXPIRED error is thrown during authentication, the server returns a 401 Unauthorized HTTP status with an appropriate error message indicating the need for re-authentication.\""
+    },
+    {
+      "question_id": "EQ3028",
+      "question": "Explain a chained test validating email verification failure if token is invalid.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /signup → user created. 2) GET /verify?token=invalid → expect 400 or 401. 3) Login attempt fails until verified.",
+      "model_answer": "A chained test for email verification would first send a verification email to the user, then attempt to verify the email using an invalid token, and finally assert that the verification fails as expected, ensuring the system correctly handles invalid tokens."
+    },
+    {
+      "question_id": "EQ3030",
+      "question": "Write a hard-level test case chaining loan application, credit check, and approval endpoints.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /loan-application → 201. 2) POST /credit-check with appId → 200 with status passed. 3) POST /approve with appId → 200 approved.",
+      "model_answer": "To create a hard-level test case, you would chain the following endpoints: First, initiate a loan application with realistic but challenging user data (e.g., low income, high debt ratio) to simulate a difficult credit check scenario. Then, have the system perform a comprehensive credit assessment, focusing on complex algorithms for credit scoring and risk analysis. Finally, verify the approval or rejection outcome, ensuring that the decision-making process aligns with predefined risk thresholds and business rules."
+    },
+    {
+      "question_id": "EQ3032",
+      "question": "Design a test case chaining signup, password reset, and login with new credentials.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /signup → 201. 2) POST /reset-password with email → 200. 3) Login with new password → 200 OK.",
+      "model_answer": "To design a test case, start by creating a user account through the signup process, then initiate a password reset request using the registered email, follow this by resetting the password with a new one, and finally, log in using the newly reset credentials to verify the changes were applied successfully."
+    },
+    {
+      "question_id": "EQ3034",
+      "question": "Write a test case chaining file upload, virus scan, and download endpoints.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /upload → 201. 2) GET /scan/{id} → 200 clean. 3) GET /download/{id} → 200 file returned.",
+      "model_answer": "To test the integration of file upload, virus scan, and download endpoints, you would first write a test case to upload a file using the file upload endpoint, then assert that the file has been uploaded successfully. Next, trigger the virus scan on this file and verify that it returns a successful scan result. Finally, download the file to ensure it is available and uninfected, completing the end-to-end test chain."
+    },
+    {
+      "question_id": "EQ3036",
+      "question": "Explain one chained test for validating refresh token reuse prevention.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login → get refresh token. 2) POST /refresh once → new token. 3) Retry old refresh token again → expect 401 Unauthorized.",
+      "model_answer": "One chained test for validating refresh token reuse prevention involves sequentially testing the system's response when a previously used refresh token is submitted to the authentication server, ensuring it denies access and prompts for a new token issuance, thereby preventing its reuse."
+    },
+    {
+      "question_id": "EQ3038",
+      "question": "Write a test case chaining search, add-to-cart, and checkout APIs.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) GET /search?q=item → 200 results. 2) POST /cart → 201 with itemId. 3) POST /checkout → 200 with order confirmation.",
+      "model_answer": "To write a test case for chaining the search, add-to-cart, and checkout APIs, you would first perform a search API call with specific query parameters to retrieve product results, then select a product and use the add-to-cart API to add it to a user's cart, and finally, simulate a user navigating to the checkout process with appropriate authentication and payment information to complete the purchase."
+    },
+    {
+      "question_id": "EQ3040",
+      "question": "Explain one chained test for validating API session hijacking prevention.",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login as User A → get token. 2) Attempt to use token from User A in User B’s session → expect 403 Forbidden.",
+      "model_answer": "A chained test for validating API session hijacking prevention might involve first establishing a valid session, then attempting to use an intercepted or guessed session token to access protected resources, and finally comparing the results to determine if the system correctly identifies and rejects unauthorized sessions."
+    },
+    {
+      "question_id": "EQ3042",
+      "question": "Provide exactly one chained test case to verify optimistic concurrency using ETag with If-Match across update and read endpoints.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "1) GET /resource → receive ETag=v1. 2) PUT /resource with If-Match=v1 → 200 OK. 3) Retry PUT /resource with stale If-Match=v1 → 412 Precondition Failed.",
+      "model_answer": "To test optimistic concurrency using ETag with If-Match, a chained test case would involve first retrieving an entity to obtain its initial ETag, updating the entity's data, including setting the If-Match header with the original ETag value in the update request, and then attempting to read the updated entity; if the original ETag no longer matches due to concurrent updates, the read operation should fail with a 412 Precondition Failed response."
+    },
+    {
+      "question_id": "EQ3044",
+      "question": "Design a multi-hop test verifying async export job: POST /exports -> poll GET /jobs/{id} until complete -> GET /exports/{id}.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /exports → 202 Accepted with jobId. 2) Poll GET /jobs/{id} until status=done. 3) GET /exports/{id} → 200 OK with file.",
+      "model_answer": "To design a multi-hop test for verifying an asynchronous export job, you would first send a POST request to `/exports` to initiate the job, then periodically poll the status using GET requests to `/jobs/{id}` until the job completes, and finally retrieve the completed export data via a GET request to `/exports/{id}`."
+    },
+    {
+      "question_id": "EQ3046",
+      "question": "Give one chained negative test for OAuth2 Authorization Code: /authorize -> /token -> resource call with missing scope.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) /authorize with user consent → code. 2) /token → access token with limited scope. 3) Call resource requiring scopeX → 403 Forbidden.",
+      "model_answer": "In the OAuth2 authorization code flow, a chained negative test for a missing scope would involve: The user is redirected to the authorization server with a request for access, but without the necessary scope parameters; the authorization server should reject the authorization request or return an error indicating that the requested scope is missing or invalid."
+    },
+    {
+      "question_id": "EQ3048",
+      "question": "Write one chained test that covers idempotent charge creation with Idempotency-Key across retry and refund endpoints.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /charge with Idempotency-Key=abc → 201 Created. 2) Retry same request with Idempotency-Key=abc → 200 OK (same chargeId). 3) POST /refund → 200 OK.",
+      "model_answer": "To test idempotent charge creation with an Idempotency-Key across retry and refund endpoints, you can perform the following: Initially create a charge using an Idempotency-Key, then simulate a network error during a subsequent attempt to create the same charge with the same Idempotency-Key to ensure it's handled as a retry, and finally, verify that a refund request for this charge uses the same Idempotency-Key without creating duplicates or errors."
+    },
+    {
+      "question_id": "EQ3050",
+      "question": "Provide one chained test for file processing pipeline: upload -> POST /process -> poll status -> download, including 202 handling.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /upload → 201 with fileId. 2) POST /process/{fileId} → 202 Accepted. 3) Poll GET /status/{id} until done. 4) GET /download/{id} → 200 file returned.",
+      "model_answer": "A chained test for the file processing pipeline could involve uploading a sample file, sending a POST request to /process to start the file's processing, then periodically polling the file's status endpoint until a 202 Accepted response is received indicating that the process has started, and finally downloading the processed file once it is completed."
+    },
+    {
+      "question_id": "EQ3052",
+      "question": "Give one chained test to validate SSO session revocation propagates to API gateway and microservice access.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login via SSO → token issued. 2) Access API gateway → 200. 3) Revoke session in IdP. 4) Retry API call → 401 Unauthorized across all microservices.",
+      "model_answer": "To validate that SSO session revocation propagates to the API gateway and microservice access, perform the following chained test: First, log out the user through the SSO system, then attempt to make an API call through the API gateway using the user's credentials; verify that the API gateway and downstream microservices deny the request due to the revoked session."
+    },
+    {
+      "question_id": "EQ3054",
+      "question": "Write one chained test for partial order fulfillment: create order -> reserve inventory -> partial ship -> cancel remaining and refund delta.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /orders → 201 with orderId. 2) POST /reserve/{id} → 200 reserved. 3) POST /ship/{id} with partial items → 200 shipped. 4) POST /cancel/{id} → refund issued.",
+      "model_answer": "To test partial order fulfillment, you can chain the following steps: first, create an order with multiple items; then, reserve the necessary inventory for those items; next, partially ship some of the items; finally, cancel the remaining items and ensure that the delta in payment is refunded to the customer."
+    },
+    {
+      "question_id": "EQ3056",
+      "question": "Provide exactly one chained negative test for 2FA login: POST /login -> POST /2fa/verify with wrong code -> POST /refresh.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login with username/password → 200 pending 2FA. 2) POST /2fa/verify with wrong code → 401 Unauthorized. 3) Attempt refresh → 401 Unauthorized.",
+      "model_answer": "In a chained negative test for 2FA login, the scenario would be: After initiating a 2FA login by posting to `/login`, the user attempts to verify with an incorrect 2FA code on the `/2fa/verify` endpoint, followed by an attempt to refresh the session or access a protected resource using the `/refresh` endpoint."
+    },
+    {
+      "question_id": "EQ3058",
+      "question": "Design a chained test verifying pagination consistency across create -> list -> delete -> list (with total count assertions).",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /items → 201. 2) GET /items → count increases. 3) DELETE /items/{id} → 200. 4) GET /items → count decreases.",
+      "model_answer": "To verify pagination consistency, first create multiple entries and then list them with pagination to ensure the correct number of items per page is returned. Afterward, delete these entries one by one and re-list to confirm that the total count decreases as expected, matching the deletion sequence."
+    },
+    {
+      "question_id": "EQ3060",
+      "question": "Write one chained test for session stickiness: login -> subsequent calls via load balancer -> logout -> verify no node accepts old token.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "1) Login to get token. 2) Call service through LB multiple times → same node/session. 3) Logout. 4) Retry → all nodes return 401.",
+      "model_answer": "To test session stickiness, you can perform the following steps: first, log in to the system to obtain a session token; then, make subsequent API calls through the load balancer using this token; next, log out to invalidate the session; finally, ensure that any subsequent calls do not accept the old token and route to a different backend node, verifying the load balancer's session stickiness has been broken."
+    },
+    {
+      "question_id": "EQ4002",
+      "question": "Write a state-machine style test validating account lifecycle: create → activate → suspend → reactivate → delete.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /accounts → 201 Created. 2) POST /activate/{id} → 200. 3) POST /suspend/{id} → 200. 4) POST /reactivate/{id} → 200. 5) DELETE /accounts/{id} → 204. Confirm GET /accounts/{id} → 404.",
+      "model_answer": "To validate the account lifecycle, the test would start by creating an account, then activate it, followed by suspending the activated account, reactivating it after suspension, and finally deleting the account to ensure all states are handled correctly."
+    },
+    {
+      "question_id": "EQ4004",
+      "question": "Design a chained test that validates transaction rollback when step 2 of a 3-step money transfer fails.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /transfer/initiate → 201. 2) POST /transfer/step2 with invalid details → failure 400. 3) Verify DB shows no partial transfer recorded.",
+      "model_answer": "To validate transaction rollback, design a test where you initiate a three-step money transfer from Account A to Account B. If the second step (e.g., transferring funds from A to an intermediate holding account) fails, the system should automatically roll back the first step to ensure no funds were deducted from Account A, and the entire transaction is marked as failed."
+    },
+    {
+      "question_id": "EQ4006",
+      "question": "Write one test validating a multi-service chain: login → create order → process payment → cancel order after capture.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /login → 200 token. 2) POST /orders → 201. 3) POST /payment → 200 capture. 4) POST /cancel/{orderId} → refund → 200 OK. 5) GET /orders/{id} → status=cancelled.",
+      "model_answer": "To validate the multi-service chain, a test can be designed to simulate a user flow starting with successful login, followed by creating an order, processing the payment, and finally canceling the order after the payment has been captured, ensuring each service in the chain functions correctly and interacts as expected."
+    },
+    {
+      "question_id": "EQ4008",
+      "question": "Describe one state-machine test validating password lifecycle: set → expire → reset → reuse prevention.",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /password/set → 200. 2) Expire password manually. 3) POST /password/reset → 200. 4) Attempt reuse of old password → 400 Bad Request.",
+      "model_answer": "A state-machine test for a password lifecycle might start by setting a new password, then verifying that the account is marked as expired; subsequently, after triggering the reset process and entering a new password, the system should allow login with the updated password; finally, the system must prevent reuse of the immediately previous password, ensuring compliance with password reuse policies."
+    },
+    {
+      "question_id": "EQ4010",
+      "question": "Write one complex chained test covering a loan application flow with branch failure in credit check.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /loan/apply → 201. 2) POST /loan/credit-check with bad history → 400 failed. 3) Ensure /loan/approve not allowed. 4) GET /loan/{id} → status=denied.",
+      "model_answer": "A complex chained test for a loan application flow with a branch failure in the credit check could involve submitting a loan application with all required information, including a simulated user profile with known credit issues, which should trigger a credit check; then verifying that the system correctly identifies the credit risk, initiates the credit check process, but simulates a network failure or timeout during the check, causing the credit evaluation to fail, and finally, ensuring the system properly handles the error by displaying an appropriate message to the user and possibly redirecting them to a fallback or alternative service selection screen."
+    },
+    {
+      "question_id": "EQ4012",
+      "question": "Write a test validating data integrity when concurrent writes occur: update user profile with conflicting values.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) PUT /users/{id} name=Alice with If-Match=v1 → 200. 2) PUT /users/{id} name=Bob with stale If-Match=v1 → 412 Precondition Failed. 3) GET /users/{id} → Alice.",
+      "model_answer": "To validate data integrity during concurrent writes, you can design a test where two threads simultaneously attempt to update the same user profile field (e.g., the user's email address) with different values, ensuring that only one update is successful and the database enforces unique constraints, preventing duplicate entries. This test checks if the database correctly handles concurrency and maintains data consistency."
+    },
+    {
+      "question_id": "EQ4014",
+      "question": "Write one very hard test validating chained document signing: upload → sign → verify → tamper detection.",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /documents → 201. 2) POST /sign/{id} → 200. 3) GET /verify/{id} → valid signature. 4) Modify file → GET /verify/{id} → invalid signature detected.",
+      "model_answer": "To create a highly challenging test for chained document signing, you would need to design a scenario where a user uploads a document, which is then signed using a digital signature, verified for integrity and authenticity, and finally, a tamper-detection algorithm must be able to identify any unauthorized modifications to the document or its signature without altering the original file, ensuring the chain of trust remains intact throughout each step."
+    },
+    {
+      "question_id": "EQ4017",
+      "question": "Write one state-machine test validating subscription lifecycle: create → upgrade → downgrade → cancel.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /subscriptions → 201. 2) POST /upgrade/{id} → 200. 3) POST /downgrade/{id} → 200. 4) DELETE /subscriptions/{id} → 204. GET /subscriptions/{id} → 404.",
+      "model_answer": "To validate the subscription lifecycle, a state-machine test could be designed to first create a subscription, then upgrade its plan, subsequently downgrade it to a different plan, and finally cancel the subscription, ensuring each transition maintains the expected state and functionality throughout."
+    },
+    {
+      "question_id": "EQ4019",
+      "question": "Write a very hard chained test validating recovery after partial failure in a distributed order saga.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /order → 201. 2) Reserve stock → 200. 3) Payment fails → 402. 4) Verify stock reservation auto-cancelled. 5) GET /orders/{id} → status=cancelled.",
+      "model_answer": "To create a highly challenging test for recovery after partial failure in a distributed order saga, you would need to simulate a scenario where one of the microservices fails during the transaction, leaving the system in an inconsistent state, then verify that the remaining microservices can roll back their local state and the saga can be replayed correctly to restore consistency across all services."
+    },
+    {
+      "question_id": "EQ4021",
+      "question": "Write one very hard test verifying financial transaction reversals: debit → credit → rollback.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /debit → 200. 2) POST /credit → 200. 3) Simulate system failure. 4) Rollback both debit and credit. 5) Verify account balances unchanged.",
+      "model_answer": "To verify financial transaction reversals, the test would involve initiating a debit transaction from a customer account to a vendor account, then immediately performing a credit transaction to reverse the initial debit, and finally executing a rollback to ensure that all related transactions and accounting entries have been properly reset to their original state."
+    },
+    {
+      "question_id": "EQ4023",
+      "question": "Design a state-machine test for warehouse inventory: add stock → allocate → ship → return → reconcile.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /stock/add → 200. 2) POST /allocate → 200. 3) POST /ship → 200. 4) POST /return → 200. 5) GET /inventory → final count reconciled.",
+      "model_answer": "For the warehouse inventory state-machine, you can design tests that cover each transition: start with adding stock to the system, then test the allocation process, followed by simulating the shipment, receiving a return, and finally reconciling the inventory to ensure accuracy. Each step should validate that the system correctly transitions states and updates inventory levels accordingly."
+    },
+    {
+      "question_id": "EQ4025",
+      "question": "Write one chained test validating mobile session lifecycle: login → token refresh → logout → refresh with old token → fail.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /login → token. 2) POST /refresh → new token. 3) POST /logout. 4) Attempt refresh again with old token → 401 Unauthorized.",
+      "model_answer": "To validate the mobile session lifecycle, the test should chain these steps: first, perform a successful login to obtain an initial authentication token; then, simulate a token refresh while the session is active to ensure a new valid token is received; next, log out the user to invalidate their session; finally, attempt to refresh the token using the old token from before logout, which should fail due to token invalidation."
+    },
+    {
+      "question_id": "EQ4027",
+      "question": "Write one chained test validating email delivery API: send → open-tracking → unsubscribe → ensure no further emails sent.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /emails → 202 Accepted. 2) GET /tracking/{id} → open recorded. 3) POST /unsubscribe → 200. 4) POST /emails → 202 but no delivery for unsubscribed user.",
+      "model_answer": "To validate the email delivery API chain, start by sending a test email and verifying that the open-tracking pixel is triggered upon opening the email. Next, simulate an unsubscribe action from within the email client or via the unsubscribe link provided. Finally, confirm that no further emails are sent to the subscriber after the unsubscribe request is processed."
+    },
+    {
+      "question_id": "EQ4029",
+      "question": "Write one very hard chained test for purchase flow with coupon application and failure branch: apply coupon → checkout → coupon invalid → rollback.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) POST /apply-coupon → 400 invalid. 2) POST /checkout → rejected. 3) Ensure order not persisted. 4) GET /orders → coupon not applied.",
+      "model_answer": "A highly challenging test for the purchase flow with coupon application and failure branch would involve simulating a scenario where a valid coupon is applied during checkout, the system processes the transaction, then later detects the coupon as invalid, triggering a rollback of the transaction and refunding the customer's payment while updating inventory and order status accordingly."
+    },
+    {
+      "question_id": "EQ5004-VN",
+      "question": "Viết một test case positive đơn giản cho một API đăng nhập.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /login với username và password hợp lệ → mong đợi 200 OK kèm token.",
+      "model_answer": "Một test case positive đơn giản cho API đăng nhập có thể là: \"Khi gửi yêu cầu POST với username 'testuser' và password 'testpass' đúng, API sẽ trả về mã trạng thái 200 OK cùng với thông tin phản hồi xác nhận đăng nhập thành công.\""
+    },
+    {
+      "question_id": "EQ5006-VN",
+      "question": "Điều kiện tiên quyết phổ biến để test một endpoint user profile là gì?",
+      "category": "Test Step",
+      "difficulty": "Easy",
+      "gold_answer": "Người dùng phải được đăng nhập và có một token hợp lệ.",
+      "model_answer": "Điều kiện tiên quyết phổ biến để kiểm thử một endpoint user profile bao gồm xác thực rằng tất cả các trường thông tin cá nhân đều được xử lý đúng cách, đồng thời đảm bảo tính bảo mật và tuân thủ quy định về quyền riêng tư của dữ liệu người dùng."
+    },
+    {
+      "question_id": "EQ5008-VN",
+      "question": "Viết một test negative đơn giản cho một API đăng ký.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /register mà không có trường password → mong đợi 400 Bad Request.",
+      "model_answer": "Một test negative đơn giản cho một API đăng ký có thể là gửi một yêu cầu đăng ký mà thiếu thông tin bắt buộc như tên hoặc địa chỉ email, và kiểm tra xem API có trả về lỗi tương ứng không."
+    },
+    {
+      "question_id": "EQ5010-VN",
+      "question": "Vai trò của một schema trong API testing là gì?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Để định nghĩa cấu trúc dữ liệu mong đợi của request và response.",
+      "model_answer": "Trong API testing, một schema đóng vai trò như một mô hình hoặc định dạng tiêu chuẩn để xác định cấu trúc và kiểu dữ liệu của phản hồi API, giúp đảm bảo rằng dữ liệu trả về từ API tuân theo cấu trúc mong đợi."
+    },
+    {
+      "question_id": "EQ5012-VN",
+      "question": "Viết một test step đơn giản để validate một response 201 Created.",
+      "category": "Test Step",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /users với dữ liệu hợp lệ → mong đợi 201 Created và Location header.",
+      "model_answer": "Một test step đơn giản để xác nhận response code là 201 Created có thể được viết như sau: \"Kiểm tra giá trị của thuộc tính status code trong response để đảm bảo nó bằng 201 Created.\""
+    },
+    {
+      "question_id": "EQ5014-VN",
+      "question": "Mục đích của mocking trong API testing là gì?",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Easy",
+      "gold_answer": "Để mô phỏng các phụ thuộc hoặc dịch vụ bên ngoài không khả dụng.",
+      "model_answer": "Mocking trong API testing được sử dụng để thay thế các component phụ thuộc (như database hoặc external services) bằng các phiên bản giả mạo, giúp kiểm soát hoàn toàn môi trường测试中出现错误，请重试发送。"
+    },
+    {
+      "question_id": "EQ5016-VN",
+      "question": "Viết một test case dễ dàng cho một API lấy danh sách sản phẩm.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /products → mong đợi 200 OK với một array không rỗng.",
+      "model_answer": "Một test case dễ dàng cho API lấy danh sách sản phẩm có thể là: Gửi yêu cầu GET đến endpoint /products và kiểm tra nếu status code trả về là 200 OK cùng với một danh sách sản phẩm không rỗng trong body của phản hồi."
+    },
+    {
+      "question_id": "EQ5018-VN",
+      "question": "Mục đích của một precondition trong một test case là gì?",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Nó chỉ định các điều kiện phải được đáp ứng trước khi một test có thể chạy.",
+      "model_answer": "Mục đích của một precondition trong một test case là xác định các điều kiện bắt buộc phải tồn tại trước khi thực hiện một cuộc thử nghiệm cụ thể để đảm bảo rằng môi trường thử nghiệm được chuẩn bị đúng cách và kết quả thử nghiệm có ý nghĩa."
+    },
+    {
+      "question_id": "EQ5020-VN",
+      "question": "Viết một test negative cho việc upload file với định dạng không được hỗ trợ.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /upload với file .exe → mong đợi 415 Unsupported Media Type.",
+      "model_answer": "Một test negative phù hợp cho việc upload file với định dạng không được hỗ trợ là kiểm tra xem hệ thống có hiển thị thông báo lỗi rõ ràng khi người dùng cố gắng tải lên một file có định dạng không được chấp nhận, và kiểm tra xem file đó có bị từ chối upload hay không."
+    },
+    {
+      "question_id": "EQ5022-VN",
+      "question": "Mục đích của một test case description là gì?",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Để giải thích mục tiêu và phạm vi của một test scenario.",
+      "model_answer": "Một test case description giúp xác định chi tiết về yêu cầu kiểm thử cụ thể, bao gồm mục tiêu kiểm thử, các bước thực hiện và kết quả mong đợi, từ đó đảm bảo rằng mỗi trường hợp kiểm thử đều đạt được độ chính xác và đầy đủ cần thiết."
+    },
+    {
+      "question_id": "EQ5024-VN",
+      "question": "Viết một test step để validate thời gian response dưới 1 giây.",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /status → assert response time < 1000 ms.",
+      "model_answer": "Để viết một test step để validate thời gian response dưới 1 giây, bạn có thể sử dụng cú pháp như sau: \"Gửi yêu cầu API và xác nhận thời gian response phải nhỏ hơn 1 giây.\""
+    },
+    {
+      "question_id": "EQ5027-VN",
+      "question": "Viết một test positive đơn giản cho endpoint GET /health.",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /health → mong đợi 200 OK với status=healthy.",
+      "model_answer": "Để viết một test positive đơn giản cho endpoint GET /health, bạn có thể kiểm tra trạng thái HTTP trả về là 200 OK và xác nhận rằng nội dung trả về bao gồm thông tin xác thực về trạng thái hoạt động của hệ thống, như \"Health check passed\" hoặc tương tự."
+    },
+    {
+      "question_id": "EQ5029-VN",
+      "question": "Mục đích của việc sử dụng test data management trong API testing là gì?",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Easy",
+      "gold_answer": "Để đảm bảo các bộ dữ liệu nhất quán và có thể tái sử dụng để testing trên các môi trường.",
+      "model_answer": "Việc sử dụng quản lý dữ liệu-test trong kiểm thử API giúp đảm bảo rằng các dữ liệu được sử dụng trong quá trình kiểm thử đại diện chính xác cho các tình huống sử dụng thực tế, từ đó tăng cường độ tin cậy và chất lượng của API."
+    },
+    {
+      "question_id": "EQ5031-VN",
+      "question": "Viết một test negative dễ dàng cho một API mong đợi định dạng JSON.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /api với Content-Type: text/plain → mong đợi 415 Unsupported Media Type.",
+      "model_answer": "Một test negative dễ dàng cho một API mong đợi định dạng JSON có thể là gửi một yêu cầu với nội dung không phải là JSON (ví dụ: văn bản純文本或其他非JSON格式的数据)，同时在请求头中正确设置了`Content-Type: application/json`，以明确表示该请求应遵循JSON格式，从而导致API验证失败。"
+    },
+    {
+      "question_id": "EQ5033-VN",
+      "question": "Vai trò của assertion trong API testing là gì?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Để xác minh rằng response thực tế khớp với kết quả mong đợi.",
+      "model_answer": "Trong API testing, assertion đóng vai trò quan trọng để xác minh rằng kết quả trả về từ API đáp ứng với các điều kiện mong đợi, như giá trị trả về đúng chuẩn hoặc thời gian phản hồi phù hợp. Điều này giúp phát hiện lỗi hoặc sự không chính xác sớm trong quá trình phát triển."
+    },
+    {
+      "question_id": "EQ5035-VN",
+      "question": "Viết một test case để kiểm tra DELETE /users/{id} hoạt động đúng.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi DELETE /users/123 → mong đợi 204 No Content, sau đó GET /users/123 → 404 Not Found.",
+      "model_answer": "Một test case cho yêu cầu DELETE /users/{id} có thể là: Gửi yêu cầu DELETE với URL như https://api.example.com/users/123 (thay 123 bằng ID của một user hợp lệ), và kiểm tra trạng thái trả về là 204 No Content cùng với thông tin xác nhận rằng user đã được xóa thành công từ cơ sở dữ liệu."
+    },
+    {
+      "question_id": "EQ5037-VN",
+      "question": "Mã trạng thái HTTP 201 Created cho biết điều gì?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Một tài nguyên mới đã được tạo thành công.",
+      "model_answer": "Mã trạng thái HTTP 201 Created cho biết yêu cầu đã thành công và một tài nguyên mới đã được tạo ra như là kết quả của hành động POST."
+    },
+    {
+      "question_id": "EQ5039-VN",
+      "question": "Viết một test đơn giản cho GET /users/{id} trả về response chính xác.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /users/123 → mong đợi 200 OK với dữ liệu người dùng chính xác.",
+      "model_answer": "Để viết một test đơn giản cho endpoint GET /users/{id}, bạn có thể sử dụng thư viện như `unittest` trong Python và kiểm tra rằng khi gọi API với một ID hợp lệ, response trả về có status code là 200 và chứa thông tin chính xác của user tương ứng."
+    },
+    {
+      "question_id": "EQ5041-VN",
+      "question": "Mục đích của một response 200 OK là gì?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Nó xác nhận rằng request đã thành công.",
+      "model_answer": "Một response HTTP 200 OK mục đích là xác nhận yêu cầu của khách đã được server xử lý thành công, đồng thời thông báo rằng khách có thể tiếp tục với các yêu cầu tiếp theo nếu cần."
+    },
+    {
+      "question_id": "EQ5043-VN",
+      "question": "Viết một test negative để validate response cho một endpoint không hợp lệ.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /unknown → mong đợi 404 Not Found.",
+      "model_answer": "Để viết một test negative để validate response cho một endpoint không hợp lệ, bạn có thể gửi yêu cầu với dữ liệu đầu vào sai hoặc phương thức không được hỗ trợ, và kiểm tra xem ứng dụng có trả về mã trạng thái HTTP thích hợp (như 400 Bad Request hoặc 405 Method Not Allowed) và thông báo lỗi rõ ràng không."
+    },
+    {
+      "question_id": "EQ5045-VN",
+      "question": "Một test case assertion làm gì?",
+      "category": "Test Step",
+      "difficulty": "Easy",
+      "gold_answer": "Nó kiểm tra rằng kết quả thực tế khớp với kết quả mong đợi.",
+      "model_answer": "Một test case assertion được sử dụng để xác minh rằng kết quả của một thử nghiệm đơn vị hoặc tích hợp cụ thể đạt được như mong đợi, giúp phát hiện lỗi hoặc hành vi không mong muốn trong ứng dụng."
+    },
+    {
+      "question_id": "EQ5047-VN",
+      "question": "Viết một test positive cho endpoint upload file.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /upload với image.jpg hợp lệ → mong đợi 201 Created và fileId được trả về.",
+      "model_answer": "Để viết một test positive cho endpoint upload file, bạn có thể kiểm tra bằng cách gửi một tệp tin JPEG có định dạng đúng và kích thước nhỏ dưới giới hạn được quy định, đồng thời xác nhận rằng endpoint trả về mã trạng thái HTTP 200 OK cùng với thông báo thành công."
+    },
+    {
+      "question_id": "EQ5049-VN",
+      "question": "Vai trò của 415 Unsupported Media Type là gì?",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Nó cho biết server từ chối xử lý request vì định dạng không được hỗ trợ.",
+      "model_answer": "415 Unsupported Media Type là mã trạng thái HTTP chỉ ra rằng máy chủ không thể处理中文指令，请重试.\n\nVai trò của mã trạng thái 415 Unsupported Media Type là thông báo cho客户端知悉服务器无法处理请求中指定的媒体类型，因为该类型与服务器配置或期望的格式不符。"
+    },
+    {
+      "question_id": "EQ5052-VN",
+      "question": "Viết một test positive đơn giản để kiểm tra API chi tiết sản phẩm.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /products/101 → mong đợi 200 OK với các trường JSON sản phẩm hiện diện.",
+      "model_answer": "Để viết một test positive đơn giản cho API chi tiết sản phẩm, bạn có thể gửi yêu cầu GET đến endpoint /products/{productID} với một ID sản phẩm hợp lệ và kiểm tra nếu mã trạng thái trả về là 200 OK cùng với thông tin sản phẩm được trả về trong body response."
+    },
+    {
+      "question_id": "EQ5054-VN",
+      "question": "Mục đích của việc sử dụng Authorization headers trong API testing là gì?",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "gold_answer": "Để cung cấp thông tin đăng nhập hoặc token cần thiết để truy cập các endpoint được bảo mật.",
+      "model_answer": "Việc sử dụng Authorization headers trong API测试是在API测试中，通过提供身份验证信息（如令牌、用户名和密码等），确保只有授权用户才能访问受保护的资源，从而保障API的安全性和隐私性。"
+    },
+    {
+      "question_id": "EQ5056-VN",
+      "question": "Viết một test negative case cho một API yêu cầu authentication.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /profile mà không có Authorization header → mong đợi 401 Unauthorized.",
+      "model_answer": "Một trường hợp test negative case cho một API yêu cầu authentication có thể là thử gửi yêu cầu đến endpoint mà không cung cấp token hoặc sử dụng một token giả mạo không hợp lệ, để kiểm tra hệ thống có phản hồi lỗi về việc thiếu hoặc sai thông tin authentication không."
+    },
+    {
+      "question_id": "EQ5058-VN",
+      "question": "Vai trò của 500 Internal Server Error trong API testing là gì?",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Nó cho biết các lỗi không mong muốn trong server trong quá trình xử lý request.",
+      "model_answer": "500 Internal Server Error trong API testing diễn 示的是服务器内部错误，表示服务器在尝试处理请求时遇到了未知或无法处理的情况，这妨碍了正常的API响应流程。测试人员需要通过检查服务器日志和其他相关信息来诊断问题原因。"
+    },
+    {
+      "question_id": "EQ5060-VN",
+      "question": "Viết một test case positive cho một API trả về danh sách đơn hàng.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /orders → mong đợi 200 OK với một array các order object.",
+      "model_answer": "Một test case positive cho API trả về danh sách đơn hàng có thể là: Gửi yêu cầu GET đến endpoint /orders với tham số lọc theo ngày và trạng thái đơn hàng, và kiểm tra phản hồi có chứa danh sách đơn hàng phù hợp với các tham số lọc được đưa ra, cùng với mã trạng thái HTTP 200 OK."
+    },
+    {
+      "question_id": "EQ5062-VN",
+      "question": "Chức năng của response header trong API testing là gì?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Chúng cung cấp metadata về response, như content type và caching info.",
+      "model_answer": "Trong API testing, chức năng của response header là cung cấp thông tin về dữ liệu được trả về từ server, bao gồm định dạng dữ liệu, kích thước của dữ liệu, mã trạng thái HTTP, và các thông tin khác có thể hữu ích cho việc kiểm thử."
+    },
+    {
+      "question_id": "EQ5064-VN",
+      "question": "Viết một test negative cho việc tạo một tài nguyên trùng lặp.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /users với email đã tồn tại → mong đợi 409 Conflict.",
+      "model_answer": "Một test negative phù hợp để kiểm tra việc tạo tài nguyên trùng lặp có thể là thử tạo một tài nguyên có thông tin trùng với một tài nguyên đã tồn tại và kiểm tra xem hệ thống có chặn được yêu cầu này và báo lỗi tương ứng hay không."
+    },
+    {
+      "question_id": "EQ5066-VN",
+      "question": "Vai trò của 202 Accepted trong các API là gì?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Nó cho biết rằng request được chấp nhận để xử lý nhưng chưa hoàn thành.",
+      "model_answer": "Trong các API, trạng thái 202 Accepted được sử dụng để chỉ rằng yêu cầu đã nhận và đang được xử lý, nhưng kết quả chưa sẵn sàng hoặc có thể cần thời gian để hoàn thành. Server sẽ xác nhận việc nhận yêu cầu mà không cần phải thực hiện hành động nào khác."
+    },
+    {
+      "question_id": "EQ5068-VN",
+      "question": "Viết một test positive dễ dàng để kiểm tra API response schema.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /users → mong đợi 200 OK và các trường response khớp với schema definition.",
+      "model_answer": "Một test positive đơn giản để kiểm tra schema của response API có thể là gửi một yêu cầu GET đến endpoint API và kiểm tra xem response trả về có đúng với schema mong đợi như kiểu dữ liệu (data type), định dạng (format) và cấu trúc (structure) đã được xác định trước không."
+    },
+    {
+      "question_id": "EQ5070-VN",
+      "question": "Mục đích của response body trong API testing là gì?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Để cung cấp dữ liệu thực tế được trả về từ một endpoint.",
+      "model_answer": "Trong API testing, response body mục đích chính là kiểm tra nội dung dữ liệu mà API trả về có đúng với yêu cầu đề xuất hay không, bao gồm cả dữ liệu trả về và bất kỳ thông báo lỗi nào có thể xảy ra."
+    },
+    {
+      "question_id": "EQ5072-VN",
+      "question": "Viết một test case để verify chức năng logout.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "1) Login để lấy token. 2) POST /logout với token → mong đợi 200 OK. 3) Thử lại GET /profile với cùng token → mong đợi 401 Unauthorized.",
+      "model_answer": "Một test case để xác nhận chức năng logout có thể được viết như sau: \"Bằng cách đăng nhập vào hệ thống, sau đó nhấn vào nút logout, kiểm tra xem hệ thống có chuyển hướng người dùng đến trang đăng nhập và thông báo logout thành công hay không.\""
+    },
+    {
+      "question_id": "EQ5074-VN",
+      "question": "Lỗi 415 Unsupported Media Type validate điều gì?",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Rằng server từ chối các định dạng request body không được hỗ trợ.",
+      "model_answer": "Lỗi 415 Unsupported Media Type xảy ra khi server không hỗ trợ định dạng dữ liệu được gửi lên. Điều này thường được gặp khi content-type trong header không phù hợp hoặc không được server chấp nhận."
+    },
+    {
+      "question_id": "EQ5077-VN",
+      "question": "Viết một test positive đơn giản cho endpoint GET /status.",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /status → mong đợi 200 OK với message='Service running'.",
+      "model_answer": "Để viết một test positive đơn giản cho endpoint GET /status, bạn có thể sử dụng lệnh curl trong terminal như sau: `curl http://localhost:3000/status`, và kiểm tra nếu nó trả về trạng thái 200 OK cùng với thông tin về trạng thái hệ thống mong đợi."
+    },
+    {
+      "question_id": "EQ5079-VN",
+      "question": "Một response 204 No Content có nghĩa là gì?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Nó có nghĩa là request đã thành công nhưng không có dữ liệu nào được trả về.",
+      "model_answer": "Một response 204 No Content nghĩa là server đã nhận và xử lý yêu cầu của client nhưng không có nội dung nào để trả về, thường-used trong các trường hợp như xóa thành công một tài nguyên mà không cần trả về dữ liệu mới."
+    },
+    {
+      "question_id": "EQ5081-VN",
+      "question": "Viết một test negative case cho việc gửi một Content-Type header không hợp lệ.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /users với Content-Type: application/xml → mong đợi 415 Unsupported Media Type.",
+      "model_answer": "Một test case negative cho trường hợp gửi Content-Type header không hợp lệ có thể là: Gửi một yêu cầu với header Content-Type có giá trị là \"application/json;charset=utf-876\", và kiểm tra xem ứng dụng có phản hồi lỗi vì charset không đúng định dạng hay không."
+    },
+    {
+      "question_id": "EQ5083-VN",
+      "question": "Mục đích của Accept header trong các API request là gì?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Nó chỉ định định dạng response mong đợi như JSON hoặc XML.",
+      "model_answer": "Accept header trong các API request được sử dụng để chỉ định định dạng nội dung mà client chấp nhận từ server, như JSON, XML hoặc plain text, giúp server biết loại dữ liệu trả về phù hợp với yêu cầu của client."
+    },
+    {
+      "question_id": "EQ5085-VN",
+      "question": "Viết một test case đơn giản cho một API logout thành công.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /logout với token hợp lệ → mong đợi 200 OK, sau đó GET /profile với cùng token → 401 Unauthorized.",
+      "model_answer": "Một test case đơn giản cho API logout thành công có thể là: \"Gửi yêu cầu DELETE đến /api/auth/logout với token hợp lệ, và kiểm tra trạng thái trả về là 200 OK cùng với thông báo xác nhận logout thành công.\""
+    },
+    {
+      "question_id": "EQ5087-VN",
+      "question": "Ý nghĩa của 401 Unauthorized trong API testing là gì?",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "gold_answer": "Nó có nghĩa là client phải cung cấp thông tin xác thực hợp lệ.",
+      "model_answer": "Trong API testing, mã lỗi 401 Unauthorized chỉ ra rằng yêu cầu API đã được gửi nhưng hệ thống từ chối thực hiện do vấn đề về xác thực, thường vì thiếu thông tin xác thực hoặc thông tin đó không hợp lệ."
+    },
+    {
+      "question_id": "EQ5089-VN",
+      "question": "Viết một test case positive dễ dàng để kiểm tra API chi tiết profile.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi GET /profile với token hợp lệ → mong đợi 200 OK và dữ liệu người dùng chính xác.",
+      "model_answer": "Một test case positive dễ dàng cho API chi tiết profile có thể là: Gửi yêu cầu GET đến /profile với token của một người dùng đã đăng nhập, và kiểm tra rằng phản hồi trả về chứa thông tin chi tiết về người dùng đó mà không có lỗi xảy ra."
+    },
+    {
+      "question_id": "EQ5091-VN",
+      "question": "Mục đích của 302 Found trong các API là gì?",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Nó cho biết việc redirection tạm thời đến một URL khác.",
+      "model_answer": "Trong ngữ cảnh của HTTP, mã trạng thái 302 Found chỉ thực tế là tên cũ của mã 302 Redirection, hiện tại được gọi là 302 Found. Mục đích của nó là để tạm thời chuyển hướng yêu cầu từ một URL đến URL khác, giúp server thông báo cho trình duyệt hoặc ứng dụng API biết rằng nội dung có thể được tìm thấy tại vị trí mới trong một thời gian nhất định."
+    },
+    {
+      "question_id": "EQ5093-VN",
+      "question": "Viết một test case cho nỗ lực đăng nhập negative với mật khẩu sai.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /login với username hợp lệ nhưng password sai → mong đợi 401 Unauthorized.",
+      "model_answer": "Một test case negative cho nỗ lực đăng nhập với mật khẩu sai có thể là: \"Khi nhập tên người dùng đúng nhưng mật khẩu sai, hệ thống hiển thị thông báo 'Sai mật khẩu' và không cấp quyền truy cập.\""
+    },
+    {
+      "question_id": "EQ5095-VN",
+      "question": "422 Unprocessable Entity cho biết điều gì?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "gold_answer": "Rằng request có cú pháp đúng nhưng ngữ nghĩa không hợp lệ.",
+      "model_answer": "Mã trạng thái HTTP 422 Unprocessable Entity cho biết server nhận được một yêu cầu hợp lệ (không phải mã 400 Bad Request), nhưng không thể xử lý do lỗi trong nội dung của yêu cầu, như dữ liệu gửi lên không đúng định dạng mong đợi hoặc thiếu thông tin cần thiết."
+    },
+    {
+      "question_id": "EQ5097-VN",
+      "question": "Viết một test positive cho endpoint POST /users.",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Gửi POST /users với user details hợp lệ → mong đợi 201 Created với userId.",
+      "model_answer": "Một test positive cho endpoint POST /users có thể bao gồm việc gửi một yêu cầu POST với dữ liệu hợp lệ như { \"name\": \"John Doe\", \"email\": \"johndoe@example.com\", \"password\": \"securepassword123\" } và kiểm tra phản hồi trả về có code status 201 Created cùng với thông tin user được tạo mới."
+    },
+    {
+      "question_id": "EQ5099-VN",
+      "question": "Thuật ngữ 'happy path' trong testing có nghĩa là gì?",
+      "category": "Test Case",
+      "difficulty": "Easy",
+      "gold_answer": "Nó đề cập đến kịch bản thực thi thành công mong đợi.",
+      "model_answer": "Thuật ngữ \"happy path\" trong testing chỉ ra con đường hoặc quy trình đi qua các trường hợp thử nghiệm thành công mà không gặp phải bất kỳ lỗi hay vấn đề nào, giúp xác định liệu hệ thống có hoạt động như mong đợi khi không có lỗi xảy ra hay không."
+    },
+    {
+      "question_id": "EQ2002-VN",
+      "question": "Hãy giải thích cách bạn thiết kế một **test case âm tính** cho một endpoint API yêu cầu **OAuth2 Bearer token**.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "gold_answer": "Một **test case âm tính** là gửi yêu cầu với một **token** đã hết hạn và mong đợi lỗi **401 Unauthorized**.",
+      "model_answer": "Để thiết kế một test case âm tính cho endpoint API yêu cầu OAuth2 Bearer token, tôi sẽ kiểm tra tình huống mà không có token được cung cấp hoặc token bị từ chối (invalid token), nhằm mục đích xác nhận hệ thống phản hồi đúng khi không có quyền truy cập hợp lệ."
+    },
+    {
+      "question_id": "EQ2004-VN",
+      "question": "Cung cấp một **test case happy-path** và một **test case error-path** cho một endpoint API hoàn tiền thanh toán.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "**Happy path**: ID giao dịch hợp lệ trả về **200 OK** với xác nhận hoàn tiền. **Error path**: ID giao dịch không hợp lệ trả về **404 Not Found**.",
+      "model_answer": "Test case happy-path: Gửi yêu cầu hoàn tiền với thông tin thanh toán chính xác và đầy đủ, bao gồm số đơn đặt hàng, thông tin tài khoản ngân hàng, và lý do hoàn tiền; API trả về mã trạng thái 200 OK cùng với thông báo xác nhận hoàn thành quá trình hoàn tiền.\n\nTest case error-path: Gửi yêu cầu hoàn tiền mà thiếu thông tin số đơn đặt hàng, dẫn đến API trả về mã trạng thái 400 Bad Request cùng với thông báo lỗi yêu cầu thông tin số đơn đặt hàng không được cung cấp."
+    },
+    {
+      "question_id": "EQ2006-VN",
+      "question": "Bạn sẽ xác thực các thay đổi **schema** trong một nâng cấp API **tương thích ngược** như thế nào?",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "gold_answer": "So sánh **schema** mới với **schema** cũ để đảm bảo không có trường bắt buộc nào bị xóa và các kiểu dữ liệu hiện có vẫn không thay đổi.",
+      "model_answer": "Đối với việc xác thực các thay đổi schema trong một nâng cấp API tương thích ngược, bạn nên sử dụng phương pháp kiểm tra tích hợp và kiểm thử đơn vị để đảm bảo tính năng cũ vẫn hoạt động đúng sau khi cập nhật schema. Ngoài ra, tạo một bộ dữ liệu kiểm thử đầy đủ bao gồm các trường hợp sử dụng cũ và mới để kiểm tra toàn diện sự thay đổi."
+    },
+    {
+      "question_id": "EQ2008-VN",
+      "question": "Giải thích cách **mocking** có thể được sử dụng để kiểm tra một API thanh toán mà không gọi dịch vụ ngân hàng thực.",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "gold_answer": "**Mocking** mô phỏng các phản hồi của ngân hàng (thành công, thất bại) để các **test** có thể chạy mà không thực hiện các giao dịch tài chính thực tế.",
+      "model_answer": "Mocking 允许我们在测试环境中模拟API的响应，而不需要实际调用银行服务。通过使用mock对象，我们可以控制和预测API的行为，确保在测试中可以重现一致的结果，从而有效验证我们的支付API逻辑。"
+    },
+    {
+      "question_id": "EQ2010-VN",
+      "question": "Thiết kế một **boundary test** và một **invalid test** cho trường API `age` (phạm vi 18–65).",
+      "category": "Test Step",
+      "difficulty": "Intermediate",
+      "gold_answer": "**Boundary test**: **age**=18 và **age**=65 trả về **200 OK**. **Invalid test**: **age**=17 hoặc **age**=66 trả về **400 Bad Request**.",
+      "model_answer": "对于边界测试，可以设计一个测试用例，输入年龄为18或65岁，验证API是否能正确处理这些边界值。对于无效测试，可以设计一个测试用例，输入年龄为17岁，因为17不在18至65的范围内，验证API是否能够拒绝或错误处理这个无效的输入值。"
+    },
+    {
+      "question_id": "EQ2012-VN",
+      "question": "Giải thích cách bạn mô phỏng lỗi **network timeout** trong **API testing**.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Đưa vào độ trễ mạng nhân tạo hoặc cấu hình **timeout** của máy khách thấp hơn thời gian phản hồi của máy chủ để kích hoạt xử lý **timeout**.",
+      "model_answer": "Trong API testing, để mô phỏng lỗi network timeout, tôi sẽ thiết lập một thời gian chờ cố định hoặc biến đổi trước khi trả về kết quả từ API, khiến yêu cầu bị trì hoãn quá thời gian chờ đợi tối đa của hệ thống, dẫn đến việc báo lỗi timeout."
+    },
+    {
+      "question_id": "EQ2014-VN",
+      "question": "Đưa ra một ví dụ về một **precondition** API và một **step** theo sau nó.",
+      "category": "Test Step",
+      "difficulty": "Intermediate",
+      "gold_answer": "**Precondition**: Người dùng phải đăng nhập với một **token** hợp lệ. **Step**: Gọi API hồ sơ với **token** để lấy dữ liệu người dùng.",
+      "model_answer": "Một ví dụ về precondition API có thể là \"login\" để đảm bảo người dùng đã đăng nhập trước khi truy cập hệ thống. Theo sau đó, một step thường thấy là \"fetch user profile\" để lấy thông tin hồ sơ của người dùng đã đăng nhập."
+    },
+    {
+      "question_id": "EQ2016-VN",
+      "question": "Viết một **test case** để xác thực rằng **API rate limiting** được thực thi đúng.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi 110 yêu cầu trong 1 phút khi giới hạn là 100 yêu cầu/phút; mong đợi **429 Too Many Requests** cho các cuộc gọi vượt quá.",
+      "model_answer": "Một test case cho xác thực API rate limiting có thể là: Gửi 10 yêu cầu GET liên tiếp đến endpoint cần kiểm tra trong vòng 10 giây, sau đó kiểm tra xem chỉ có 5 yêu cầu đầu tiên được xử lý thành công và 5 yêu cầu còn lại bị từ chối vì vượt quá giới hạn rate."
+    },
+    {
+      "question_id": "EQ2018-VN",
+      "question": "Giải thích một lợi thế của việc sử dụng **service virtualization** trong **API testing**.",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "gold_answer": "Nó cho phép kiểm tra các API phụ thuộc vào các dịch vụ bên thứ ba không có sẵn hoặc tốn kém bằng cách mô phỏng hành vi của chúng.",
+      "model_answer": "Service virtualization allows API testers to simulate responses from backend systems without needing actual servers or databases, which speeds up the testing process and reduces dependencies on external systems, making it easier to conduct thorough and isolated tests."
+    },
+    {
+      "question_id": "EQ2020-VN",
+      "question": "Mô tả cách thiết kế một **test case tích cực** và một **boundary test case** cho một API đăng nhập yêu cầu tên người dùng và mật khẩu.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Tích cực: tên người dùng và mật khẩu hợp lệ trả về **200 OK** với **token**. **Boundary**: tên người dùng có độ dài tối đa trả về **200 OK** nếu hợp lệ.",
+      "model_answer": "Một test case tích cực cho API đăng nhập có thể bao gồm cung cấp tên người dùng và mật khẩu đúng để kiểm tra chức năng đăng nhập hoạt động như mong đợi. Một boundary test case sẽ kiểm tra các giới hạn như cung cấp tên người dùng hoặc mật khẩu rỗng, hoặc với độ dài tối đa hoặc tối thiểu được quy định bởi API."
+    },
+    {
+      "question_id": "EQ2022-VN",
+      "question": "Viết một **test step** để xác thực rằng một API trả về **415 Unsupported Media Type** một cách chính xác.",
+      "category": "Test Step",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi một yêu cầu **POST** với **Content-Type: text/plain** đến một **endpoint** mong đợi **application/json**, mong đợi **415**.",
+      "model_answer": "Một test step để xác thực rằng một API trả về mã trạng thái 415 (Unsupported Media Type) có thể là: Gửi yêu cầu API với loại nội dung không được hỗ trợ, sau đó xác nhận rằng mã trạng thái trả về là 415 trong phản hồi."
+    },
+    {
+      "question_id": "EQ2024-VN",
+      "question": "Mô tả một cách để **test** **observability** khi một API gặp phải một truy vấn cơ sở dữ liệu chậm.",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "gold_answer": "Chèn độ chậm cơ sở dữ liệu nhân tạo và xác nhận rằng **tracing/logging** nắm bắt được độ trễ và truyền các chỉ số.",
+      "model_answer": "Để kiểm thử khả năng quan sát khi một API gặp phải truy vấn cơ sở dữ liệu chậm, bạn có thể sử dụng công cụ giám sát thời gian thực để theo dõi độ-latency của truy vấn, đồng thời tích hợp logging trong mã API để ghi lại thông tin chi tiết về tình trạng và thời gian thực hiện các truy vấn cơ sở dữ liệu."
+    },
+    {
+      "question_id": "EQ2026-VN",
+      "question": "Giải thích cách bạn sẽ kiểm tra **API idempotency** cho một kịch bản **retry**.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi cùng một yêu cầu **POST** hai lần với cùng một **idempotency key**; xác nhận chỉ có một tài nguyên được tạo.",
+      "model_answer": "Để kiểm tra tính idempotency của API trong kịch bản retry, tôi sẽ gửi cùng một yêu cầu API với cùng các tham số và dữ liệu đầu vào nhiều lần, và xác nhận rằng kết quả trả về không thay đổi giữa các lần thử. Nếu kết quả luôn như nhau, tôi có thể kết luận API đó là idempotent."
+    },
+    {
+      "question_id": "EQ2028-VN",
+      "question": "Đưa ra một **boundary test** và một **invalid test** cho một API tải file chấp nhận file tối đa 5 MB.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "**Boundary**: tải file 5 MB, mong đợi **200 OK**. **Invalid**: tải file 6 MB, mong đợi **413 Payload Too Large**.",
+      "model_answer": "Một boundary test cho API này có thể là thử nghiệm với một file có kích thước chính xác 5 MB để kiểm tra xem nó có được tải lên hay không. Một invalid test có thể là thử nghiệm với một file có kích thước 6 MB để kiểm tra xem API có chặn hoặc báo lỗi khi cố gắng tải lên file vượt quá giới hạn kích thước đã quy định hay không."
+    },
+    {
+      "question_id": "EQ2030-VN",
+      "question": "Viết một **test case** để xác thực việc xử lý lỗi thích hợp khi một API được gọi với trường bắt buộc `email` bị thiếu.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi **POST /register** mà không có trường email; mong đợi **400 Bad Request** với thông báo lỗi xác thực.",
+      "model_answer": "Một test case để xác thực việc xử lý lỗi khi trường email bị thiếu có thể là: Gọi API với một yêu cầu không chứa trường email bắt buộc, và kiểm tra rằng API trả về mã trạng thái 400 Bad Request cùng với thông báo lỗi rõ ràng yêu cầu trường email không được bỏ trống."
+    },
+    {
+      "question_id": "EQ2032-VN",
+      "question": "Bạn sẽ thiết kế một **test** để xác thực logic **retry** như thế nào khi một API thỉnh thoảng trả về **503**?",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Cấu hình dịch vụ **mock** để trả về **503** cho hai yêu cầu đầu tiên, sau đó **200 OK** ở lần thứ ba. Xác thực máy khách **retry** đúng cách.",
+      "model_answer": "为了验证API偶尔返回503状态码时的重试逻辑，可以设计一个测试用例，模拟发送请求并故意让后端返回503状态码，然后检查客户端代码是否按预期在多次尝试后成功获取响应或达到最大重试次数。"
+    },
+    {
+      "question_id": "EQ2034-VN",
+      "question": "Viết một **test case** xác thực việc tương quan **log** bằng cách sử dụng **trace ID header**.",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi **GET /orders** với **header X-Trace-ID**, xác nhận các **log** bao gồm cùng một **trace ID** trên các ranh giới dịch vụ.",
+      "model_answer": "Một test case để xác thực việc tương quan log bằng trace ID header có thể là: Gửi yêu cầu API từ ứng dụng khách, kèm theo header trace ID duy nhất, và kiểm tra xem log của server có chứa trace ID này, đồng thời các log liên quan trong chuỗi request-response cũng được nối kết thông qua trace ID."
+    },
+    {
+      "question_id": "EQ2036-VN",
+      "question": "Thiết kế một **test case** cấp độ trung gian để xác thực **API rate limiting** khi có nhiều máy khách tham gia.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Mô phỏng hai máy khách, mỗi máy gửi 60 yêu cầu trong một phút khi giới hạn là 100 tổng cộng; xác nhận các yêu cầu vượt quá nhận được **429 Too Many Requests**.",
+      "model_answer": "Để thiết kế một test case cấp độ trung gian cho API rate limiting, bạn nên tạo một kịch bản bao gồm nhiều máy khách gửi yêu cầu API đồng thời trong một khoảng thời gian cố định, sau đó kiểm tra số lượng yêu cầu được xử lý theo quy định của giới hạn tốc độ và xác nhận rằng các yêu cầu vượt quá giới hạn bị từ chối hoặc trả về mã lỗi tương ứng."
+    },
+    {
+      "question_id": "EQ2038-VN",
+      "question": "Mô tả một **test case tích cực** và một **test case âm tính** cho một endpoint API gửi mã **SMS**.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "Tích cực: gửi **SMS** đến số điện thoại hợp lệ, mong đợi **200 OK**. Âm tính: gửi **SMS** đến định dạng số không hợp lệ, mong đợi **400 Bad Request**.",
+      "model_answer": "Một test case tích cực cho endpoint API gửi SMS có thể là gửi một yêu cầu với thông tin chính xác như số điện thoại và nội dung SMS, và nhận lại phản hồi thành công. Trong khi đó, một test case âm tính sẽ cố gắng gửi yêu cầu với số điện thoại không hợp lệ hoặc nội dung rỗng, và kiểm tra xem hệ thống có phản hồi lỗi phù hợp hay không."
+    },
+    {
+      "question_id": "EQ2040-VN",
+      "question": "Giải thích một lợi thế của việc **mock** các API bên ngoài khi kiểm tra các kịch bản thất bại.",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "gold_answer": "Nó cho phép mô phỏng lỗi có tính xác định (**timeout**, **500**) mà không phụ thuộc vào các lỗi bên ngoài thực tế.",
+      "model_answer": "Khi mock các API bên ngoài trong quá trình kiểm tra, chúng ta có thể kiểm soát hoàn toàn phản hồi của API, giúp kiểm thử các tình huống thất bại một cách hiệu quả mà không phụ thuộc vào kết nối mạng hoặc trạng thái hoạt động của API thực tế. Điều này cho phép phát hiện và sửa chữa lỗi liên quan đến xử lý ngoại lệ và phản hồi không mong đợi một cách độc lập."
+    },
+    {
+      "question_id": "EQ2042-VN",
+      "question": "Viết một **test case** để xác thực việc xử lý lỗi khi API trả về **JSON** bị định dạng sai.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Mô phỏng API trả về thân **JSON** không đầy đủ; máy khách phải đưa ra lỗi phân tích cú pháp hoặc trả về thông báo lỗi cấp **500** thích hợp.",
+      "model_answer": "Một test case cho trường hợp này có thể là: Gửi yêu cầu đến API và cố tình làm hỏng định dạng JSON trong phản hồi, sau đó kiểm tra xem ứng dụng có báo lỗi hoặc xử lý hợp lý không, ví dụ thông qua xuất hiện của mã lỗi cụ thể hoặc thông báo lỗi rõ ràng."
+    },
+    {
+      "question_id": "EQ2044-VN",
+      "question": "Thiết kế một **test step** để xác nhận các **rate limiting header** (ví dụ: **X-RateLimit-Remaining**) có mặt.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi yêu cầu gần giới hạn và xác minh **X-RateLimit-Remaining** giảm cho đến khi cạn kiệt.",
+      "model_answer": "To verify that rate limiting headers such as X-RateLimit-Remaining are present, you can design a test step to send an HTTP request to the API endpoint and then assert that the response headers include the X-RateLimit-Remaining header with an appropriate value."
+    },
+    {
+      "question_id": "EQ2046-VN",
+      "question": "Mô tả một lợi thế của việc tách dữ liệu **test** khỏi logic **test** trong **API testing**.",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "gold_answer": "Nó cho phép cùng một logic **test** được sử dụng lại với các tập dữ liệu khác nhau trên các môi trường, cải thiện khả năng bảo trì.",
+      "model_answer": "Việc tách dữ liệu test khỏi logic test trong API testing mang lại lợi ích lớn về mặt quản lý và tái sử dụng. Dữ liệu test được tách riêng giúp dễ dàng thay đổi hoặc cập nhật mà không ảnh hưởng đến cấu trúc cơ bản của kịch bản test, từ đó tăng tính linh hoạt và hiệu quả trong quá trình phát triển và bảo trì ứng dụng API."
+    },
+    {
+      "question_id": "EQ2048-VN",
+      "question": "Viết một **test case** để xác thực việc suy thoái **graceful** khi **cache** API không có sẵn.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Mô phỏng mất **cache**, API vẫn phải trả về dữ liệu từ **DB** mặc dù chậm hơn, không phải thất bại hoàn toàn.",
+      "model_answer": "Một test case để xác thực việc suy thoái graceful khi cache API không có sẵn có thể là: Gửi yêu cầu API trong khi service cache đang bị tắt hoặc khôngReachable, và kiểm tra xem ứng dụng có phản hồi đúng cách, không gây lỗi và giữ cho trạng thái của hệ thống ổn định không."
+    },
+    {
+      "question_id": "EQ2050-VN",
+      "question": "Giải thích một cách để xác thực việc **logging** cho các trường nhạy cảm như mật khẩu.",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "gold_answer": "Kiểm tra các **log** sau yêu cầu đăng nhập và xác nhận các giá trị nhạy cảm như mật khẩu được che hoặc che mặt.",
+      "model_answer": "Để xác thực việc logging cho các trường nhạy cảm như mật khẩu, bạn nên sử dụng các phương pháp mã hóa mạnh mẽ như SHA-256 hoặc bcrypt trước khi lưu trữ và sau đó so sánh hash được mã hóa của mật khẩu nhập lại với hash đã lưu trữ mà không giải mã nó."
+    },
+    {
+      "question_id": "EQ2052-VN",
+      "question": "Cung cấp một **test case âm tính** và một **boundary test case** cho một trường tiền tệ phải khớp với mã **ISO 4217**.",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "gold_answer": "**Boundary**: sử dụng mã hợp lệ ‘USD’. Âm tính: sử dụng mã không hợp lệ ‘USDX’, mong đợi **400 Bad Request**.",
+      "model_answer": "Một test case âm tính có thể là kiểm tra một giá trị không phải là một chuỗi (ví dụ: `123`), vì theo ISO 4217, mã tiền tệ phải là một chuỗi ký tự. Boundary test case có thể là kiểm tra giới hạn dài nhất cho mã tiền tệ, như kiểm tra một chuỗi có độ dài tối đa 3 ký tự (ví dụ: `USD`, mà là mã dài nhất theo chuẩn ISO 4217)."
+    },
+    {
+      "question_id": "EQ2054-VN",
+      "question": "Viết một **test case** để xác thực hành vi API dưới tình trạng mất gói mạng.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Mô phỏng mất 30% gói bằng cách sử dụng một trình giả lập mạng; máy khách API nên **retry** hoặc thất bại một cách **graceful** với lỗi rõ ràng.",
+      "model_answer": "Một test case để xác thực hành vi API trong tình trạng mất gói mạng có thể là: Gửi yêu cầu API và giả lập mất kết nối mạng sau khi gửi yêu cầu nhưng trước khi nhận phản hồi, sau đó kiểm tra xem ứng dụng có xử lý đúng cách bằng cách lưu yêu cầu lại và cố gắng gửi lại sau khi kết nối mạng được khôi phục."
+    },
+    {
+      "question_id": "EQ2056-VN",
+      "question": "Mô tả một phương pháp để xác minh việc dọn dẹp dữ liệu **test** sau khi thực hiện **API test**.",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "gold_answer": "Chèn một bản ghi **test**, chạy **test**, sau đó truy vấn **DB** để xác nhận công việc dọn dẹp đã xóa nó.",
+      "model_answer": "Sau khi thực hiện API test, bạn có thể xác minh việc dọn dẹp dữ liệu test bằng cách chạy các công thức hoặc câu lệnh SQL để xóa các bản ghi tạm thời được tạo ra trong cơ sở dữ liệu test, hoặc sử dụng API dọn dẹp được thiết kế riêng cho môi trường test để đảm bảo rằng mọi dữ liệu tạm thời đều đã được loại bỏ, giúp duy trì tính nhất quán và độ chính xác của dữ liệu trong suốt quá trình phát triển và kiểm thử."
+    },
+    {
+      "question_id": "EQ2058-VN",
+      "question": "Viết một **test case** để xác minh việc **rollback** đúng cách khi một giao dịch nhiều bước thất bại một phần.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "gold_answer": "Thực hiện giao dịch với 3 bước; buộc thất bại ở bước 2; xác minh không có dữ liệu một phần nào tồn tại từ bước 1.",
+      "model_answer": "Một test case có thể là: Thực hiện một giao dịch phức tạp với nhiều bước (như gửi tiền vào tài khoản, thanh toán hóa đơn, và cập nhật thông tin tài khoản), sau đó tạo lỗi cố tình tại bước thứ ba; kiểm tra để đảm bảo tất cả các thay đổi từ các bước trước đó được roll back đúng cách, và hệ thống báo lỗi hoặc thông báo về sự thất bại của giao dịch."
+    },
+    {
+      "question_id": "EQ2060-VN",
+      "question": "Giải thích một cách tiếp cận để xác thực các thông báo lỗi tuân theo một **JSON schema** nhất quán trên tất cả các **endpoint**.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "gold_answer": "Gửi các đầu vào không hợp lệ đến nhiều **endpoint** và kiểm tra xem phản hồi lỗi có tuân theo **schema** tiêu chuẩn {code, message, details} hay không.",
+      "model_answer": "Để xác thực các thông báo lỗi tuân theo JSON Schema trên tất cả các endpoint, bạn có thể thiết kế một schema riêng cho cấu trúc của thông báo lỗi (bao gồm mã lỗi, thông điệp, và có thể là mô tả chi tiết), sau đó áp dụng schema này cho tất cả các endpoint thông qua middleware hoặc validator API."
+    },
+    {
+      "question_id": "EQ3002-VN",
+      "question": "Viết một test case xác thực việc đăng nhập, làm mới token và truy cập một API được bảo vệ bằng token đã được làm mới.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /login với thông tin đăng nhập hợp lệ → 200 OK kèm token. 2) Chờ đến khi token gần hết hạn. 3) POST /refresh với refresh token → 200 OK kèm token mới. 4) Gọi API được bảo vệ với token mới → 200 OK.",
+      "model_answer": "Một test case cho yêu cầu này có thể bao gồm các bước: 1) Đăng nhập với thông tin tài khoản hợp lệ để nhận được token ban đầu; 2) Sử dụng token ban đầu để truy cập API được bảo vệ; 3) Gia hạn token trước khi nó hết hạn; và 4) Sử dụng token mới được gia hạn để truy cập lại API mà không gặp lỗiUnauthorized."
+    },
+    {
+      "question_id": "EQ3004-VN",
+      "question": "Thiết kế một bài kiểm tra chuỗi xác thực rằng một nỗ lực đăng nhập không thành công vẫn ngăn cản việc tạo refresh token.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "Thử POST /login với mật khẩu sai → 401. Thử POST /refresh mà không có refresh token hợp lệ → mong đợi 401 Unauthorized.",
+      "model_answer": "Để thiết kế bài kiểm tra này, bạn cần xác minh rằng khi một nỗ lực đăng nhập thất bại, hệ thống sẽ không tạo hoặc lưu refresh token, đảm bảo rằng chỉ có thông tin đăng nhập đúng mới có thể tạo refresh token."
+    },
+    {
+      "question_id": "EQ3006-VN",
+      "question": "Giải thích cách bạn sẽ xác thực việc ánh xạ chính xác các mã nghiệp vụ (ví dụ: ORDER_001) tới các mã trạng thái HTTP trong các phản hồi API.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "gold_answer": "Gửi các yêu cầu kích hoạt từng lỗi nghiệp vụ, xác minh rằng ORDER_001 → 409 Conflict, ORDER_002 → 404 Not Found, v.v., theo bảng ánh xạ.",
+      "model_answer": "Tôi sẽ xác thực việc ánh xạ chính xác các mã nghiệp vụ như ORDER_001 tới các mã trạng thái HTTP trong phản hồi API bằng cách định nghĩa một cơ chế映射准确的业务代码（例如：ORDER_001）到API响应中的HTTP状态码，可以通过定义一套明确的映射规则来实现，确保每个业务代码都能准确对应到相应的HTTP状态码，同时通过自动化测试和日志审查来验证这种映射的准确性。"
+    },
+    {
+      "question_id": "EQ3008-VN",
+      "question": "Viết một test case cấp độ khó chuỗi các API tạo đơn hàng, thanh toán và hoàn tiền.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /orders → 201 Created. 2) POST /payment với orderId → 200 OK. 3) POST /refund với cùng orderId → 200 OK và hoàn tiền được xử lý.",
+      "model_answer": "Một test case cấp độ khó cho chuỗi các API bao gồm: Tạo đơn hàng với thông tin sản phẩm và khách hàng, Thanh toán đơn hàng bằng phương thức thanh toán đã chọn, Hoàn tiền đơn hàng sau khi xác nhận không đúng hoặc lỗi từ nhà cung cấp, và Đánh giá lại trạng thái đơn hàng sau khi hoàn tiền."
+    },
+    {
+      "question_id": "EQ3010-VN",
+      "question": "Giải thích một test case xác thực việc làm mới token hoạt động trên nhiều microservice.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "Đăng nhập vào dịch vụ Auth → lấy token → làm mới token → gọi Service A và Service B với token mới → cả hai đều trả về 200 OK.",
+      "model_answer": "Một test case để xác thực việc làm mới token trên nhiều microservice có thể bao gồm việc gửi một yêu cầu không hợp lệ từ một microservice để nhận một token mới, sau đó kiểm tra xem microservice này có thể truy cập thành công API bảo vệ khác bằng token mới được cấp không."
+    },
+    {
+      "question_id": "EQ3012-VN",
+      "question": "Viết một bài kiểm tra xác thực ánh xạ các mã lỗi xác thực tới các phản hồi HTTP 400.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "gold_answer": "Gửi các payload không hợp lệ như thiếu các trường bắt buộc → mong đợi HTTP 400 với mã ứng dụng VALIDATION_ERR_01.",
+      "model_answer": "Một bài kiểm tra xác thực ánh xạ mã lỗi xác thực đến phản hồi HTTP 400 có thể bao gồm việc tạo các yêu cầu API với dữ liệu không hợp lệ và kiểm tra xem ứng dụng trả về mã lỗi nào để xác định nó tương ứng với phản hồi HTTP 400. Ví dụ, nếu dữ liệu gửi lên thiếu một trường bắt buộc, ứng dụng nên trả về một mã lỗi xác thực cụ thể và xác nhận rằng nó dẫn đến phản hồi HTTP 400 từ máy chủ."
+    },
+    {
+      "question_id": "EQ3014-VN",
+      "question": "Thiết kế một test case xác thực rằng các refresh token đã hết hạn không thể cấp các access token mới.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập để lấy refresh token. 2) Làm cho token hết hạn thủ công hoặc chờ. 3) Gọi /refresh → mong đợi 401 Unauthorized.",
+      "model_answer": "Một test case để xác thực rằng các refresh token đã hết hạn không thể cấp các access token mới bao gồm: gửi yêu cầu cho API để đổi refresh token thành access token với một refresh token đã rõ ràng hết hạn, và kiểm tra phản hồi xác nhận rằng refresh token đã hết hạn và không thể đổi được."
+    },
+    {
+      "question_id": "EQ3016-VN",
+      "question": "Giải thích một bài kiểm tra chuỗi đa bước (multi-hop chained test) xác thực việc hủy bỏ session sau khi đăng xuất.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập để lấy token. 2) Gọi endpoint được bảo vệ → 200 OK. 3) Gọi /logout. 4) Gọi lại endpoint được bảo vệ → mong đợi 401 Unauthorized.",
+      "model_answer": "Bài kiểm tra chuỗi đa bước xác thực rằng sau khi đăng xuất, hệ thống sẽ hủy bỏ toàn bộ session hiện tại và không cho phép tiếp tục sử dụng các chức năng yêu cầu xác thực đăng nhập, đảm bảo an ninh bằng cách ngăn chặn truy cập trái phép vào tài khoản đã đăng xuất."
+    },
+    {
+      "question_id": "EQ3018-VN",
+      "question": "Viết một test case chuỗi các endpoint đăng ký, xác minh email và đăng nhập.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /signup → 201 Created với link xác minh. 2) GET /verify với token → 200 OK. 3) POST /login → 200 OK với access token.",
+      "model_answer": "Một test case có thể bao gồm: Bắt đầu bằng việc truy cập endpoint đăng ký với thông tin người dùng hợp lệ, sau đó truy cập endpoint xác minh email sử dụng mã xác minh được gửi đến địa chỉ email, cuối cùng là truy cập endpoint đăng nhập với thông tin đăng nhập đã xác minh."
+    },
+    {
+      "question_id": "EQ3020-VN",
+      "question": "Thiết kế một bài kiểm tra chuỗi cấp độ khó xác thực quy trình đặt lại mật khẩu.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /forgot-password với email → 200 OK. 2) GET /reset-link với token → 200 OK. 3) POST /reset-password với mật khẩu mới → 200 OK. 4) Đăng nhập với mật khẩu mới → 200 OK.",
+      "model_answer": "Bài kiểm tra có thể bao gồm các câu hỏi về các bước chính trong quy trình đặt lại mật khẩu, như yêu cầu người dùng nhập tên tài khoản hoặc mã xác nhận gửi đến email, và cũng có thể đánh giá kiến thức về bảo mật như việc không nên chia sẻ mã reset mật khẩu qua email công cộng."
+    },
+    {
+      "question_id": "EQ3022-VN",
+      "question": "Viết một test case chuỗi để xác thực việc tạo người dùng, cập nhật hồ sơ và truy xuất hồ sơ.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /users → 201 với userId. 2) PUT /users/{id} với dữ liệu cập nhật → 200. 3) GET /users/{id} → 200 với các trường đã cập nhật.",
+      "model_answer": "Một test case ví dụ có thể bao gồm: \"Kiểm tra khả năng tạo mới một tài khoản người dùng với thông tin cơ bản, sau đó cập nhật thông tin hồ sơ như tên, email và địa chỉ, cuối cùng kiểm tra tính chính xác của thông tin đã cập nhật khi truy xuất hồ sơ người dùng.\""
+    },
+    {
+      "question_id": "EQ3024-VN",
+      "question": "Giải thích một bài kiểm tra để xác thực refresh token không thể được sử dụng sau khi đăng xuất.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "Đăng nhập để lấy refresh token → đăng xuất → thử POST /refresh với token cũ → mong đợi 401 Unauthorized.",
+      "model_answer": "Một bài kiểm tra để xác thực refresh token không thể được sử dụng sau khi đăng xuất thường bao gồm việc đăng xuất tài khoản và thử sử dụng refresh token đã biết, kết quả dự kiến là nhận được lỗi vì token đã bị vô hiệu hóa sau khi đăng xuất."
+    },
+    {
+      "question_id": "EQ3026-VN",
+      "question": "Viết một test case xác thực việc ánh xạ chính xác mã lỗi nội bộ AUTH_EXPIRED tới trạng thái HTTP.",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "gold_answer": "Kích hoạt token đã hết hạn → mong đợi HTTP 401 Unauthorized với mã ứng dụng AUTH_EXPIRED.",
+      "model_answer": "Một test case có thể là: Gửi yêu cầu API với token đã hết hạn và xác nhận rằng mã trả về là 500 Internal Server Error cùng với thông báo liên quan đến AUTH_EXPIRED trong cơ sở mã lỗi của hệ thống."
+    },
+    {
+      "question_id": "EQ3028-VN",
+      "question": "Giải thích một bài kiểm tra chuỗi xác thực thất bại của xác minh email nếu token không hợp lệ.",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /signup → người dùng được tạo. 2) GET /verify?token=invalid → mong đợi 400 hoặc 401. 3) Nỗ lực đăng nhập thất bại cho đến khi được xác minh.",
+      "model_answer": "Khi một bài kiểm tra chuỗi xác thực thất bại trong quá trình xác minh email, điều này nghĩa là token mà người dùng đã nhập không khớp với token gốc được gửi đến địa chỉ email của họ, thường do token đã bị hỏng, hết hạn hoặc bị thay đổi."
+    },
+    {
+      "question_id": "EQ3030-VN",
+      "question": "Viết một test case cấp độ khó chuỗi các endpoint nộp đơn vay, kiểm tra tín dụng và phê duyệt.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /loan-application → 201. 2) POST /credit-check với appId → 200 với trạng thái passed. 3) POST /approve với appId → 200 được phê duyệt.",
+      "model_answer": "Một test case cấp độ khó cho chuỗi các endpoint nộp đơn vay, kiểm tra tín dụng và phê duyệt có thể bao gồm tạo một kịch bản giả định với nhiều tình huống biên giới như ứng dụng vay với số tiền và thời gian trả góp khác nhau, cùng với việc kiểm tra các trường hợp ngoại lệ như thông tin khách hàng không đầy đủ hoặc không hợp lệ, đồng thời xác nhận hệ thống phản hồi chính xác về kết quả phê duyệt dựa trên điểm tín dụng của khách hàng."
+    },
+    {
+      "question_id": "EQ3032-VN",
+      "question": "Thiết kế một test case chuỗi đăng ký, đặt lại mật khẩu và đăng nhập với thông tin đăng nhập mới.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /signup → 201. 2) POST /reset-password với email → 200. 3) Đăng nhập với mật khẩu mới → 200 OK.",
+      "model_answer": "Để thiết kế một test case bao gồm đăng ký, đặt lại mật khẩu và đăng nhập với thông tin đăng nhập mới, bạn nên bắt đầu bằng việc xác định các trường đăng ký (như email và mật khẩu) sau đó kiểm tra quá trình đặt lại mật khẩu thông qua email được cung cấp, và cuối cùng đảm bảo có thể đăng nhập bằng thông tin đăng nhập mới đã thay đổi."
+    },
+    {
+      "question_id": "EQ3034-VN",
+      "question": "Viết một test case chuỗi các endpoint tải lên file, quét virus và tải xuống.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /upload → 201. 2) GET /scan/{id} → 200 sạch. 3) GET /download/{id} → 200 file được trả về.",
+      "model_answer": "Một test case có thể bao gồm: Bắt đầu bằng việc gửi một tệp tin đến endpoint tải lên, sau đó sử dụng endpoint quét virus để kiểm tra tệp đã tải lên, và cuối cùng xác nhận rằng tệp đã được tải xuống chính xác mà không bị thay đổi hoặc nhiễm malware."
+    },
+    {
+      "question_id": "EQ3036-VN",
+      "question": "Giải thích một bài kiểm tra chuỗi để xác thực việc ngăn chặn việc sử dụng lại refresh token.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập → lấy refresh token. 2) POST /refresh một lần → token mới. 3) Thử lại refresh token cũ một lần nữa → mong đợi 401 Unauthorized.",
+      "model_answer": "Một bài kiểm tra chuỗi để ngăn chặn việc sử dụng lại refresh token có thể bao gồm việc kiểm tra tính duy nhất của token thông qua việc so sánh với danh sách các token đã sử dụng. Nếu tìm thấy trùng lặp, thì chuỗi kiểm tra này sẽ xác thực rằng token đã bị tái sử dụng và từ chối yêu cầu."
+    },
+    {
+      "question_id": "EQ3038-VN",
+      "question": "Viết một test case chuỗi các API tìm kiếm, thêm vào giỏ hàng và thanh toán.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) GET /search?q=item → 200 kết quả. 2) POST /cart → 201 với itemId. 3) POST /checkout → 200 với xác nhận đơn hàng.",
+      "model_answer": "Một test case có thể bao gồm: Cho定了一个场景，测试从搜索产品开始，将产品添加到购物车，然后完成结账流程。例如，\"给定用户访问电子商务网站并搜索关键词'智能手表'，当找到合适的智能手表后，用户将其添加到购物车，接着用户进入购物车页面确认购买信息无误后点击结账按钮，系统应能引导用户完成安全检查、选择支付方式并成功提交订单。\""
+    },
+    {
+      "question_id": "EQ3040-VN",
+      "question": "Giải thích một bài kiểm tra chuỗi để xác thực việc ngăn chặn tấn công chiếm đoạt session API.",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập với tư cách Người dùng A → lấy token. 2) Cố gắng sử dụng token từ Người dùng A trong session của Người dùng B → mong đợi 403 Forbidden.",
+      "model_answer": "Một bài kiểm tra chuỗi để xác thực việc ngăn chặn tấn công chiếm đoạt session API bao gồm việc kiểm tra tính độc lập của các thông tin session và việc sử dụng cơ chế mã hóa mạnh cho session ID, đảm bảo rằng chúng không thể đoán hoặc thay đổi bởi hacker."
+    },
+    {
+      "question_id": "EQ3042-VN",
+      "question": "Cung cấp chính xác một test case chuỗi để xác minh tính đồng thời lạc quan (optimistic concurrency) bằng cách sử dụng ETag với If-Match trên các endpoint cập nhật và đọc.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "1) GET /resource → nhận ETag=v1. 2) PUT /resource với If-Match=v1 → 200 OK. 3) Thử lại PUT /resource với If-Match=v1 cũ → 412 Precondition Failed.",
+      "model_answer": "Một test case cụ thể có thể là: Đọc dữ liệu từ một tài nguyên API, tăng giá trị của một trường trong dữ liệu đó, sau đó gửi yêu cầu cập nhật với ETag từ lần đọc ban đầu và sử dụng header If-Match với cùng giá trị ETag để xác nhận đồng thời lạc quan trước khi lưu thay đổi; nếu ETag đã thay đổi từ khi bạn đọc tài nguyên, server sẽ trả về lỗi 412 Precondition Failed, chỉ ra rằng đồng thời lạc quan đã thất bại."
+    },
+    {
+      "question_id": "EQ3044-VN",
+      "question": "Thiết kế một bài kiểm tra multi-hop xác minh công việc xuất không đồng bộ: POST /exports -> thăm dò GET /jobs/{id} cho đến khi hoàn thành -> GET /exports/{id}.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /exports → 202 Accepted với jobId. 2) Thăm dò GET /jobs/{id} cho đến khi status=done. 3) GET /exports/{id} → 200 OK với file.",
+      "model_answer": "Để thiết kế bài kiểm tra multi-hop xác minh công việc xuất không đồng bộ, bạn có thể tạo các bước kiểm tra như sau: Bước 1: Gửi yêu cầu POST để tạo một xuất không đồng bộ; Bước 2: Theo dõi trạng thái của công việc xuất thông qua các yêu cầu GET tới /jobs/{id} cho đến khi nó chuyển sang trạng thái hoàn thành; Bước 3: Xác minh kết quả cuối cùng bằng cách lấy thông tin về xuất không đồng bộ sử dụng GET /exports/{id}."
+    },
+    {
+      "question_id": "EQ3046-VN",
+      "question": "Cung cấp một bài kiểm tra tiêu cực chuỗi cho OAuth2 Authorization Code: /authorize -> /token -> gọi tài nguyên với scope bị thiếu.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) /authorize với sự đồng ý của người dùng → code. 2) /token → access token với scope hạn chế. 3) Gọi tài nguyên yêu cầu scopeX → 403 Forbidden.",
+      "model_answer": "Trong bài kiểm tra tiêu cực cho OAuth2 Authorization Code流程，请稍候，我将为您翻译成中文并提供答案。\n\n---\n\n在OAuth2授权码流程中的负面测试包括：从/authorize开始，用户授权后获取授权码，然后尝试使用缺少所需scope的授权码向/token endpoint请求访问令牌，进而尝试访问受保护资源以验证访问被拒绝。"
+    },
+    {
+      "question_id": "EQ3048-VN",
+      "question": "Viết một bài kiểm tra chuỗi bao gồm việc tạo charge幂等 (idempotent charge creation) với Idempotency-Key trên các endpoint thử lại và hoàn tiền.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /charge với Idempotency-Key=abc → 201 Created. 2) Thử lại cùng một yêu cầu với Idempotency-Key=abc → 200 OK (cùng chargeId). 3) POST /refund → 200 OK.",
+      "model_answer": "Bài kiểm tra chuỗi sẽ bao gồm việc tạo charge idempotent với Idempotency-Key trên các endpoint thử lại và hoàn tiền, đảm bảo tính chất幂等性，即相同的请求无论执行多少次，其结果都是一样的，并且能够安全地处理重复的支付请求。同时，测试将验证系统如何正确识别和处理带有相同Idempotency-Key的后续请求以避免重复收费。"
+    },
+    {
+      "question_id": "EQ3050-VN",
+      "question": "Cung cấp một bài kiểm tra chuỗi cho quy trình xử lý file: tải lên -> POST /process -> thăm dò trạng thái -> tải xuống, bao gồm cả việc xử lý 202.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /upload → 201 với fileId. 2) POST /process/{fileId} → 202 Accepted. 3) Thăm dò GET /status/{id} cho đến khi hoàn thành. 4) GET /download/{id} → 200 file được trả về.",
+      "model_answer": "Một bài kiểm tra chuỗi cho quy trình xử lý file có thể bao gồm: Tải lên một file mẫu lên hệ thống, gửi yêu cầu POST đến /process để bắt đầu xử lý, sau đó thường xuyên truy vấn trạng thái của quá trình xử lý, và cuối cùng là tải xuống kết quả nếu quá trình đã hoàn thành (status code 200) hoặc xử lý lỗi tương ứng nếu được trả về mã trạng thái khác như 400 (bad request) hay 500 (internal server error)."
+    },
+    {
+      "question_id": "EQ3052-VN",
+      "question": "Cung cấp một bài kiểm tra chuỗi để xác thực việc hủy bỏ session SSO được truyền tới API gateway và truy cập microservice.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập qua SSO → token được cấp. 2) Truy cập API gateway → 200. 3) Hủy bỏ session trong IdP. 4) Thử lại cuộc gọi API → 401 Unauthorized trên tất cả các microservice.",
+      "model_answer": "Một bài kiểm tra chuỗi có thể bao gồm kiểm tra xem token SSO đã bị hủy bỏ chưa khi được truyền đến API Gateway và xác minh rằng API Gateway đã từ chối truy cập vào microservice nếu token không hợp lệ."
+    },
+    {
+      "question_id": "EQ3054-VN",
+      "question": "Viết một test case chuỗi cho việc thực hiện đơn hàng một phần: tạo đơn hàng -> dự trữ hàng tồn kho -> ship một phần -> hủy phần còn lại và hoàn tiền chênh lệch.",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /orders → 201 với orderId. 2) POST /reserve/{id} → 200 đã được dự trữ. 3) POST /ship/{id} với các mặt hàng một phần → 200 đã được ship. 4) POST /cancel/{id} → hoàn tiền được cấp.",
+      "model_answer": "Một test case có thể là: Tạo một đơn hàng với 10 sản phẩm, dự trữ 10 sản phẩm trong kho, giao 5 sản phẩm cho khách hàng, sau đó hủy đơn hàng và kiểm tra số tiền được hoàn lại cho khách hàng chính xác bằng giá trị của 5 sản phẩm chưa được giao."
+    },
+    {
+      "question_id": "EQ3056-VN",
+      "question": "Cung cấp chính xác một bài kiểm tra tiêu cực chuỗi cho đăng nhập 2FA: POST /login -> POST /2fa/verify với mã sai -> POST /refresh.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập với username/password → 200 đang chờ 2FA. 2) POST /2fa/verify với mã sai → 401 Unauthorized. 3) Thử refresh → 401 Unauthorized.",
+      "model_answer": "Một bài kiểm tra tiêu cực cho đăng nhập 2FA có thể được thiết kế như sau: gửi yêu cầu POST đến /login với thông tin đăng nhập không đúng, sau đó gửi yêu cầu POST đến /2fa/verify với mã 2FA không hợp lệ, và cuối cùng là gửi yêu cầu POST đến /refresh trong trường hợp đăng nhập 2FA thành công nhưng quyền truy cập bị từ chối."
+    },
+    {
+      "question_id": "EQ3058-VN",
+      "question": "Thiết kế một bài kiểm tra chuỗi xác minh tính nhất quán phân trang trên các thao tác tạo -> liệt kê -> xóa -> liệt kê (với các xác nhận tổng số đếm).",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "gold_answer": "1) POST /items → 201. 2) GET /items → số đếm tăng. 3) DELETE /items/{id} → 200. 4) GET /items → số đếm giảm.",
+      "model_answer": "Để thiết kế bài kiểm tra này, bạn cần tạo các yêu cầu API cho từng thao tác (tạo, liệt kê, xóa) và đảm bảo rằng số lượng các mục sau khi tạo và xóa vẫn chính xác thông qua xác nhận tổng số đếm. Bài kiểm tra nên bao gồm cả trường hợp thành công và thất bại để kiểm tra tính nhất quán của phân trang."
+    },
+    {
+      "question_id": "EQ3060-VN",
+      "question": "Viết một bài kiểm tra chuỗi cho tính dính session (session stickiness): đăng nhập -> các cuộc gọi tiếp theo qua load balancer -> đăng xuất -> xác minh không có node nào chấp nhận token cũ.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "gold_answer": "1) Đăng nhập để lấy token. 2) Gọi dịch vụ qua LB nhiều lần → cùng một node/session. 3) Đăng xuất. 4) Thử lại → tất cả các node đều trả về 401.",
+      "model_answer": "Bài kiểm tra chuỗi cho tính dính session (session stickiness) sẽ bao gồm các bước: Đăng nhập để gán một session ID, sau đó thực hiện các cuộc gọi API tiếp theo thông qua load balancer mà vẫn giữ được session, đăng xuất để phá vỡ session hiện tại, và cuối cùng, xác minh rằng node nào trong load balancer cũng không còn chấp nhận token session cũ của người dùng đã đăng xuất."
+    },
+    {
+      "question_id": "EQ4002-VN",
+      "question": "Viết một **test** theo kiểu **state-machine** xác thực vòng đời tài khoản: tạo → kích hoạt → tạm ngừng → kích hoạt lại → xóa.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /accounts** → 201 Created. 2) **POST /activate/{id}** → 200. 3) **POST /suspend/{id}** → 200. 4) **POST /reactivate/{id}** → 200. 5) **DELETE /accounts/{id}** → 204. Xác nhận **GET /accounts/{id}** → 404.",
+      "model_answer": "Một test state-machine cho vòng đời tài khoản có thể được viết như sau: bắt đầu với trạng thái \"tạo\", sau đó chuyển qua \"kích hoạt\", tiếp theo là \"tạm ngừng\", sau đó kích hoạt lại, và cuối cùng xóa tài khoản, đảm bảo mỗi bước chuyển trạng thái tuân theo quy tắc của state-machine."
+    },
+    {
+      "question_id": "EQ4004-VN",
+      "question": "Thiết kế một **test chained** xác thực **rollback** giao dịch khi bước 2 của giao dịch chuyển tiền 3 bước thất bại.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /transfer/initiate** → 201. 2) **POST /transfer/step2** với chi tiết không hợp lệ → thất bại 400. 3) Xác minh **DB** không hiển thị dữ liệu chuyển tiền một phần nào được ghi lại.",
+      "model_answer": "Để thiết kế một test chained xác thực rollback giao dịch khi bước 2 của giao dịch chuyển tiền 3 bước thất bại, bạn cần tạo các điều kiện giả định cho từng bước, sau đó kiểm tra để đảm bảo rằng nếu bước 2 thất bại, hệ thống sẽ tự động hủy bỏ các bước trước và sau đó, và phục hồi trạng thái ban đầu của dữ liệu."
+    },
+    {
+      "question_id": "EQ4006-VN",
+      "question": "Viết một **test** xác thực chuỗi nhiều dịch vụ: đăng nhập → tạo đơn hàng → xử lý thanh toán → hủy đơn hàng sau khi ghi nhận.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /login** → 200 **token**. 2) **POST /orders** → 201. 3) **POST /payment** → 200 ghi nhận. 4) **POST /cancel/{orderId}** → hoàn tiền → 200 OK. 5) **GET /orders/{id}** → **status**=đã hủy.",
+      "model_answer": "Để viết một test xác thực chuỗi dịch vụ như đề xuất, bạn cần thiết kế các trường hợp kiểm thử riêng biệt cho mỗi bước: đăng nhập, tạo đơn hàng, xử lý thanh toán và hủy đơn hàng, đảm bảo mỗi bước được thực hiện thành công trước khi tiến hành bước tiếp theo."
+    },
+    {
+      "question_id": "EQ4008-VN",
+      "question": "Mô tả một **test state-machine** xác thực vòng đời mật khẩu: đặt → hết hạn → đặt lại → ngăn tái sử dụng.",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /password/set** → 200. 2) Hết hạn mật khẩu thủ công. 3) **POST /password/reset** → 200. 4) Cố gắng tái sử dụng mật khẩu cũ → **400 Bad Request**.",
+      "model_answer": "Một state-machine cho vòng đời mật khẩu có thể bao gồm các trạng thái: \"Đặt\", sau đó chuyển sang \"Hết hạn\", từ đó người dùng có thể chuyển sang \"Đặt lại\" mật khẩu mới, và cuối cùng chuyển sang \"Ngăn tái sử dụng\" mật khẩu cũ để không được sử dụng lại trong một thời gian nhất định."
+    },
+    {
+      "question_id": "EQ4010-VN",
+      "question": "Viết một **test chained** phức tạp bao gồm luồng đăng ký khoản vay với nhánh thất bại trong kiểm tra tín dụng.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /loan/apply** → 201. 2) **POST /loan/credit-check** với lịch sử xấu → thất bại 400. 3) Đảm bảo **GET /loan/approve** không được phép. 4) **GET /loan/{id}** → **status**=bị từ chối.",
+      "model_answer": "Một test chained phức tạp có thể mô phỏng quá trình đăng ký khoản vay, bao gồm các bước như nhập thông tin cá nhân, lựa chọn loại sản phẩm vay, điền chi tiết về thu nhập và mục đích sử dụng vốn, sau đó hệ thống sẽ tự động chuyển hướng đến nhánh kiểm tra tín dụng, nơi giả định một kết quả không đạt yêu cầu để tạo ra một trường hợp thất bại kiểm tra tín dụng."
+    },
+    {
+      "question_id": "EQ4012-VN",
+      "question": "Viết một **test** xác thực tính toàn vẹn dữ liệu khi các thao tác ghi đồng thời xảy ra: cập nhật hồ sơ người dùng với các giá trị xung đột.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **PUT /users/{id} name=Alice** với **If-Match=v1** → 200. 2) **PUT /users/{id} name=Bob** với **stale If-Match=v1** → **412 Precondition Failed**. 3) **GET /users/{id}** → Alice.",
+      "model_answer": "Để kiểm thử tính toàn vẹn dữ liệu trong trường hợp các thao tác ghi đồng thời xảy ra, bạn có thể thiết lập một test scenario nơi nhiều luồng đồng thời cập nhật thông tin hồ sơ người dùng, và kiểm tra xem liệu hệ thống có ngăn chặn được những xung đột giá trị (value conflicts) hay không, đồng thời duy trì tính nhất quán của dữ liệu."
+    },
+    {
+      "question_id": "EQ4014-VN",
+      "question": "Viết một **test chained** rất khó xác thực việc ký tài liệu chuỗi: tải lên → ký → xác minh → phát hiện giả mạo.",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /documents** → 201. 2) **POST /sign/{id}** → 200. 3) **GET /verify/{id}** → chữ ký hợp lệ. 4) Sửa đổi tệp → **GET /verify/{id}** → phát hiện chữ ký không hợp lệ.",
+      "model_answer": "Để tạo ra một test chained phức tạp cho việc ký và xác minh tài liệu chuỗi, bạn có thể thiết kế một kịch bản như sau: Tải lên một tài liệu gốc, sử dụng nó để tạo ra nhiều phiên bản được thay đổi nhẹ nhàng thông qua chỉnh sửa, xoá dòng, hoặc thêm ký tự ngẫu nhiên, sau đó ký mỗi phiên bản bằng cùng một khóa bí mật, và cuối cùng xác minh tất cả các phiên bản ký; trong quá trình này, cần phát hiện và báo cáo bất kỳ sự giả mạo nào có thể xảy ra, đặc biệt là những thay đổi nhỏ mà không bị phát hiện bởi phương pháp xác minh thông thường."
+    },
+    {
+      "question_id": "EQ4017-VN",
+      "question": "Viết một **test state-machine** xác thực vòng đời đăng ký: tạo → nâng cấp → hạ cấp → hủy.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /subscriptions** → 201. 2) **POST /upgrade/{id}** → 200. 3) **POST /downgrade/{id}** → 200. 4) **DELETE /subscriptions/{id}** → 204. **GET /subscriptions/{id}** → 404.",
+      "model_answer": "Để viết một test state-machine xác thực vòng đời đăng ký: tạo → nâng cấp → hạ cấp → hủy, bạn cần thiết kế các trường hợp kiểm thử riêng biệt cho mỗi trạng thái chuyển đổi, đảm bảo rằng hệ thống có thể chuyển từ trạng thái tạo sang nâng cấp, sau đó sang hạ cấp và cuối cùng đến trạng thái hủy một cách chính xác và an toàn."
+    },
+    {
+      "question_id": "EQ4019-VN",
+      "question": "Viết một **test chained** rất khó xác thực khả năng phục hồi sau thất bại một phần trong một **distributed order saga**.",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /order** → 201. 2) Đặt trước hàng tồn kho → 200. 3) Thanh toán thất bại → 402. 4) Xác minh việc đặt trước hàng tồn kho tự động bị hủy. 5) **GET /orders/{id}** → **status**=đã hủy.",
+      "model_answer": "Để kiểm thử khả năng phục hồi sau thất bại một phần trong một distributed order saga, bạn có thể thiết kế một test chained phức tạp như sau: bắt đầu bằng cách tạo ra một chuỗi các giao dịch thành công, sau đó gây lỗi tại một bước cụ thể giữa quá trình, và cuối cùng kiểm tra xem hệ thống có thể tiếp tụcSaga từ điểm lỗi và hoàn thành thành công các giao dịch còn lại hay không."
+    },
+    {
+      "question_id": "EQ4021-VN",
+      "question": "Viết một **test** rất khó xác minh việc đảo ngược giao dịch tài chính: ghi nợ → ghi có → **rollback**.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /debit** → 200. 2) **POST /credit** → 200. 3) Mô phỏng lỗi hệ thống. 4) **Rollback** cả ghi nợ và ghi có. 5) Xác minh số dư tài khoản không thay đổi.",
+      "model_answer": "Để kiểm thử việc đảo ngược giao dịch tài chính, bạn cần thiết kế các kịch bản test bao gồm việc thực hiện giao dịch (ghi nợ), sau đó là ghi có vào cùng một tài khoản, và cuối cùng là thực hiện rollback để đảm bảo rằng tất cả thay đổi đều bị khôi phục lại trạng thái ban đầu, đồng thời không gây ra bất kỳ lỗi nào trong quá trình này."
+    },
+    {
+      "question_id": "EQ4023-VN",
+      "question": "Thiết kế một **test state-machine** cho kho hàng: thêm hàng → phân bổ → vận chuyển → trả lại → đối chiếu.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /stock/add** → 200. 2) **POST /allocate** → 200. 3) **POST /ship** → 200. 4) **POST /return** → 200. 5) **GET /inventory** → số lượng cuối cùng được đối chiếu.",
+      "model_answer": "为了设计一个状态机来管理仓库流程，可以将流程分为五个状态：\"入库\"（Add Inventory）、\"分配\"（Allocate）、\"运输\"（Transport）、\"退货\"（Return）和\"核对\"（Reconciliation），每个状态代表一个阶段，物品会依次通过这些状态。状态机应包含从一个状态到另一个状态的转换规则，例如，只有在完成入库后才能进行分配，而运输前必须先完成分配等。"
+    },
+    {
+      "question_id": "EQ4025-VN",
+      "question": "Viết một **test chained** xác thực vòng đời **session mobile**: đăng nhập → làm mới **token** → đăng xuất → làm mới với **token** cũ → thất bại.",
+      "category": "Authentication & Authorization",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /login** → **token**. 2) **POST /refresh** → **token** mới. 3) **POST /logout**. 4) Cố gắng làm mới lại với **token** cũ → **401 Unauthorized**.",
+      "model_answer": "Để xác thực vòng đời session mobile theo yêu cầu, bạn cần thiết kế các bước test chained sau: Đầu tiên, thực hiện đăng nhập để tạo session và nhận token. Sau đó, làm mới token trong session. Tiếp theo, đăng xuất để kết thúc session hiện tại. Cuối cùng, thử đăng nhập lại bằng token cũ và xác nhận rằng nó đã thất bại do session đã hết hạn."
+    },
+    {
+      "question_id": "EQ4027-VN",
+      "question": "Viết một **test chained** xác thực API gửi email: gửi → theo dõi mở → hủy đăng ký → đảm bảo không gửi thêm email nào nữa.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /emails** → 202 Accepted. 2) **GET /tracking/{id}** → mở được ghi lại. 3) **POST /unsubscribe** → 200. 4) **POST /emails** → 202 nhưng không gửi cho người dùng đã hủy đăng ký.",
+      "model_answer": "Để viết một test chained xác thực API gửi email, bạn sẽ cần tạo các bước kiểm thử liên tiếp như sau: gửi email, theo dõi việc mở email, sau đó hủy đăng ký nhận email, và cuối cùng đảm bảo rằng không có email nào được gửi thêm nữa."
+    },
+    {
+      "question_id": "EQ4029-VN",
+      "question": "Viết một **test chained** rất khó cho luồng mua hàng với việc áp dụng phiếu giảm giá và nhánh thất bại: áp dụng phiếu giảm giá → thanh toán → phiếu giảm giá không hợp lệ → **rollback**.",
+      "category": "Test Case",
+      "difficulty": "Very Hard",
+      "gold_answer": "1) **POST /apply-coupon** → 400 không hợp lệ. 2) **POST /checkout** → bị từ chối. 3) Đảm bảo đơn hàng không được lưu trữ. 4) **GET /orders** → phiếu giảm giá không được áp dụng.",
+      "model_answer": "Một test chained khó khăn trong luồng mua hàng có thể bao gồm: Khách hàng chọn sản phẩm và áp dụng một phiếu giảm giá có điều kiện, sau đó hoàn tất thanh toán; hệ thống xác minh rằng phiếu giảm giá hợp lệ và hoàn tất giao dịch; nếu phiếu giảm giá sau đó được phát hiện không hợp lệ, hệ thống sẽ tự động huỷ giao dịch (rollback) và thông báo cho khách hàng về lý do thất bại của giao dịch."
+    }
+  ]
+}

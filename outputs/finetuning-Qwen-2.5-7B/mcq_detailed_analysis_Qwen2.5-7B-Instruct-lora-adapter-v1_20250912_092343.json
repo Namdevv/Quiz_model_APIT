@@ -1,0 +1,5286 @@
+{
+  "metadata": {
+    "timestamp": "20250912_092343",
+    "model": "Qwen2.5-7B-Instruct-lora-adapter-v1",
+    "total_mcq_questions": 258,
+    "overall_accuracy": 0.9806201550387597
+  },
+  "category_analysis": {
+    "General Testing": {
+      "accuracy": 0.9375,
+      "correct_count": 45,
+      "total_count": 48,
+      "question_ids": [
+        "EQ5001",
+        "EQ5003",
+        "EQ5007",
+        "EQ5009",
+        "EQ5011",
+        "EQ5015",
+        "EQ5021",
+        "EQ5028",
+        "EQ5036",
+        "EQ5040",
+        "EQ5048",
+        "EQ5051",
+        "EQ5053",
+        "EQ5057",
+        "EQ5061",
+        "EQ5065",
+        "EQ5067",
+        "EQ5073",
+        "EQ5076",
+        "EQ5078",
+        "EQ5082",
+        "EQ5086",
+        "EQ5092",
+        "EQ5094",
+        "EQ5001-VN",
+        "EQ5003-VN",
+        "EQ5007-VN",
+        "EQ5009-VN",
+        "EQ5011-VN",
+        "EQ5015-VN",
+        "EQ5021-VN",
+        "EQ5028-VN",
+        "EQ5036-VN",
+        "EQ5040-VN",
+        "EQ5048-VN",
+        "EQ5051-VN",
+        "EQ5053-VN",
+        "EQ5057-VN",
+        "EQ5061-VN",
+        "EQ5065-VN",
+        "EQ5067-VN",
+        "EQ5073-VN",
+        "EQ5076-VN",
+        "EQ5078-VN",
+        "EQ5082-VN",
+        "EQ5086-VN",
+        "EQ5092-VN",
+        "EQ5094-VN"
+      ]
+    },
+    "Contract & Schema Validation": {
+      "accuracy": 1.0,
+      "correct_count": 42,
+      "total_count": 42,
+      "question_ids": [
+        "EQ5002",
+        "EQ5023",
+        "EQ5042",
+        "EQ5098",
+        "EQ2011",
+        "EQ2035",
+        "EQ2043",
+        "EQ2053",
+        "EQ3005",
+        "EQ3009",
+        "EQ3015",
+        "EQ3023",
+        "EQ3029",
+        "EQ3033",
+        "EQ3043",
+        "EQ3045",
+        "EQ3049",
+        "EQ3057",
+        "EQ4009",
+        "EQ4022",
+        "EQ4024",
+        "EQ5002-VN",
+        "EQ5023-VN",
+        "EQ5042-VN",
+        "EQ5098-VN",
+        "EQ2011-VN",
+        "EQ2035-VN",
+        "EQ2043-VN",
+        "EQ2053-VN",
+        "EQ3005-VN",
+        "EQ3009-VN",
+        "EQ3015-VN",
+        "EQ3023-VN",
+        "EQ3029-VN",
+        "EQ3033-VN",
+        "EQ3043-VN",
+        "EQ3045-VN",
+        "EQ3049-VN",
+        "EQ3057-VN",
+        "EQ4009-VN",
+        "EQ4022-VN",
+        "EQ4024-VN"
+      ]
+    },
+    "Authentication & Authorization": {
+      "accuracy": 1.0,
+      "correct_count": 44,
+      "total_count": 44,
+      "question_ids": [
+        "EQ5005",
+        "EQ5013",
+        "EQ5019",
+        "EQ5030",
+        "EQ5038",
+        "EQ5044",
+        "EQ5063",
+        "EQ5080",
+        "EQ5084",
+        "EQ2025",
+        "EQ2041",
+        "EQ2047",
+        "EQ2059",
+        "EQ3001",
+        "EQ3003",
+        "EQ3013",
+        "EQ3019",
+        "EQ3021",
+        "EQ3031",
+        "EQ3041",
+        "EQ3047",
+        "EQ4020",
+        "EQ5005-VN",
+        "EQ5013-VN",
+        "EQ5019-VN",
+        "EQ5030-VN",
+        "EQ5038-VN",
+        "EQ5044-VN",
+        "EQ5063-VN",
+        "EQ5080-VN",
+        "EQ5084-VN",
+        "EQ2025-VN",
+        "EQ2041-VN",
+        "EQ2047-VN",
+        "EQ2059-VN",
+        "EQ3001-VN",
+        "EQ3003-VN",
+        "EQ3013-VN",
+        "EQ3019-VN",
+        "EQ3021-VN",
+        "EQ3031-VN",
+        "EQ3041-VN",
+        "EQ3047-VN",
+        "EQ4020-VN"
+      ]
+    },
+    "Error Handling & Negative Testing": {
+      "accuracy": 0.98,
+      "correct_count": 49,
+      "total_count": 50,
+      "question_ids": [
+        "EQ5017",
+        "EQ5025",
+        "EQ5026",
+        "EQ5034",
+        "EQ5050",
+        "EQ5055",
+        "EQ5059",
+        "EQ5069",
+        "EQ5071",
+        "EQ5088",
+        "EQ5090",
+        "EQ5100",
+        "EQ2007",
+        "EQ2033",
+        "EQ3007",
+        "EQ3011",
+        "EQ3017",
+        "EQ3025",
+        "EQ3035",
+        "EQ3039",
+        "EQ3059",
+        "EQ4003",
+        "EQ4007",
+        "EQ4013",
+        "EQ4015",
+        "EQ5017-VN",
+        "EQ5025-VN",
+        "EQ5026-VN",
+        "EQ5034-VN",
+        "EQ5050-VN",
+        "EQ5055-VN",
+        "EQ5059-VN",
+        "EQ5069-VN",
+        "EQ5071-VN",
+        "EQ5088-VN",
+        "EQ5090-VN",
+        "EQ5100-VN",
+        "EQ2007-VN",
+        "EQ2033-VN",
+        "EQ3007-VN",
+        "EQ3011-VN",
+        "EQ3017-VN",
+        "EQ3025-VN",
+        "EQ3035-VN",
+        "EQ3039-VN",
+        "EQ3059-VN",
+        "EQ4003-VN",
+        "EQ4007-VN",
+        "EQ4013-VN",
+        "EQ4015-VN"
+      ]
+    },
+    "Security Testing": {
+      "accuracy": 0.9444444444444444,
+      "correct_count": 17,
+      "total_count": 18,
+      "question_ids": [
+        "EQ5032",
+        "EQ2015",
+        "EQ2027",
+        "EQ2057",
+        "EQ3037",
+        "EQ3053",
+        "EQ3055",
+        "EQ4018",
+        "EQ4028",
+        "EQ5032-VN",
+        "EQ2015-VN",
+        "EQ2027-VN",
+        "EQ2057-VN",
+        "EQ3037-VN",
+        "EQ3053-VN",
+        "EQ3055-VN",
+        "EQ4018-VN",
+        "EQ4028-VN"
+      ]
+    },
+    "Performance & Load Testing": {
+      "accuracy": 1.0,
+      "correct_count": 12,
+      "total_count": 12,
+      "question_ids": [
+        "EQ5046",
+        "EQ5075",
+        "EQ5096",
+        "EQ2003",
+        "EQ2013",
+        "EQ2039",
+        "EQ5046-VN",
+        "EQ5075-VN",
+        "EQ5096-VN",
+        "EQ2003-VN",
+        "EQ2013-VN",
+        "EQ2039-VN"
+      ]
+    },
+    "Test Case": {
+      "accuracy": 1.0,
+      "correct_count": 8,
+      "total_count": 8,
+      "question_ids": [
+        "EQ2001",
+        "EQ2021",
+        "EQ2049",
+        "EQ3027",
+        "EQ2001-VN",
+        "EQ2021-VN",
+        "EQ2049-VN",
+        "EQ3027-VN"
+      ]
+    },
+    "CI/CD & Automation Integration": {
+      "accuracy": 1.0,
+      "correct_count": 4,
+      "total_count": 4,
+      "question_ids": [
+        "EQ2005",
+        "EQ2023",
+        "EQ2005-VN",
+        "EQ2023-VN"
+      ]
+    },
+    "Observability & Monitoring": {
+      "accuracy": 1.0,
+      "correct_count": 10,
+      "total_count": 10,
+      "question_ids": [
+        "EQ2009",
+        "EQ2019",
+        "EQ2029",
+        "EQ2051",
+        "EQ2055",
+        "EQ2009-VN",
+        "EQ2019-VN",
+        "EQ2029-VN",
+        "EQ2051-VN",
+        "EQ2055-VN"
+      ]
+    },
+    "Environment & Test Data Management": {
+      "accuracy": 1.0,
+      "correct_count": 4,
+      "total_count": 4,
+      "question_ids": [
+        "EQ2017",
+        "EQ2037",
+        "EQ2017-VN",
+        "EQ2037-VN"
+      ]
+    },
+    "Mocking & Service Virtualization": {
+      "accuracy": 1.0,
+      "correct_count": 2,
+      "total_count": 2,
+      "question_ids": [
+        "EQ2031",
+        "EQ2031-VN"
+      ]
+    },
+    "Advanced Testing Strategies": {
+      "accuracy": 1.0,
+      "correct_count": 16,
+      "total_count": 16,
+      "question_ids": [
+        "EQ2045",
+        "EQ3051",
+        "EQ4001",
+        "EQ4005",
+        "EQ4011",
+        "EQ4016",
+        "EQ4026",
+        "EQ4030",
+        "EQ2045-VN",
+        "EQ3051-VN",
+        "EQ4001-VN",
+        "EQ4005-VN",
+        "EQ4011-VN",
+        "EQ4016-VN",
+        "EQ4026-VN",
+        "EQ4030-VN"
+      ]
+    }
+  },
+  "difficulty_analysis": {
+    "Easy": {
+      "accuracy": 0.9716981132075472,
+      "correct_count": 103,
+      "total_count": 106,
+      "question_ids": [
+        "EQ5001",
+        "EQ5002",
+        "EQ5003",
+        "EQ5005",
+        "EQ5007",
+        "EQ5009",
+        "EQ5011",
+        "EQ5013",
+        "EQ5015",
+        "EQ5017",
+        "EQ5019",
+        "EQ5021",
+        "EQ5023",
+        "EQ5025",
+        "EQ5026",
+        "EQ5028",
+        "EQ5030",
+        "EQ5032",
+        "EQ5034",
+        "EQ5036",
+        "EQ5038",
+        "EQ5040",
+        "EQ5042",
+        "EQ5044",
+        "EQ5046",
+        "EQ5048",
+        "EQ5050",
+        "EQ5051",
+        "EQ5053",
+        "EQ5055",
+        "EQ5057",
+        "EQ5059",
+        "EQ5061",
+        "EQ5063",
+        "EQ5065",
+        "EQ5067",
+        "EQ5069",
+        "EQ5071",
+        "EQ5073",
+        "EQ5075",
+        "EQ5076",
+        "EQ5078",
+        "EQ5080",
+        "EQ5082",
+        "EQ5084",
+        "EQ5086",
+        "EQ5088",
+        "EQ5090",
+        "EQ5092",
+        "EQ5094",
+        "EQ5096",
+        "EQ5098",
+        "EQ5100",
+        "EQ5001-VN",
+        "EQ5002-VN",
+        "EQ5003-VN",
+        "EQ5005-VN",
+        "EQ5007-VN",
+        "EQ5009-VN",
+        "EQ5011-VN",
+        "EQ5013-VN",
+        "EQ5015-VN",
+        "EQ5017-VN",
+        "EQ5019-VN",
+        "EQ5021-VN",
+        "EQ5023-VN",
+        "EQ5025-VN",
+        "EQ5026-VN",
+        "EQ5028-VN",
+        "EQ5030-VN",
+        "EQ5032-VN",
+        "EQ5034-VN",
+        "EQ5036-VN",
+        "EQ5038-VN",
+        "EQ5040-VN",
+        "EQ5042-VN",
+        "EQ5044-VN",
+        "EQ5046-VN",
+        "EQ5048-VN",
+        "EQ5050-VN",
+        "EQ5051-VN",
+        "EQ5053-VN",
+        "EQ5055-VN",
+        "EQ5057-VN",
+        "EQ5059-VN",
+        "EQ5061-VN",
+        "EQ5063-VN",
+        "EQ5065-VN",
+        "EQ5067-VN",
+        "EQ5069-VN",
+        "EQ5071-VN",
+        "EQ5073-VN",
+        "EQ5075-VN",
+        "EQ5076-VN",
+        "EQ5078-VN",
+        "EQ5080-VN",
+        "EQ5082-VN",
+        "EQ5084-VN",
+        "EQ5086-VN",
+        "EQ5088-VN",
+        "EQ5090-VN",
+        "EQ5092-VN",
+        "EQ5094-VN",
+        "EQ5096-VN",
+        "EQ5098-VN",
+        "EQ5100-VN"
+      ]
+    },
+    "Intermediate": {
+      "accuracy": 1.0,
+      "correct_count": 60,
+      "total_count": 60,
+      "question_ids": [
+        "EQ2001",
+        "EQ2003",
+        "EQ2005",
+        "EQ2007",
+        "EQ2009",
+        "EQ2011",
+        "EQ2013",
+        "EQ2015",
+        "EQ2017",
+        "EQ2019",
+        "EQ2021",
+        "EQ2023",
+        "EQ2025",
+        "EQ2027",
+        "EQ2029",
+        "EQ2031",
+        "EQ2033",
+        "EQ2035",
+        "EQ2037",
+        "EQ2039",
+        "EQ2041",
+        "EQ2043",
+        "EQ2045",
+        "EQ2047",
+        "EQ2049",
+        "EQ2051",
+        "EQ2053",
+        "EQ2055",
+        "EQ2057",
+        "EQ2059",
+        "EQ2001-VN",
+        "EQ2003-VN",
+        "EQ2005-VN",
+        "EQ2007-VN",
+        "EQ2009-VN",
+        "EQ2011-VN",
+        "EQ2013-VN",
+        "EQ2015-VN",
+        "EQ2017-VN",
+        "EQ2019-VN",
+        "EQ2021-VN",
+        "EQ2023-VN",
+        "EQ2025-VN",
+        "EQ2027-VN",
+        "EQ2029-VN",
+        "EQ2031-VN",
+        "EQ2033-VN",
+        "EQ2035-VN",
+        "EQ2037-VN",
+        "EQ2039-VN",
+        "EQ2041-VN",
+        "EQ2043-VN",
+        "EQ2045-VN",
+        "EQ2047-VN",
+        "EQ2049-VN",
+        "EQ2051-VN",
+        "EQ2053-VN",
+        "EQ2055-VN",
+        "EQ2057-VN",
+        "EQ2059-VN"
+      ]
+    },
+    "Hard": {
+      "accuracy": 0.9833333333333333,
+      "correct_count": 59,
+      "total_count": 60,
+      "question_ids": [
+        "EQ3001",
+        "EQ3003",
+        "EQ3005",
+        "EQ3007",
+        "EQ3009",
+        "EQ3011",
+        "EQ3013",
+        "EQ3015",
+        "EQ3017",
+        "EQ3019",
+        "EQ3021",
+        "EQ3023",
+        "EQ3025",
+        "EQ3027",
+        "EQ3029",
+        "EQ3031",
+        "EQ3033",
+        "EQ3035",
+        "EQ3037",
+        "EQ3039",
+        "EQ3041",
+        "EQ3043",
+        "EQ3045",
+        "EQ3047",
+        "EQ3049",
+        "EQ3051",
+        "EQ3053",
+        "EQ3055",
+        "EQ3057",
+        "EQ3059",
+        "EQ3001-VN",
+        "EQ3003-VN",
+        "EQ3005-VN",
+        "EQ3007-VN",
+        "EQ3009-VN",
+        "EQ3011-VN",
+        "EQ3013-VN",
+        "EQ3015-VN",
+        "EQ3017-VN",
+        "EQ3019-VN",
+        "EQ3021-VN",
+        "EQ3023-VN",
+        "EQ3025-VN",
+        "EQ3027-VN",
+        "EQ3029-VN",
+        "EQ3031-VN",
+        "EQ3033-VN",
+        "EQ3035-VN",
+        "EQ3037-VN",
+        "EQ3039-VN",
+        "EQ3041-VN",
+        "EQ3043-VN",
+        "EQ3045-VN",
+        "EQ3047-VN",
+        "EQ3049-VN",
+        "EQ3051-VN",
+        "EQ3053-VN",
+        "EQ3055-VN",
+        "EQ3057-VN",
+        "EQ3059-VN"
+      ]
+    },
+    "Very Hard": {
+      "accuracy": 0.96875,
+      "correct_count": 31,
+      "total_count": 32,
+      "question_ids": [
+        "EQ4001",
+        "EQ4003",
+        "EQ4005",
+        "EQ4007",
+        "EQ4009",
+        "EQ4011",
+        "EQ4013",
+        "EQ4015",
+        "EQ4016",
+        "EQ4018",
+        "EQ4020",
+        "EQ4022",
+        "EQ4024",
+        "EQ4026",
+        "EQ4028",
+        "EQ4030",
+        "EQ4001-VN",
+        "EQ4003-VN",
+        "EQ4005-VN",
+        "EQ4007-VN",
+        "EQ4009-VN",
+        "EQ4011-VN",
+        "EQ4013-VN",
+        "EQ4015-VN",
+        "EQ4016-VN",
+        "EQ4018-VN",
+        "EQ4020-VN",
+        "EQ4022-VN",
+        "EQ4024-VN",
+        "EQ4026-VN",
+        "EQ4028-VN",
+        "EQ4030-VN"
+      ]
+    }
+  },
+  "detailed_results": [
+    {
+      "question_id": "EQ5001",
+      "question": "Which HTTP method is commonly used to retrieve data from an API?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET is the standard method for retrieving data."
+    },
+    {
+      "question_id": "EQ5002",
+      "question": "What does HTTP status code 404 represent?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "OK",
+        "B": "Unauthorized",
+        "C": "Not Found",
+        "D": "Conflict"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "404 indicates the requested resource could not be found."
+    },
+    {
+      "question_id": "EQ5003",
+      "question": "What is the purpose of the HTTP POST method?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Retrieve data",
+        "B": "Submit data to create resources",
+        "C": "Update existing resources",
+        "D": "Delete resources"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "POST is used to create new resources with data in the request body."
+    },
+    {
+      "question_id": "EQ5005",
+      "question": "Which of these HTTP status codes means 'Unauthorized'?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "401",
+        "C": "403",
+        "D": "404"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "401 Unauthorized indicates missing or invalid credentials."
+    },
+    {
+      "question_id": "EQ5007",
+      "question": "Which HTTP method is considered idempotent?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PATCH",
+        "C": "PUT",
+        "D": "CONNECT"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "PUT is idempotent because multiple identical requests have the same effect."
+    },
+    {
+      "question_id": "EQ5009",
+      "question": "Which HTTP status code means 'OK'?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "500"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "200 OK is the standard success code."
+    },
+    {
+      "question_id": "EQ5011",
+      "question": "Which HTTP method is used to delete a resource?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "DELETE removes the resource specified in the URL."
+    },
+    {
+      "question_id": "EQ5013",
+      "question": "Which HTTP header is typically used for authentication tokens?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Type",
+        "B": "Authorization",
+        "C": "Accept",
+        "D": "Cache-Control"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Authorization header carries credentials or tokens."
+    },
+    {
+      "question_id": "EQ5015",
+      "question": "Which HTTP status code indicates 'Created'?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "403"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "201 Created confirms successful creation of a resource."
+    },
+    {
+      "question_id": "EQ5017",
+      "question": "Which HTTP status indicates 'Internal Server Error'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "400",
+        "C": "403",
+        "D": "500"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "500 indicates unexpected server-side failure."
+    },
+    {
+      "question_id": "EQ5019",
+      "question": "Which HTTP status is appropriate for forbidden access with valid credentials?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "401 Unauthorized",
+        "B": "200 OK",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "403 Forbidden indicates insufficient permissions despite valid login."
+    },
+    {
+      "question_id": "EQ5021",
+      "question": "Which HTTP method is typically used for partial updates?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PATCH",
+        "C": "POST",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "PATCH is used to modify part of a resource."
+    },
+    {
+      "question_id": "EQ5023",
+      "question": "Which HTTP header indicates the format of request body?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Type",
+        "B": "Authorization",
+        "C": "User-Agent",
+        "D": "Accept-Encoding"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Content-Type defines the media type of request body."
+    },
+    {
+      "question_id": "EQ5025",
+      "question": "Which HTTP status code indicates a conflict, such as duplicate resource creation?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "409 Conflict is used when request conflicts with current state."
+    },
+    {
+      "question_id": "EQ5026",
+      "question": "Which HTTP status code means 'Bad Request'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "500"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "400 Bad Request indicates invalid syntax or parameters."
+    },
+    {
+      "question_id": "EQ5028",
+      "question": "Which HTTP method is used to fully update a resource?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "PUT replaces an existing resource with new data."
+    },
+    {
+      "question_id": "EQ5030",
+      "question": "Which HTTP status indicates 'Forbidden'?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "401",
+        "D": "403"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "403 Forbidden means user is authenticated but not authorized."
+    },
+    {
+      "question_id": "EQ5032",
+      "question": "Which HTTP status code represents 'Too Many Requests'?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "408",
+        "B": "429",
+        "C": "503",
+        "D": "504"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "429 Too Many Requests is returned when rate limits are exceeded."
+    },
+    {
+      "question_id": "EQ5034",
+      "question": "Which HTTP status indicates a timeout from the server?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "404",
+        "B": "400",
+        "C": "200",
+        "D": "504"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "504 Gateway Timeout indicates the server did not respond in time."
+    },
+    {
+      "question_id": "EQ5036",
+      "question": "Which HTTP method is safe (does not change server state)?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET is safe because it only retrieves data."
+    },
+    {
+      "question_id": "EQ5038",
+      "question": "Which HTTP status is returned when a client request is well-formed but unauthorized?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "400",
+        "C": "401",
+        "D": "500"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "401 Unauthorized is used for invalid credentials."
+    },
+    {
+      "question_id": "EQ5040",
+      "question": "Which HTTP status indicates success but no content is returned?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "204"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "204 No Content is returned on successful deletion or empty responses."
+    },
+    {
+      "question_id": "EQ5042",
+      "question": "Which header is used to specify accepted response formats?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Type",
+        "B": "Accept",
+        "C": "Authorization",
+        "D": "Cache-Control"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Accept header tells the server which formats are expected (e.g., application/json)."
+    },
+    {
+      "question_id": "EQ5044",
+      "question": "Which HTTP status code is used when the client must authenticate to access a resource?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "403",
+        "C": "401",
+        "D": "404"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "401 Unauthorized requires authentication credentials."
+    },
+    {
+      "question_id": "EQ5046",
+      "question": "Which HTTP status indicates the server cannot handle the request due to overload?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "503 Service Unavailable",
+        "B": "200 OK",
+        "C": "404 Not Found",
+        "D": "201 Created"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "503 indicates temporary overload or maintenance."
+    },
+    {
+      "question_id": "EQ5048",
+      "question": "Which HTTP method is safe and idempotent?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PATCH",
+        "C": "GET",
+        "D": "DELETE"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "GET is both safe and idempotent."
+    },
+    {
+      "question_id": "EQ5050",
+      "question": "Which HTTP status code means 'Request Timeout'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "404",
+        "B": "408",
+        "C": "500",
+        "D": "429"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "408 Request Timeout indicates the client took too long to send the request."
+    },
+    {
+      "question_id": "EQ5051",
+      "question": "Which HTTP method is typically used to create a new resource?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "POST is the standard method for creating resources."
+    },
+    {
+      "question_id": "EQ5053",
+      "question": "Which HTTP status code is returned when a resource is successfully deleted?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "204"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "204 No Content confirms deletion succeeded."
+    },
+    {
+      "question_id": "EQ5055",
+      "question": "Which HTTP status code is used when a client sends an invalid JSON payload?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "500 Internal Server Error",
+        "C": "400 Bad Request",
+        "D": "201 Created"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "400 indicates the request could not be understood due to invalid syntax."
+    },
+    {
+      "question_id": "EQ5057",
+      "question": "Which HTTP method is generally used to update a resource entirely?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "PUT replaces the full resource with new data."
+    },
+    {
+      "question_id": "EQ5059",
+      "question": "Which HTTP status means 'Conflict'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "409"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "409 Conflict occurs when resource creation/update conflicts with state."
+    },
+    {
+      "question_id": "EQ5061",
+      "question": "Which HTTP method is used for partial updates to resources?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "PATCH modifies only part of a resource."
+    },
+    {
+      "question_id": "EQ5063",
+      "question": "Which HTTP status code is returned when authentication is required but missing?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "401",
+        "C": "403",
+        "D": "404"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "401 Unauthorized indicates missing or invalid credentials."
+    },
+    {
+      "question_id": "EQ5065",
+      "question": "Which HTTP method is most often used for safe read-only operations?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PUT",
+        "C": "POST",
+        "D": "DELETE"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET is safe and read-only."
+    },
+    {
+      "question_id": "EQ5067",
+      "question": "Which HTTP status is returned when a resource has been permanently moved?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "404",
+        "B": "302",
+        "C": "301",
+        "D": "500"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "301 Moved Permanently indicates redirection."
+    },
+    {
+      "question_id": "EQ5069",
+      "question": "Which HTTP status indicates the request is valid but resource not found?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "404"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "404 Not Found means the resource does not exist."
+    },
+    {
+      "question_id": "EQ5071",
+      "question": "Which HTTP status indicates client request timeout?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "500",
+        "B": "408",
+        "C": "403",
+        "D": "404"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "408 Request Timeout means the client did not finish sending in time."
+    },
+    {
+      "question_id": "EQ5073",
+      "question": "Which HTTP status indicates a successful request returning JSON data?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "200 OK is the standard code for successful GETs."
+    },
+    {
+      "question_id": "EQ5075",
+      "question": "Which HTTP status code indicates server is temporarily down for maintenance?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "503 Service Unavailable",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "503 is used when service is unavailable due to overload or maintenance."
+    },
+    {
+      "question_id": "EQ5076",
+      "question": "Which HTTP method is commonly used for updating only part of a resource?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "PATCH is designed for partial updates."
+    },
+    {
+      "question_id": "EQ5078",
+      "question": "Which HTTP status indicates a successful resource creation?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "201 Created confirms successful creation of resource."
+    },
+    {
+      "question_id": "EQ5080",
+      "question": "Which HTTP status code is used when a request is valid but access is forbidden?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "401 Unauthorized",
+        "B": "200 OK",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "403 Forbidden means valid credentials but insufficient permissions."
+    },
+    {
+      "question_id": "EQ5082",
+      "question": "Which HTTP status code indicates success but the resource is empty?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "400 Bad Request",
+        "D": "204 No Content"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "204 is returned when no body content is available."
+    },
+    {
+      "question_id": "EQ5084",
+      "question": "Which HTTP status code is appropriate for invalid user credentials?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "401 Unauthorized indicates invalid login credentials."
+    },
+    {
+      "question_id": "EQ5086",
+      "question": "Which HTTP method is used to retrieve resource details?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "PATCH"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET is used to retrieve data."
+    },
+    {
+      "question_id": "EQ5088",
+      "question": "Which HTTP status code indicates duplicate resource creation attempt?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "409 Conflict means duplicate or conflicting request."
+    },
+    {
+      "question_id": "EQ5090",
+      "question": "Which HTTP status code indicates request was valid but the server failed to fulfill it?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "400",
+        "C": "500",
+        "D": "201"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "500 Internal Server Error signals server-side failure."
+    },
+    {
+      "question_id": "EQ5092",
+      "question": "Which HTTP status is correct for a successfully updated resource using PUT?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": false,
+      "explanation": "200 OK indicates the resource was updated successfully."
+    },
+    {
+      "question_id": "EQ5094",
+      "question": "Which HTTP method is safe and cacheable?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "GET",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "GET is safe, idempotent, and cacheable."
+    },
+    {
+      "question_id": "EQ5096",
+      "question": "Which HTTP status is appropriate when service is temporarily overloaded?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "201",
+        "B": "200",
+        "C": "503",
+        "D": "404"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "503 Service Unavailable indicates overload or maintenance."
+    },
+    {
+      "question_id": "EQ5098",
+      "question": "Which HTTP header specifies the size of the request body?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Length",
+        "B": "Authorization",
+        "C": "User-Agent",
+        "D": "Cache-Control"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Content-Length defines body size in bytes."
+    },
+    {
+      "question_id": "EQ5100",
+      "question": "Which HTTP status code is used when a request method is not allowed on a resource?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "405 Method Not Allowed"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "405 is used when HTTP method is invalid for the resource."
+    },
+    {
+      "question_id": "EQ2001",
+      "question": "When designing API tests, which scenario best represents a boundary condition for a pagination parameter?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Sending page=2 when total items=200",
+        "B": "Sending page=10 when each page size=10 and total items=100",
+        "C": "Sending page=11 when total items=100 with size=10",
+        "D": "Sending page=1 when size=20 and total items=300"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Page=11 would exceed the available range (max 10), testing a boundary overflow."
+    },
+    {
+      "question_id": "EQ2003",
+      "question": "Which of the following is the most effective way to validate an API’s response time under simulated user load?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Manual sequential API calls with stopwatch measurement",
+        "B": "Automated load test with concurrent virtual users",
+        "C": "Single request execution and measuring response time",
+        "D": "Unit testing with mocked responses"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Load testing with concurrent virtual users mimics real-world conditions."
+    },
+    {
+      "question_id": "EQ2005",
+      "question": "Which practice reduces the flakiness of automated API tests running in CI/CD pipelines?",
+      "type": "MCQ",
+      "category": "CI/CD & Automation Integration",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Hardcoding API keys in scripts",
+        "B": "Using random sleep delays before assertions",
+        "C": "Running tests only once per release",
+        "D": "Using stable test data and environment setup hooks"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Stable test data and environment setup reduce randomness and flakiness."
+    },
+    {
+      "question_id": "EQ2007",
+      "question": "Which of the following represents a correct negative test for input validation on a date-of-birth field?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Sending dateOfBirth=‘2025-13-40’",
+        "B": "Sending dateOfBirth=‘1990-05-20’",
+        "C": "Leaving dateOfBirth empty when optional",
+        "D": "Sending dateOfBirth=‘2000-01-01’"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Invalid month/day makes it a correct negative input validation case."
+    },
+    {
+      "question_id": "EQ2009",
+      "question": "Which monitoring approach helps detect sudden spikes in API error rates?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Code coverage reports",
+        "B": "Manual log review every week",
+        "C": "Real-time alerting on error rate metrics",
+        "D": "Static code analysis"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Real-time alerting ensures immediate detection of error rate spikes."
+    },
+    {
+      "question_id": "EQ2011",
+      "question": "Which of these is an example of contract validation in API testing?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Checking response latency",
+        "B": "Validating response JSON matches OpenAPI schema",
+        "C": "Measuring server CPU load",
+        "D": "Asserting SQL queries from logs"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Contract validation ensures responses match defined schemas."
+    },
+    {
+      "question_id": "EQ2013",
+      "question": "Which scenario best represents an intermediate load test?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "10,000 concurrent users for stress testing",
+        "B": "Single-user functional check",
+        "C": "Unit testing one function",
+        "D": "100–200 concurrent users simulating average traffic"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Intermediate load tests simulate moderate, realistic user traffic."
+    },
+    {
+      "question_id": "EQ2015",
+      "question": "Which approach helps detect unauthorized access attempts in an API?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Penetration test using invalid or missing tokens",
+        "B": "Unit tests on helper functions",
+        "C": "CI pipeline build success",
+        "D": "Running API in debug mode"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Penetration tests reveal weaknesses in authorization handling."
+    },
+    {
+      "question_id": "EQ2017",
+      "question": "Which strategy ensures reproducibility of integration API tests?",
+      "type": "MCQ",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Running against random live production data",
+        "B": "Using seeded test databases and reset scripts",
+        "C": "Hardcoding timestamps in requests",
+        "D": "Disabling cleanup steps after tests"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Seeded test data ensures consistent reproducibility."
+    },
+    {
+      "question_id": "EQ2019",
+      "question": "Which of these is an appropriate recovery step if API monitoring detects consistent 500 errors?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Ignore them until next release",
+        "B": "Add random retry logic to all clients",
+        "C": "Alert ops team and trigger rollback of recent deployment",
+        "D": "Turn off error logs"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Rollback and alerts ensure quick mitigation."
+    },
+    {
+      "question_id": "EQ2021",
+      "question": "Which of the following scenarios is an example of a chained API test case?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Calling GET /status repeatedly",
+        "B": "Creating a user, then using that user’s ID in GET /profile",
+        "C": "Testing an endpoint with invalid headers",
+        "D": "Measuring average latency of one endpoint"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Chained test cases depend on output of one API being input to another."
+    },
+    {
+      "question_id": "EQ2023",
+      "question": "Which practice helps detect contract violations early in a CI/CD pipeline?",
+      "type": "MCQ",
+      "category": "CI/CD & Automation Integration",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Load testing in production only",
+        "B": "Manual regression testing once a month",
+        "C": "Schema validation tests integrated into pipeline",
+        "D": "Using mocks for all external dependencies"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Automated schema validation in CI/CD detects breaking changes quickly."
+    },
+    {
+      "question_id": "EQ2025",
+      "question": "Which of the following is an example of a negative authorization test?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Calling DELETE /users without admin privileges",
+        "B": "Calling GET /users with valid token",
+        "C": "Logging in with valid credentials",
+        "D": "Refreshing a valid session token"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Attempting to delete users without privileges tests access restrictions."
+    },
+    {
+      "question_id": "EQ2027",
+      "question": "Which method ensures sensitive API keys are not exposed during automated testing?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Hardcoding them in test scripts",
+        "B": "Printing them in CI/CD logs",
+        "C": "Storing them in public GitHub repos",
+        "D": "Using encrypted environment variables"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Encrypted env variables keep secrets secure."
+    },
+    {
+      "question_id": "EQ2029",
+      "question": "Which monitoring metric would best indicate a memory leak in an API?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Spike in average latency",
+        "B": "Steadily increasing memory usage",
+        "C": "Decreasing CPU utilization",
+        "D": "Random increase in cache hit ratio"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "A memory leak manifests as continuously rising memory usage."
+    },
+    {
+      "question_id": "EQ2031",
+      "question": "Which of the following best describes service virtualization?",
+      "type": "MCQ",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Running APIs only in production",
+        "B": "Using local database replicas",
+        "C": "Simulating unavailable dependencies with virtual services",
+        "D": "Replacing backend logic with new microservices"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Service virtualization allows testing without real dependencies."
+    },
+    {
+      "question_id": "EQ2033",
+      "question": "Which error scenario best represents a client-side failure?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "HTTP 400 Bad Request",
+        "B": "HTTP 500 Internal Server Error",
+        "C": "Database timeout",
+        "D": "Out-of-memory on server"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "400 Bad Request indicates client-side invalid request."
+    },
+    {
+      "question_id": "EQ2035",
+      "question": "Which of these scenarios requires schema validation during testing?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Checking average API response time",
+        "B": "Ensuring response JSON fields match OpenAPI definition",
+        "C": "Measuring throughput under load",
+        "D": "Analyzing SQL query logs"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Schema validation ensures structural correctness of responses."
+    },
+    {
+      "question_id": "EQ2037",
+      "question": "Which of the following improves reproducibility of API tests in multiple environments?",
+      "type": "MCQ",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Using hardcoded environment URLs",
+        "B": "Randomizing all test data",
+        "C": "Executing tests against production data",
+        "D": "Parameterizing endpoints and using environment configs"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Parameterization ensures same test logic works across environments."
+    },
+    {
+      "question_id": "EQ2039",
+      "question": "Which of these best describes performance baseline testing?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Measuring normal response times under expected load",
+        "B": "Testing API with invalid inputs",
+        "C": "Validating API against OpenAPI spec",
+        "D": "Simulating 10x peak traffic"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Baseline testing captures normal expected performance."
+    },
+    {
+      "question_id": "EQ2041",
+      "question": "Which of these is a correct test case for validating session expiration?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Login with valid credentials, expect 200 OK",
+        "B": "Send request with valid token immediately after login",
+        "C": "Send request with token after session timeout, expect 401 Unauthorized",
+        "D": "Send request without token, expect 200 OK"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Expired sessions must return 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ2043",
+      "question": "Which strategy helps validate backward compatibility after adding new optional fields?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Ensure older clients still work without sending new fields",
+        "B": "Force clients to update immediately",
+        "C": "Remove old fields from responses",
+        "D": "Require schema changes to be breaking"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Backward compatibility means old clients should still function without new fields."
+    },
+    {
+      "question_id": "EQ2045",
+      "question": "Which is the most effective way to test resilience when an API’s downstream service fails?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Disable retries in client",
+        "B": "Stop testing until service recovers",
+        "C": "Run unit tests only",
+        "D": "Inject failures using chaos testing or mocks"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Chaos testing/mocks allow controlled simulation of dependency failures."
+    },
+    {
+      "question_id": "EQ2047",
+      "question": "Which response status code is appropriate for a request blocked due to missing authorization header?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Missing authorization results in 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ2049",
+      "question": "Which of the following represents a proper boundary test for a password length field (min=8, max=20)?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Testing with 7, 8, 20, and 21 characters",
+        "B": "Testing with 10 characters only",
+        "C": "Testing with 15 characters only",
+        "D": "Testing with empty password only"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Boundary testing includes values at, below, and above limits."
+    },
+    {
+      "question_id": "EQ2051",
+      "question": "Which monitoring method helps identify gradual latency increases over weeks?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Single request stopwatch timing",
+        "B": "Manual debugging during incidents",
+        "C": "Time-series trend analysis with dashboards",
+        "D": "Code coverage metrics"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Dashboards and time-series monitoring highlight latency trends."
+    },
+    {
+      "question_id": "EQ2053",
+      "question": "Which strategy ensures contract tests remain useful when APIs evolve?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Never updating schema tests",
+        "B": "Removing optional fields from tests",
+        "C": "Running only manual regression tests",
+        "D": "Versioning schema contracts and maintaining backward compatibility"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Versioning and backward compatibility keep contract tests reliable."
+    },
+    {
+      "question_id": "EQ2055",
+      "question": "Which of these scenarios correctly validates API observability using distributed tracing?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Checking only HTTP status codes",
+        "B": "Following a trace ID across multiple microservices",
+        "C": "Checking memory usage in server logs",
+        "D": "Using manual testing notes"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Tracing IDs track requests across services."
+    },
+    {
+      "question_id": "EQ2057",
+      "question": "Which of the following indicates a denial-of-service vulnerability?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "API accepts unlimited requests without throttling",
+        "B": "API returns 404 Not Found",
+        "C": "API schema missing a description field",
+        "D": "Unit test coverage is low"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Unrestricted requests can exhaust resources, causing DoS."
+    },
+    {
+      "question_id": "EQ2059",
+      "question": "Which HTTP status code should be validated when an API request is well-formed but forbidden due to role restrictions?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "500 Internal Server Error"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "403 Forbidden indicates client is authenticated but not authorized."
+    },
+    {
+      "question_id": "EQ3001",
+      "question": "Which of the following scenarios best represents a multi-hop test involving login and refresh token endpoints?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Send a request to GET /health",
+        "B": "Obtain access token via POST /login, then use POST /refresh to extend session",
+        "C": "Send request with expired token to protected endpoint",
+        "D": "Check status 200 on GET /docs"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Multi-hop testing means chaining login with subsequent refresh token usage."
+    },
+    {
+      "question_id": "EQ3003",
+      "question": "Which HTTP status code should a server return when a refresh token is expired?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "403 Forbidden",
+        "C": "401 Unauthorized",
+        "D": "201 Created"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Expired refresh token means the client must log in again → 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ3005",
+      "question": "Which of the following maps an application-specific error code to the correct HTTP status?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "APP_1001 (User not found) → 404 Not Found",
+        "B": "APP_2002 (Invalid password) → 201 Created",
+        "C": "APP_3003 (Success) → 500 Internal Server Error",
+        "D": "APP_9999 (Database error) → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Mapping user-not-found to 404 is the correct HTTP translation."
+    },
+    {
+      "question_id": "EQ3007",
+      "question": "Which scenario demonstrates chained negative testing?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Testing single GET /status request",
+        "B": "Valid login followed by accessing /profile",
+        "C": "Checking server uptime with GET /health",
+        "D": "Logging in with expired password → 401, then retrying refresh token → 401"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Chained negative tests validate failures across endpoints."
+    },
+    {
+      "question_id": "EQ3009",
+      "question": "Which HTTP status code is correct for mapping a custom error ORDER_DUPLICATE to HTTP?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "409 Conflict",
+        "C": "404 Not Found",
+        "D": "500 Internal Server Error"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Duplicate order is a conflict → 409."
+    },
+    {
+      "question_id": "EQ3011",
+      "question": "Which scenario correctly validates multi-hop error handling in an e-commerce workflow?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Create order → invalid payment details → 402 Payment Required",
+        "B": "Check inventory → product exists → 200 OK",
+        "C": "Call healthcheck endpoint → 200 OK",
+        "D": "Request product catalog → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Payment failure after order creation is a multi-hop negative test."
+    },
+    {
+      "question_id": "EQ3013",
+      "question": "Which of these represents a hard-level chained login test?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Only testing GET /login-docs",
+        "B": "Logging in once and stopping",
+        "C": "Login → refresh token → logout → confirm refresh fails",
+        "D": "Checking GET /health endpoint"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Combines multiple endpoints into a workflow validation."
+    },
+    {
+      "question_id": "EQ3015",
+      "question": "Which mapping is correct for business error PAYMENT_DECLINED?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "402 Payment Required"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Payment declined → 402 Payment Required."
+    },
+    {
+      "question_id": "EQ3017",
+      "question": "Which scenario maps to the correct HTTP code for an internal application error?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "APP_TIMEOUT → 200 OK",
+        "B": "APP_TIMEOUT → 504 Gateway Timeout",
+        "C": "APP_TIMEOUT → 201 Created",
+        "D": "APP_TIMEOUT → 400 Bad Request"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Timeouts should map to 504 Gateway Timeout."
+    },
+    {
+      "question_id": "EQ3019",
+      "question": "Which test validates chained role-based access?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Login as user → access /admin → expect 403 Forbidden",
+        "B": "Login as admin → access /admin → expect 200 OK",
+        "C": "Login as user → view profile → 200 OK",
+        "D": "GET /health → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Role mismatch leading to 403 is a multi-hop role validation."
+    },
+    {
+      "question_id": "EQ3021",
+      "question": "Which scenario validates a chained login, refresh, and logout sequence?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Login → use token once",
+        "B": "Refresh token immediately after login",
+        "C": "Logout only",
+        "D": "Login → refresh token → logout → confirm refresh fails"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "This full sequence tests the entire authentication lifecycle."
+    },
+    {
+      "question_id": "EQ3023",
+      "question": "Which mapping correctly translates a business error STOCK_OUT to HTTP?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "409 Conflict",
+        "C": "201 Created",
+        "D": "403 Forbidden"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Stock-out means a conflict with order fulfillment, mapping to 409."
+    },
+    {
+      "question_id": "EQ3025",
+      "question": "Which scenario validates chained negative testing for a shopping cart workflow?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Add valid item to cart → 200 OK",
+        "B": "Checkout with valid payment → 200 OK",
+        "C": "Add item → remove item → checkout → expect 400 Bad Request",
+        "D": "View cart after login → 200 OK"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Empty cart checkout is a chained negative scenario."
+    },
+    {
+      "question_id": "EQ3027",
+      "question": "Which scenario best validates chained order cancellation?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Create order → cancel order → GET /orders/{id} shows status=cancelled",
+        "B": "Cancel non-existent order → 404",
+        "C": "Create order only",
+        "D": "Check /status endpoint"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Covers lifecycle of order creation → cancellation → verification."
+    },
+    {
+      "question_id": "EQ3029",
+      "question": "Which mapping correctly translates FILE_TOO_LARGE to HTTP?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "404 Not Found",
+        "D": "413 Payload Too Large"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "File too large should map to 413."
+    },
+    {
+      "question_id": "EQ3031",
+      "question": "Which chained sequence validates refresh tokens across multiple sessions?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Login → logout only",
+        "B": "Login → refresh token → logout → login again → confirm old refresh invalid",
+        "C": "Refresh token without login",
+        "D": "Check GET /status"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Ensures session handling across multiple logins."
+    },
+    {
+      "question_id": "EQ3033",
+      "question": "Which mapping is correct for mapping business error INVALID_COUPON?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "403 Forbidden",
+        "C": "400 Bad Request",
+        "D": "201 Created"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Invalid coupon should map to 400 Bad Request."
+    },
+    {
+      "question_id": "EQ3035",
+      "question": "Which scenario validates correct multi-hop error mapping in payment workflow?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Payment API returns DECLINED → mapped to HTTP 402",
+        "B": "Payment API returns APPROVED → mapped to HTTP 404",
+        "C": "Payment API returns DECLINED → mapped to HTTP 201",
+        "D": "Payment API returns ERROR → mapped to HTTP 200"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Payment declined correctly maps to 402 Payment Required."
+    },
+    {
+      "question_id": "EQ3037",
+      "question": "Which mapping is correct for mapping RATE_LIMIT_EXCEEDED to HTTP?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "403 Forbidden",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Rate limits exceeded should map to 429."
+    },
+    {
+      "question_id": "EQ3039",
+      "question": "Which scenario validates chained negative testing in ticket booking workflow?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Book valid ticket → 200 OK",
+        "B": "Book ticket → cancel ticket → attempt refund → expect 400 Bad Request",
+        "C": "View available seats → 200 OK",
+        "D": "Check GET /status → 200 OK"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Chained negative: refunding after cancel is invalid."
+    },
+    {
+      "question_id": "EQ3041",
+      "question": "Which chained flow correctly validates token rotation with refresh token reuse detection?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Login → call API once → logout",
+        "B": "Login → refresh token → attempt reuse of old refresh → expect 401 Unauthorized",
+        "C": "Login only",
+        "D": "Refresh without login"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Token reuse must be rejected after rotation to prevent replay attacks."
+    },
+    {
+      "question_id": "EQ3043",
+      "question": "Which HTTP status should be returned when an If-Match precondition fails due to stale ETag during PUT /resource/{id}?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "412 Precondition Failed",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Stale ETag should map to 412 Precondition Failed."
+    },
+    {
+      "question_id": "EQ3045",
+      "question": "Which mapping from business code to HTTP is most appropriate for RESOURCE_VERSION_CONFLICT during update?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Version conflict maps correctly to 409 Conflict."
+    },
+    {
+      "question_id": "EQ3047",
+      "question": "Which status code best represents a refresh token presented to the wrong client_id in a multi-tenant system?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "401 Unauthorized",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "OAuth2 specifies invalid_grant (400) for wrong client/refresh usage."
+    },
+    {
+      "question_id": "EQ3049",
+      "question": "Which status mapping is correct for business code INSUFFICIENT_FUNDS from payment gateway?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "404 Not Found",
+        "C": "403 Forbidden",
+        "D": "402 Payment Required"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Insufficient funds → 402 Payment Required."
+    },
+    {
+      "question_id": "EQ3051",
+      "question": "Which scenario correctly validates backoff + retry policy across gateway 429 -> 200 transitions?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "options": {
+        "A": "API returns 429 Too Many Requests → client retries with backoff → 200 OK",
+        "B": "API returns 401 Unauthorized → retry succeeds",
+        "C": "API returns 404 Not Found → retry succeeds",
+        "D": "API returns 500 → retry without backoff"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Retry with exponential backoff is required for 429 handling."
+    },
+    {
+      "question_id": "EQ3053",
+      "question": "Which HTTP code should map to BUSINESS_LIMIT_EXCEEDED when per-user quota blocks a valid, authenticated request?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "403 Forbidden",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": false,
+      "explanation": "Quota exhaustion maps to 429 Too Many Requests."
+    },
+    {
+      "question_id": "EQ3055",
+      "question": "Which mapping is most accurate for error code SIGNATURE_INVALID on webhook delivery verification?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "404 Not Found",
+        "C": "401 Unauthorized",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Invalid webhook signature should return 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ3057",
+      "question": "Which HTTP code best represents a soft-deleted resource requested by GET /resource/{id} after DELETE (with recoverable state)?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "404 Not Found",
+        "C": "403 Forbidden",
+        "D": "204 No Content"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Soft-deleted resource should be treated as not found."
+    },
+    {
+      "question_id": "EQ3059",
+      "question": "Which mapping is correct when dependency outage triggers circuit breaker OPEN, causing gateway to reject requests immediately?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "503 Service Unavailable",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Circuit breaker OPEN maps to 503 Service Unavailable."
+    },
+    {
+      "question_id": "EQ4001",
+      "question": "Which chained flow correctly validates an order lifecycle with create → capture → refund, ensuring idempotency across retries?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Create order → retry refund twice → refund fails",
+        "B": "Capture payment without creating order",
+        "C": "Create order → capture payment → retry capture with same idempotency key → single charge → refund succeeds",
+        "D": "Refund before order creation"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Idempotency must ensure duplicate captures do not create multiple charges."
+    },
+    {
+      "question_id": "EQ4003",
+      "question": "Which mapping is correct for handling a duplicate transaction detected during a refund request?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "409 Conflict",
+        "C": "403 Forbidden",
+        "D": "500 Internal Server Error"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Duplicate transaction must map to 409 Conflict."
+    },
+    {
+      "question_id": "EQ4005",
+      "question": "Which chained scenario validates proper error propagation in a distributed saga transaction?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Start saga → all steps succeed",
+        "B": "Start saga → ignore error in step 2",
+        "C": "Start saga → rollback ignored",
+        "D": "Start saga → step 3 fails → compensating rollback of steps 1 & 2 executed"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Saga pattern ensures compensating actions on failure."
+    },
+    {
+      "question_id": "EQ4007",
+      "question": "Which error handling scenario best validates sanity checks in payment APIs?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Submitting refund > captured amount → 400 Bad Request",
+        "B": "Submitting refund = captured amount → 200 OK",
+        "C": "Submitting refund < captured amount → 200 OK",
+        "D": "Refund without capture → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Refunds larger than capture must fail with 400."
+    },
+    {
+      "question_id": "EQ4009",
+      "question": "Which mapping best validates format error handling for malformed JSON payloads?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "201 Created",
+        "B": "500 Internal Server Error",
+        "C": "400 Bad Request",
+        "D": "200 OK"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Malformed JSON must result in 400 Bad Request."
+    },
+    {
+      "question_id": "EQ4011",
+      "question": "Which chained flow validates consistent state during distributed booking workflow?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Reserve hotel only",
+        "B": "Reserve hotel → book flight → flight fails → hotel reservation auto-cancelled",
+        "C": "Book flight only",
+        "D": "Book hotel and keep reservation even if payment fails"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Hotel auto-cancellation ensures consistent state across systems."
+    },
+    {
+      "question_id": "EQ4013",
+      "question": "Which HTTP code is correct for validating sanity check on withdraw > account balance?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "403 Forbidden",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Over-withdrawal must be rejected as 400 Bad Request."
+    },
+    {
+      "question_id": "EQ4015",
+      "question": "Which scenario validates state rollback when an API partially updates user info and DB transaction fails?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Update fails mid-way → no partial changes persist",
+        "B": "Update fails mid-way → partial changes remain",
+        "C": "Update fails mid-way → system crashes",
+        "D": "Update succeeds despite DB rollback"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Proper rollback prevents partial/inconsistent data."
+    },
+    {
+      "question_id": "EQ4016",
+      "question": "Which chained scenario best validates the idempotency of a payment capture endpoint?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "POST /capture twice with different Idempotency-Key values → two charges",
+        "B": "POST /capture twice with the same Idempotency-Key → single charge recorded",
+        "C": "POST /refund without capture → success",
+        "D": "GET /capture-status once"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Idempotency ensures duplicate requests with same key do not create multiple charges."
+    },
+    {
+      "question_id": "EQ4018",
+      "question": "Which mapping correctly handles application error LIMIT_EXCEEDED for per-account API quota?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "403 Forbidden",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Rate/limit exceeded maps to 429 Too Many Requests."
+    },
+    {
+      "question_id": "EQ4020",
+      "question": "Which chained flow validates OAuth2 token misuse detection across services?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Login once",
+        "B": "Refresh token immediately",
+        "C": "Login → get token → attempt to use token in another client → 403 Forbidden",
+        "D": "Logout only"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Cross-client token misuse should be forbidden."
+    },
+    {
+      "question_id": "EQ4022",
+      "question": "Which scenario best validates format error handling for XML vs JSON input mismatch?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Send XML body with Content-Type: application/json → 415 Unsupported Media Type",
+        "B": "Send JSON body with application/json → 200 OK",
+        "C": "Send XML body with application/xml → 200 OK",
+        "D": "Send YAML → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Mismatch in body vs header must result in 415."
+    },
+    {
+      "question_id": "EQ4024",
+      "question": "Which HTTP status is correct when a schema validation error occurs for a nested field?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "201 Created",
+        "B": "500 Internal Server Error",
+        "C": "400 Bad Request",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Schema validation errors must return 400."
+    },
+    {
+      "question_id": "EQ4026",
+      "question": "Which chained scenario validates proper rollback after multi-step booking (flight + hotel) when payment fails?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Book flight → 200 OK",
+        "B": "Book hotel → 200 OK",
+        "C": "Book flight + hotel → payment succeeds",
+        "D": "Book flight + hotel → payment fails → rollback both bookings"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Rollback ensures no inconsistent bookings remain."
+    },
+    {
+      "question_id": "EQ4028",
+      "question": "Which mapping is correct for application code TOKEN_REPLAY_DETECTED?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "401 Unauthorized",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Token replay must be treated as 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ4030",
+      "question": "Which chained workflow validates asynchronous payment settlement with reconciliation?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Create order only",
+        "B": "Create order → capture payment → async settlement → reconcile → final status=settled",
+        "C": "Refund without settlement",
+        "D": "Check API health"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Asynchronous settlement must reconcile correctly."
+    },
+    {
+      "question_id": "EQ5001-VN",
+      "question": "Phương thức HTTP nào thường được sử dụng để truy xuất dữ liệu từ một API?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET là phương thức chuẩn để truy xuất dữ liệu."
+    },
+    {
+      "question_id": "EQ5002-VN",
+      "question": "Mã trạng thái HTTP 404 đại diện cho điều gì?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "OK",
+        "B": "Unauthorized",
+        "C": "Not Found",
+        "D": "Conflict"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "404 cho biết tài nguyên được yêu cầu không thể tìm thấy."
+    },
+    {
+      "question_id": "EQ5003-VN",
+      "question": "Mục đích của phương thức HTTP POST là gì?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Truy xuất dữ liệu",
+        "B": "Gửi dữ liệu để tạo tài nguyên",
+        "C": "Cập nhật tài nguyên hiện có",
+        "D": "Xóa tài nguyên"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "POST được sử dụng để tạo tài nguyên mới với dữ liệu trong request body."
+    },
+    {
+      "question_id": "EQ5005-VN",
+      "question": "Mã trạng thái HTTP nào trong số này có nghĩa là 'Unauthorized'?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "401",
+        "C": "403",
+        "D": "404"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "401 Unauthorized cho biết thiếu hoặc không hợp lệ thông tin đăng nhập."
+    },
+    {
+      "question_id": "EQ5007-VN",
+      "question": "Phương thức HTTP nào được coi là idempotent?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PATCH",
+        "C": "PUT",
+        "D": "CONNECT"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": false,
+      "explanation": "PUT là idempotent vì nhiều request giống hệt nhau có cùng một hiệu ứng."
+    },
+    {
+      "question_id": "EQ5009-VN",
+      "question": "Mã trạng thái HTTP nào có nghĩa là 'OK'?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "500"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "200 OK là mã thành công chuẩn."
+    },
+    {
+      "question_id": "EQ5011-VN",
+      "question": "Phương thức HTTP nào được sử dụng để xóa một tài nguyên?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "DELETE xóa tài nguyên được chỉ định trong URL."
+    },
+    {
+      "question_id": "EQ5013-VN",
+      "question": "HTTP header nào thường được sử dụng cho các authentication token?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Type",
+        "B": "Authorization",
+        "C": "Accept",
+        "D": "Cache-Control"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Authorization header mang thông tin xác thực hoặc token."
+    },
+    {
+      "question_id": "EQ5015-VN",
+      "question": "Mã trạng thái HTTP nào cho biết 'Created'?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "403"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "201 Created xác nhận tạo tài nguyên thành công."
+    },
+    {
+      "question_id": "EQ5017-VN",
+      "question": "Mã trạng thái HTTP nào cho biết 'Internal Server Error'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "400",
+        "C": "403",
+        "D": "500"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "500 cho biết lỗi không mong muốn phía server."
+    },
+    {
+      "question_id": "EQ5019-VN",
+      "question": "Trạng thái HTTP nào phù hợp cho quyền truy cập bị cấm với thông tin đăng nhập hợp lệ?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "401 Unauthorized",
+        "B": "200 OK",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "403 Forbidden cho biết không đủ quyền hạn mặc dù đăng nhập hợp lệ."
+    },
+    {
+      "question_id": "EQ5021-VN",
+      "question": "Phương thức HTTP nào thường được sử dụng cho các partial update?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PATCH",
+        "C": "POST",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "PATCH được sử dụng để sửa đổi một phần của tài nguyên."
+    },
+    {
+      "question_id": "EQ5023-VN",
+      "question": "HTTP header nào cho biết định dạng của request body?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Type",
+        "B": "Authorization",
+        "C": "User-Agent",
+        "D": "Accept-Encoding"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Content-Type định nghĩa kiểu media của request body."
+    },
+    {
+      "question_id": "EQ5025-VN",
+      "question": "Mã trạng thái HTTP nào cho biết conflict, chẳng hạn như tạo tài nguyên trùng lặp?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "409 Conflict được sử dụng khi request conflict với trạng thái hiện tại."
+    },
+    {
+      "question_id": "EQ5026-VN",
+      "question": "Mã trạng thái HTTP nào có nghĩa là 'Bad Request'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "500"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "400 Bad Request cho biết cú pháp hoặc tham số không hợp lệ."
+    },
+    {
+      "question_id": "EQ5028-VN",
+      "question": "Phương thức HTTP nào được sử dụng để cập nhật hoàn toàn một tài nguyên?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "PUT thay thế một tài nguyên hiện có bằng dữ liệu mới."
+    },
+    {
+      "question_id": "EQ5030-VN",
+      "question": "Mã trạng thái HTTP nào cho biết 'Forbidden'?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "401",
+        "D": "403"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "403 Forbidden có nghĩa là người dùng đã được xác thực nhưng không được authorization."
+    },
+    {
+      "question_id": "EQ5032-VN",
+      "question": "Mã trạng thái HTTP nào đại diện cho 'Too Many Requests'?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "408",
+        "B": "429",
+        "C": "503",
+        "D": "504"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "429 Too Many Requests được trả về khi rate limit bị vượt quá."
+    },
+    {
+      "question_id": "EQ5034-VN",
+      "question": "Mã trạng thái HTTP nào cho biết một timeout từ server?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "404",
+        "B": "400",
+        "C": "200",
+        "D": "504"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "504 Gateway Timeout cho biết server không phản hồi kịp thời."
+    },
+    {
+      "question_id": "EQ5036-VN",
+      "question": "Phương thức HTTP nào là safe (không thay đổi trạng thái server)?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET là safe vì nó chỉ truy xuất dữ liệu."
+    },
+    {
+      "question_id": "EQ5038-VN",
+      "question": "Trạng thái HTTP nào được trả về khi một client request được định dạng tốt nhưng bị unauthorized?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "400",
+        "C": "401",
+        "D": "500"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "401 Unauthorized được sử dụng cho thông tin đăng nhập không hợp lệ."
+    },
+    {
+      "question_id": "EQ5040-VN",
+      "question": "Mã trạng thái HTTP nào cho biết thành công nhưng không có content nào được trả về?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "204"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "204 No Content được trả về khi xóa thành công hoặc response rỗng."
+    },
+    {
+      "question_id": "EQ5042-VN",
+      "question": "Header nào được sử dụng để chỉ định các định dạng response được chấp nhận?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Type",
+        "B": "Accept",
+        "C": "Authorization",
+        "D": "Cache-Control"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Accept header cho server biết những định dạng nào được mong đợi (ví dụ: application/json)."
+    },
+    {
+      "question_id": "EQ5044-VN",
+      "question": "Mã trạng thái HTTP nào được sử dụng khi client phải authenticate để truy cập một tài nguyên?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "403",
+        "C": "401",
+        "D": "404"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "401 Unauthorized yêu cầu thông tin xác thực."
+    },
+    {
+      "question_id": "EQ5046-VN",
+      "question": "Trạng thái HTTP nào cho biết server không thể xử lý request do quá tải?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "503 Service Unavailable",
+        "B": "200 OK",
+        "C": "404 Not Found",
+        "D": "201 Created"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "503 cho biết quá tải tạm thời hoặc đang bảo trì."
+    },
+    {
+      "question_id": "EQ5048-VN",
+      "question": "Phương thức HTTP nào là safe và idempotent?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PATCH",
+        "C": "GET",
+        "D": "DELETE"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "GET vừa là safe vừa là idempotent."
+    },
+    {
+      "question_id": "EQ5050-VN",
+      "question": "Mã trạng thái HTTP nào có nghĩa là 'Request Timeout'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "404",
+        "B": "408",
+        "C": "500",
+        "D": "429"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "408 Request Timeout cho biết client mất quá nhiều thời gian để gửi request."
+    },
+    {
+      "question_id": "EQ5051-VN",
+      "question": "Phương thức HTTP nào thường được sử dụng để tạo một tài nguyên mới?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "POST là phương thức chuẩn để tạo tài nguyên."
+    },
+    {
+      "question_id": "EQ5053-VN",
+      "question": "Mã trạng thái HTTP nào được trả về khi một tài nguyên được xóa thành công?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "204"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "204 No Content xác nhận việc xóa thành công."
+    },
+    {
+      "question_id": "EQ5055-VN",
+      "question": "Mã trạng thái HTTP nào được sử dụng khi một client gửi một JSON payload không hợp lệ?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "500 Internal Server Error",
+        "C": "400 Bad Request",
+        "D": "201 Created"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "400 cho biết request không thể hiểu được do cú pháp không hợp lệ."
+    },
+    {
+      "question_id": "EQ5057-VN",
+      "question": "Phương thức HTTP nào thường được sử dụng để cập nhật hoàn toàn một tài nguyên?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "PUT thay thế hoàn toàn tài nguyên bằng dữ liệu mới."
+    },
+    {
+      "question_id": "EQ5059-VN",
+      "question": "Trạng thái HTTP nào có nghĩa là 'Conflict'?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "409"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "409 Conflict xảy ra khi việc tạo/cập nhật tài nguyên conflict với trạng thái."
+    },
+    {
+      "question_id": "EQ5061-VN",
+      "question": "Phương thức HTTP nào được sử dụng cho các partial update tài nguyên?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "PATCH chỉ sửa đổi một phần của tài nguyên."
+    },
+    {
+      "question_id": "EQ5063-VN",
+      "question": "Mã trạng thái HTTP nào được trả về khi authentication là bắt buộc nhưng bị thiếu?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "401",
+        "C": "403",
+        "D": "404"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "401 Unauthorized cho biết thiếu hoặc không hợp lệ thông tin đăng nhập."
+    },
+    {
+      "question_id": "EQ5065-VN",
+      "question": "Phương thức HTTP nào thường được sử dụng cho các read-only operation an toàn?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PUT",
+        "C": "POST",
+        "D": "DELETE"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET là safe và read-only."
+    },
+    {
+      "question_id": "EQ5067-VN",
+      "question": "Trạng thái HTTP nào được trả về khi một tài nguyên đã được di chuyển vĩnh viễn?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "404",
+        "B": "302",
+        "C": "301",
+        "D": "500"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "301 Moved Permanently cho biết redirection."
+    },
+    {
+      "question_id": "EQ5069-VN",
+      "question": "Trạng thái HTTP nào cho biết request hợp lệ nhưng không tìm thấy tài nguyên?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "201",
+        "C": "400",
+        "D": "404"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "404 Not Found có nghĩa là tài nguyên không tồn tại."
+    },
+    {
+      "question_id": "EQ5071-VN",
+      "question": "Trạng thái HTTP nào cho biết client request timeout?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "500",
+        "B": "408",
+        "C": "403",
+        "D": "404"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "408 Request Timeout có nghĩa là client không gửi xong kịp thời."
+    },
+    {
+      "question_id": "EQ5073-VN",
+      "question": "Trạng thái HTTP nào cho biết một request thành công trả về dữ liệu JSON?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "200 OK là mã chuẩn cho các GET thành công."
+    },
+    {
+      "question_id": "EQ5075-VN",
+      "question": "Mã trạng thái HTTP nào cho biết server tạm thời ngừng hoạt động để bảo trì?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "503 Service Unavailable",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "503 được sử dụng khi dịch vụ không khả dụng do quá tải hoặc bảo trì."
+    },
+    {
+      "question_id": "EQ5076-VN",
+      "question": "Phương thức HTTP nào thường được sử dụng để cập nhật chỉ một phần của tài nguyên?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "DELETE"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "PATCH được thiết kế cho các partial update."
+    },
+    {
+      "question_id": "EQ5078-VN",
+      "question": "Trạng thái HTTP nào cho biết việc tạo tài nguyên thành công?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "201 Created xác nhận việc tạo tài nguyên thành công."
+    },
+    {
+      "question_id": "EQ5080-VN",
+      "question": "Mã trạng thái HTTP nào được sử dụng khi một request hợp lệ nhưng quyền truy cập bị cấm?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "401 Unauthorized",
+        "B": "200 OK",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "403 Forbidden có nghĩa là thông tin đăng nhập hợp lệ nhưng không đủ quyền."
+    },
+    {
+      "question_id": "EQ5082-VN",
+      "question": "Mã trạng thái HTTP nào cho biết thành công nhưng tài nguyên rỗng?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "400 Bad Request",
+        "D": "204 No Content"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "204 được trả về khi không có body content."
+    },
+    {
+      "question_id": "EQ5084-VN",
+      "question": "Mã trạng thái HTTP nào phù hợp cho thông tin đăng nhập không hợp lệ?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "401 Unauthorized cho biết thông tin đăng nhập không hợp lệ."
+    },
+    {
+      "question_id": "EQ5086-VN",
+      "question": "Phương thức HTTP nào được sử dụng để truy xuất chi tiết tài nguyên?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "PATCH"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "GET được sử dụng để truy xuất dữ liệu."
+    },
+    {
+      "question_id": "EQ5088-VN",
+      "question": "Mã trạng thái HTTP nào cho biết nỗ lực tạo tài nguyên trùng lặp?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "409 Conflict có nghĩa là request trùng lặp hoặc conflict."
+    },
+    {
+      "question_id": "EQ5090-VN",
+      "question": "Mã trạng thái HTTP nào cho biết request hợp lệ nhưng server không thể hoàn thành nó?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200",
+        "B": "400",
+        "C": "500",
+        "D": "201"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "500 Internal Server Error báo hiệu lỗi phía server."
+    },
+    {
+      "question_id": "EQ5092-VN",
+      "question": "Trạng thái HTTP nào là chính xác cho một tài nguyên được cập nhật thành công bằng PUT?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": false,
+      "explanation": "200 OK cho biết tài nguyên đã được cập nhật thành công."
+    },
+    {
+      "question_id": "EQ5094-VN",
+      "question": "Phương thức HTTP nào là safe và cacheable?",
+      "type": "MCQ",
+      "category": "General Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "POST",
+        "B": "GET",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "GET vừa là safe, idempotent, và cacheable."
+    },
+    {
+      "question_id": "EQ5096-VN",
+      "question": "Trạng thái HTTP nào phù hợp khi dịch vụ tạm thời quá tải?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "201",
+        "B": "200",
+        "C": "503",
+        "D": "404"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "503 Service Unavailable cho biết quá tải hoặc bảo trì."
+    },
+    {
+      "question_id": "EQ5098-VN",
+      "question": "HTTP header nào chỉ định kích thước của request body?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Easy",
+      "options": {
+        "A": "Content-Length",
+        "B": "Authorization",
+        "C": "User-Agent",
+        "D": "Cache-Control"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Content-Length định nghĩa kích thước body theo byte."
+    },
+    {
+      "question_id": "EQ5100-VN",
+      "question": "Mã trạng thái HTTP nào được sử dụng khi một request method không được phép trên một tài nguyên?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Easy",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "405 Method Not Allowed"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "405 được sử dụng khi phương thức HTTP không hợp lệ cho tài nguyên."
+    },
+    {
+      "question_id": "EQ2001-VN",
+      "question": "Khi thiết kế các bài kiểm tra API, kịch bản nào thể hiện rõ nhất một **điều kiện biên** cho tham số phân trang?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Gửi page=2 khi total items=200",
+        "B": "Gửi page=10 khi size=10 mỗi trang và total items=100",
+        "C": "Gửi page=11 khi total items=100 với size=10",
+        "D": "Gửi page=1 khi size=20 và total items=300"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Page=11 sẽ vượt quá phạm vi có sẵn (tối đa 10), kiểm tra một sự tràn **điều kiện biên**."
+    },
+    {
+      "question_id": "EQ2003-VN",
+      "question": "Cách nào sau đây là hiệu quả nhất để xác thực thời gian phản hồi của API dưới **tải người dùng** mô phỏng?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Gọi API tuần tự thủ công bằng đồng hồ bấm giờ",
+        "B": "**Load test** tự động với **người dùng ảo** đồng thời",
+        "C": "Thực hiện một yêu cầu duy nhất và đo thời gian phản hồi",
+        "D": "**Unit testing** với các phản hồi được **mock**"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "**Load testing** với **người dùng ảo** đồng thời mô phỏng điều kiện thực tế."
+    },
+    {
+      "question_id": "EQ2005-VN",
+      "question": "Thực hành nào giúp giảm **sự flaky** của **automated API tests** chạy trong các **CI/CD pipelines**?",
+      "type": "MCQ",
+      "category": "CI/CD & Automation Integration",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Hardcode **API keys** trong các script",
+        "B": "Sử dụng độ trễ ngủ ngẫu nhiên trước các **assertion**",
+        "C": "Chỉ chạy **test** một lần mỗi bản phát hành",
+        "D": "Sử dụng dữ liệu **test** ổn định và các **hook** thiết lập môi trường"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Dữ liệu **test** và thiết lập môi trường ổn định giúp giảm tính ngẫu nhiên và **sự flaky**."
+    },
+    {
+      "question_id": "EQ2007-VN",
+      "question": "Điều nào sau đây thể hiện một **test case âm tính** chính xác cho việc xác thực đầu vào trên trường ngày sinh?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Gửi **dateOfBirth**=‘2025-13-40’",
+        "B": "Gửi **dateOfBirth**=‘1990-05-20’",
+        "C": "Để trống **dateOfBirth** khi nó là tùy chọn",
+        "D": "Gửi **dateOfBirth**=‘2000-01-01’"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Tháng/ngày không hợp lệ làm cho nó trở thành một trường hợp xác thực đầu vào **âm tính** chính xác."
+    },
+    {
+      "question_id": "EQ2009-VN",
+      "question": "Cách tiếp cận giám sát nào giúp phát hiện các đợt tăng đột biến về tỷ lệ lỗi API?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Báo cáo **code coverage**",
+        "B": "Kiểm tra **log** thủ công mỗi tuần",
+        "C": "Cảnh báo thời gian thực trên các chỉ số tỷ lệ lỗi",
+        "D": "Phân tích **code** tĩnh"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Cảnh báo thời gian thực đảm bảo phát hiện ngay lập tức các đợt tăng đột biến tỷ lệ lỗi."
+    },
+    {
+      "question_id": "EQ2011-VN",
+      "question": "Điều nào sau đây là một ví dụ về **contract validation** trong **API testing**?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Kiểm tra độ trễ phản hồi",
+        "B": "Xác thực **JSON** phản hồi khớp với **OpenAPI schema**",
+        "C": "Đo tải **CPU** của máy chủ",
+        "D": "**Assert** các truy vấn **SQL** từ **log**"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "**Contract validation** đảm bảo các phản hồi khớp với **schema** đã xác định."
+    },
+    {
+      "question_id": "EQ2013-VN",
+      "question": "Kịch bản nào thể hiện rõ nhất một **load test** trung gian?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "10.000 **người dùng ảo** đồng thời cho **stress testing**",
+        "B": "Kiểm tra chức năng một người dùng",
+        "C": "**Unit testing** một chức năng",
+        "D": "100–200 **người dùng ảo** đồng thời mô phỏng lưu lượng truy cập trung bình"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Các **load test** trung gian mô phỏng lưu lượng truy cập người dùng vừa phải, thực tế."
+    },
+    {
+      "question_id": "EQ2015-VN",
+      "question": "Cách tiếp cận nào giúp phát hiện các nỗ lực truy cập trái phép trong một API?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "**Penetration test** sử dụng **token** không hợp lệ hoặc thiếu",
+        "B": "**Unit test** trên các chức năng hỗ trợ",
+        "C": "Thành công **build** **CI pipeline**",
+        "D": "Chạy API ở chế độ **debug**"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "**Penetration test** tiết lộ điểm yếu trong việc xử lý ủy quyền."
+    },
+    {
+      "question_id": "EQ2017-VN",
+      "question": "Chiến lược nào đảm bảo khả năng tái tạo của các **integration API tests**?",
+      "type": "MCQ",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Chạy với dữ liệu sản phẩm ngẫu nhiên",
+        "B": "Sử dụng các cơ sở dữ liệu **test** được **seed** và các **script reset**",
+        "C": "Hardcode **timestamp** trong các yêu cầu",
+        "D": "Vô hiệu hóa các **cleanup step** sau khi **test**"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Dữ liệu **test** được **seed** đảm bảo khả năng tái tạo nhất quán."
+    },
+    {
+      "question_id": "EQ2019-VN",
+      "question": "Điều nào trong số này là một **recovery step** thích hợp nếu giám sát API phát hiện lỗi **500** nhất quán?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Bỏ qua chúng cho đến bản phát hành tiếp theo",
+        "B": "Thêm logic **retry** ngẫu nhiên cho tất cả các máy khách",
+        "C": "Cảnh báo đội ngũ vận hành và kích hoạt **rollback** của **deployment** gần đây",
+        "D": "Tắt **log** lỗi"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**Rollback** và cảnh báo đảm bảo giảm thiểu nhanh chóng."
+    },
+    {
+      "question_id": "EQ2021-VN",
+      "question": "Kịch bản nào sau đây là một ví dụ về một **chained API test case**?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Gọi GET /status lặp đi lặp lại",
+        "B": "Tạo một người dùng, sau đó sử dụng ID của người dùng đó trong GET /profile",
+        "C": "Kiểm tra một endpoint với các **header** không hợp lệ",
+        "D": "Đo độ trễ trung bình của một endpoint"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "**Chained test case** phụ thuộc vào đầu ra của một API là đầu vào cho API khác."
+    },
+    {
+      "question_id": "EQ2023-VN",
+      "question": "Thực hành nào giúp phát hiện vi phạm **contract** sớm trong **CI/CD pipeline**?",
+      "type": "MCQ",
+      "category": "CI/CD & Automation Integration",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "**Load testing** trong **production** thôi",
+        "B": "Kiểm tra **regression** thủ công mỗi tháng một lần",
+        "C": "**Schema validation tests** được tích hợp vào **pipeline**",
+        "D": "Sử dụng **mock** cho tất cả các phụ thuộc bên ngoài"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**Automated schema validation** trong **CI/CD** phát hiện các thay đổi gây lỗi nhanh chóng."
+    },
+    {
+      "question_id": "EQ2025-VN",
+      "question": "Điều nào sau đây là một ví dụ về một **negative authorization test**?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Gọi **DELETE /users** mà không có đặc quyền quản trị",
+        "B": "Gọi **GET /users** với **token** hợp lệ",
+        "C": "Đăng nhập với thông tin đăng nhập hợp lệ",
+        "D": "Làm mới một **session token** hợp lệ"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Cố gắng xóa người dùng mà không có đặc quyền kiểm tra các hạn chế truy cập."
+    },
+    {
+      "question_id": "EQ2027-VN",
+      "question": "Phương pháp nào đảm bảo các **API keys** nhạy cảm không bị lộ trong quá trình **automated testing**?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Hardcode chúng trong các **test script**",
+        "B": "In chúng trong các **log CI/CD**",
+        "C": "Lưu trữ chúng trong các **repo GitHub** công khai",
+        "D": "Sử dụng các biến môi trường được mã hóa"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Các biến môi trường được mã hóa giữ bí mật an toàn."
+    },
+    {
+      "question_id": "EQ2029-VN",
+      "question": "Chỉ số giám sát nào sẽ tốt nhất để chỉ ra rò rỉ bộ nhớ trong một API?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Tăng đột biến độ trễ trung bình",
+        "B": "Sử dụng bộ nhớ tăng dần",
+        "C": "Sử dụng CPU giảm",
+        "D": "Tăng ngẫu nhiên tỷ lệ **cache hit**"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Rò rỉ bộ nhớ biểu hiện dưới dạng sử dụng bộ nhớ liên tục tăng."
+    },
+    {
+      "question_id": "EQ2031-VN",
+      "question": "Điều nào sau đây mô tả rõ nhất **service virtualization**?",
+      "type": "MCQ",
+      "category": "Mocking & Service Virtualization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Chỉ chạy API trong **production**",
+        "B": "Sử dụng bản sao cơ sở dữ liệu cục bộ",
+        "C": "Mô phỏng các phụ thuộc không có sẵn với các dịch vụ ảo",
+        "D": "Thay thế logic **backend** bằng các **microservice** mới"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**Service virtualization** cho phép kiểm tra mà không có các phụ thuộc thực."
+    },
+    {
+      "question_id": "EQ2033-VN",
+      "question": "Kịch bản lỗi nào thể hiện rõ nhất một lỗi phía máy khách?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "HTTP 400 Bad Request",
+        "B": "HTTP 500 Internal Server Error",
+        "C": "Lỗi **timeout** cơ sở dữ liệu",
+        "D": "**Out-of-memory** trên máy chủ"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "**400 Bad Request** chỉ ra yêu cầu không hợp lệ từ phía máy khách."
+    },
+    {
+      "question_id": "EQ2035-VN",
+      "question": "Kịch bản nào trong số này yêu cầu **schema validation** trong quá trình **testing**?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Kiểm tra thời gian phản hồi API trung bình",
+        "B": "Đảm bảo các trường **JSON** phản hồi khớp với định nghĩa **OpenAPI**",
+        "C": "Đo **throughput** dưới **tải**",
+        "D": "Phân tích **log** truy vấn **SQL**"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "**Schema validation** đảm bảo tính chính xác về cấu trúc của các phản hồi."
+    },
+    {
+      "question_id": "EQ2037-VN",
+      "question": "Điều nào sau đây cải thiện khả năng tái tạo của các **API tests** trong nhiều môi trường?",
+      "type": "MCQ",
+      "category": "Environment & Test Data Management",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Sử dụng các **URL** môi trường được **hardcode**",
+        "B": "Ngẫu nhiên hóa tất cả dữ liệu **test**",
+        "C": "Thực hiện **test** trên dữ liệu **production**",
+        "D": "Tham số hóa các **endpoint** và sử dụng cấu hình môi trường"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "**Parameterization** đảm bảo cùng một logic **test** hoạt động trên các môi trường."
+    },
+    {
+      "question_id": "EQ2039-VN",
+      "question": "Điều nào trong số này mô tả rõ nhất **performance baseline testing**?",
+      "type": "MCQ",
+      "category": "Performance & Load Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Đo thời gian phản hồi bình thường dưới **tải** dự kiến",
+        "B": "Kiểm tra API với các đầu vào không hợp lệ",
+        "C": "Xác thực API so với **OpenAPI spec**",
+        "D": "Mô phỏng lưu lượng truy cập **peak** gấp 10 lần"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "**Baseline testing** nắm bắt hiệu suất bình thường dự kiến."
+    },
+    {
+      "question_id": "EQ2041-VN",
+      "question": "Điều nào trong số này là một **test case** chính xác để xác thực hết hạn **session**?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Đăng nhập với thông tin đăng nhập hợp lệ, mong đợi **200 OK**",
+        "B": "Gửi yêu cầu với **token** hợp lệ ngay sau khi đăng nhập",
+        "C": "Gửi yêu cầu với **token** sau khi hết **timeout session**, mong đợi **401 Unauthorized**",
+        "D": "Gửi yêu cầu không có **token**, mong đợi **200 OK**"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**Session** đã hết hạn phải trả về **401 Unauthorized**."
+    },
+    {
+      "question_id": "EQ2043-VN",
+      "question": "Chiến lược nào giúp xác thực **tương thích ngược** sau khi thêm các trường tùy chọn mới?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Đảm bảo các máy khách cũ vẫn hoạt động mà không cần gửi các trường mới",
+        "B": "Buộc các máy khách cập nhật ngay lập tức",
+        "C": "Xóa các trường cũ khỏi phản hồi",
+        "D": "Yêu cầu các thay đổi **schema** phải gây lỗi"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "**Tương thích ngược** có nghĩa là các máy khách cũ vẫn phải hoạt động mà không cần các trường mới."
+    },
+    {
+      "question_id": "EQ2045-VN",
+      "question": "Cách hiệu quả nhất để kiểm tra khả năng phục hồi khi một dịch vụ **downstream** của API bị lỗi là gì?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Vô hiệu hóa **retry** ở máy khách",
+        "B": "Ngừng **testing** cho đến khi dịch vụ phục hồi",
+        "C": "Chỉ chạy **unit tests**",
+        "D": "Chèn lỗi bằng cách sử dụng **chaos testing** hoặc **mock**"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "**Chaos testing/mocks** cho phép mô phỏng có kiểm soát các lỗi phụ thuộc."
+    },
+    {
+      "question_id": "EQ2047-VN",
+      "question": "**Response status code** nào thích hợp cho một yêu cầu bị chặn do thiếu **authorization header**?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Thiếu ủy quyền dẫn đến **401 Unauthorized**."
+    },
+    {
+      "question_id": "EQ2049-VN",
+      "question": "Điều nào sau đây thể hiện một **boundary test** thích hợp cho trường độ dài mật khẩu (**min**=8, **max**=20)?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Kiểm tra với 7, 8, 20, và 21 ký tự",
+        "B": "Chỉ kiểm tra với 10 ký tự",
+        "C": "Chỉ kiểm tra với 15 ký tự",
+        "D": "Chỉ kiểm tra với mật khẩu trống"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "**Boundary testing** bao gồm các giá trị ở, dưới và trên giới hạn."
+    },
+    {
+      "question_id": "EQ2051-VN",
+      "question": "Phương pháp giám sát nào giúp xác định sự gia tăng độ trễ dần dần qua các tuần?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Đo thời gian bằng đồng hồ bấm giờ cho một yêu cầu duy nhất",
+        "B": "Gỡ lỗi thủ công trong các sự cố",
+        "C": "Phân tích xu hướng chuỗi thời gian bằng **dashboard**",
+        "D": "Các chỉ số **code coverage**"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**Dashboard** và giám sát chuỗi thời gian làm nổi bật các xu hướng độ trễ."
+    },
+    {
+      "question_id": "EQ2053-VN",
+      "question": "Chiến lược nào đảm bảo các **contract test** vẫn hữu ích khi API phát triển?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Không bao giờ cập nhật **schema tests**",
+        "B": "Xóa các trường tùy chọn khỏi **test**",
+        "C": "Chỉ chạy các **regression test** thủ công",
+        "D": "Phiên bản hóa các **schema contract** và duy trì **tương thích ngược**"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "**Versioning** và **tương thích ngược** giữ cho các **contract test** đáng tin cậy."
+    },
+    {
+      "question_id": "EQ2055-VN",
+      "question": "Kịch bản nào trong số này xác thực chính xác **observability** API bằng cách sử dụng **distributed tracing**?",
+      "type": "MCQ",
+      "category": "Observability & Monitoring",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "Chỉ kiểm tra các **HTTP status codes**",
+        "B": "Theo dõi một **trace ID** trên nhiều **microservice**",
+        "C": "Kiểm tra việc sử dụng bộ nhớ trong các **log** máy chủ",
+        "D": "Sử dụng các ghi chú **test** thủ công"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "**Trace ID** theo dõi các yêu cầu trên các dịch vụ."
+    },
+    {
+      "question_id": "EQ2057-VN",
+      "question": "Điều nào sau đây chỉ ra một lỗ hổng **denial-of-service**?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "API chấp nhận yêu cầu không giới hạn mà không cần **throttling**",
+        "B": "API trả về **404 Not Found**",
+        "C": "**API schema** thiếu trường mô tả",
+        "D": "**Unit test coverage** thấp"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Các yêu cầu không bị hạn chế có thể làm cạn kiệt tài nguyên, gây ra **DoS**."
+    },
+    {
+      "question_id": "EQ2059-VN",
+      "question": "**HTTP status code** nào nên được xác thực khi một yêu cầu API được định dạng tốt nhưng bị cấm do hạn chế vai trò?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Intermediate",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "500 Internal Server Error"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**403 Forbidden** chỉ ra máy khách đã được xác thực nhưng không được ủy quyền."
+    },
+    {
+      "question_id": "EQ3001-VN",
+      "question": "Kịch bản nào sau đây thể hiện rõ nhất một bài kiểm tra multi-hop (đa bước) liên quan đến các endpoint đăng nhập và làm mới token?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Gửi yêu cầu tới GET /health",
+        "B": "Nhận access token qua POST /login, sau đó sử dụng POST /refresh để gia hạn session",
+        "C": "Gửi yêu cầu với token đã hết hạn tới một endpoint được bảo vệ",
+        "D": "Kiểm tra trạng thái 200 trên GET /docs"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Kiểm tra multi-hop có nghĩa là nối chuỗi đăng nhập với việc sử dụng refresh token sau đó."
+    },
+    {
+      "question_id": "EQ3003-VN",
+      "question": "Một server nên trả về mã trạng thái HTTP nào khi một refresh token đã hết hạn?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "403 Forbidden",
+        "C": "401 Unauthorized",
+        "D": "201 Created"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Refresh token đã hết hạn có nghĩa là client phải đăng nhập lại → 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ3005-VN",
+      "question": "Cái nào sau đây ánh xạ một mã lỗi cụ thể của ứng dụng tới mã trạng thái HTTP chính xác?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "APP_1001 (User not found) → 404 Not Found",
+        "B": "APP_2002 (Invalid password) → 201 Created",
+        "C": "APP_3003 (Success) → 500 Internal Server Error",
+        "D": "APP_9999 (Database error) → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Ánh xạ lỗi người dùng không tìm thấy tới 404 là một bản dịch HTTP chính xác."
+    },
+    {
+      "question_id": "EQ3007-VN",
+      "question": "Kịch bản nào thể hiện việc kiểm tra tiêu cực chuỗi (chained negative testing)?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Kiểm tra yêu cầu GET /status đơn lẻ",
+        "B": "Đăng nhập hợp lệ sau đó truy cập /profile",
+        "C": "Kiểm tra thời gian hoạt động của server với GET /health",
+        "D": "Đăng nhập với mật khẩu hết hạn → 401, sau đó thử lại refresh token → 401"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Các bài kiểm tra tiêu cực chuỗi xác thực các thất bại trên nhiều endpoint."
+    },
+    {
+      "question_id": "EQ3009-VN",
+      "question": "Mã trạng thái HTTP nào là chính xác để ánh xạ một lỗi tùy chỉnh ORDER_DUPLICATE tới HTTP?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "409 Conflict",
+        "C": "404 Not Found",
+        "D": "500 Internal Server Error"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Đơn hàng trùng lặp là một xung đột → 409."
+    },
+    {
+      "question_id": "EQ3011-VN",
+      "question": "Kịch bản nào xác thực việc xử lý lỗi đa bước (multi-hop) chính xác trong một quy trình thương mại điện tử?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Tạo đơn hàng → chi tiết thanh toán không hợp lệ → 402 Payment Required",
+        "B": "Kiểm tra kho hàng → sản phẩm tồn tại → 200 OK",
+        "C": "Gọi endpoint healthcheck → 200 OK",
+        "D": "Yêu cầu danh mục sản phẩm → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Thanh toán thất bại sau khi tạo đơn hàng là một bài kiểm tra tiêu cực multi-hop."
+    },
+    {
+      "question_id": "EQ3013-VN",
+      "question": "Cái nào trong số này thể hiện một bài kiểm tra đăng nhập chuỗi cấp độ khó?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Chỉ kiểm tra GET /login-docs",
+        "B": "Chỉ đăng nhập một lần và dừng lại",
+        "C": "Đăng nhập → làm mới token → đăng xuất → xác nhận việc làm mới thất bại",
+        "D": "Kiểm tra endpoint GET /health"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Kết hợp nhiều endpoint vào một quy trình xác thực."
+    },
+    {
+      "question_id": "EQ3015-VN",
+      "question": "Ánh xạ nào là chính xác cho lỗi nghiệp vụ PAYMENT_DECLINED?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "402 Payment Required"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Thanh toán bị từ chối → 402 Payment Required."
+    },
+    {
+      "question_id": "EQ3017-VN",
+      "question": "Kịch bản nào ánh xạ tới mã HTTP chính xác cho một lỗi ứng dụng nội bộ?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "APP_TIMEOUT → 200 OK",
+        "B": "APP_TIMEOUT → 504 Gateway Timeout",
+        "C": "APP_TIMEOUT → 201 Created",
+        "D": "APP_TIMEOUT → 400 Bad Request"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Các lỗi timeout nên ánh xạ tới 504 Gateway Timeout."
+    },
+    {
+      "question_id": "EQ3019-VN",
+      "question": "Bài kiểm tra nào xác thực quyền truy cập dựa trên vai trò chuỗi?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Đăng nhập với vai trò user → truy cập /admin → mong đợi 403 Forbidden",
+        "B": "Đăng nhập với vai trò admin → truy cập /admin → mong đợi 200 OK",
+        "C": "Đăng nhập với vai trò user → xem hồ sơ → 200 OK",
+        "D": "GET /health → 200 OK"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Vai trò không khớp dẫn đến 403 là một xác thực vai trò multi-hop."
+    },
+    {
+      "question_id": "EQ3021-VN",
+      "question": "Kịch bản nào xác thực một chuỗi đăng nhập, làm mới và đăng xuất?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Đăng nhập → sử dụng token một lần",
+        "B": "Làm mới token ngay sau khi đăng nhập",
+        "C": "Chỉ đăng xuất",
+        "D": "Đăng nhập → làm mới token → đăng xuất → xác nhận làm mới thất bại"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Chuỗi đầy đủ này kiểm tra toàn bộ vòng đời xác thực."
+    },
+    {
+      "question_id": "EQ3023-VN",
+      "question": "Ánh xạ nào dịch chính xác một lỗi nghiệp vụ STOCK_OUT sang HTTP?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "409 Conflict",
+        "C": "201 Created",
+        "D": "403 Forbidden"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Hết hàng có nghĩa là một xung đột với việc thực hiện đơn hàng, ánh xạ tới 409."
+    },
+    {
+      "question_id": "EQ3025-VN",
+      "question": "Kịch bản nào xác thực việc kiểm tra tiêu cực chuỗi cho một quy trình giỏ hàng?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Thêm mặt hàng hợp lệ vào giỏ hàng → 200 OK",
+        "B": "Thanh toán với thanh toán hợp lệ → 200 OK",
+        "C": "Thêm mặt hàng → xóa mặt hàng → thanh toán → mong đợi 400 Bad Request",
+        "D": "Xem giỏ hàng sau khi đăng nhập → 200 OK"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Thanh toán giỏ hàng trống là một kịch bản tiêu cực chuỗi."
+    },
+    {
+      "question_id": "EQ3027-VN",
+      "question": "Kịch bản nào thể hiện rõ nhất việc xác thực việc hủy đơn hàng chuỗi?",
+      "type": "MCQ",
+      "category": "Test Case",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Tạo đơn hàng → hủy đơn hàng → GET /orders/{id} hiển thị status=cancelled",
+        "B": "Hủy đơn hàng không tồn tại → 404",
+        "C": "Chỉ tạo đơn hàng",
+        "D": "Kiểm tra endpoint /status"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Bao gồm vòng đời của việc tạo đơn hàng → hủy bỏ → xác minh."
+    },
+    {
+      "question_id": "EQ3029-VN",
+      "question": "Ánh xạ nào dịch chính xác FILE_TOO_LARGE sang HTTP?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "401 Unauthorized",
+        "C": "404 Not Found",
+        "D": "413 Payload Too Large"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "File quá lớn nên ánh xạ tới 413."
+    },
+    {
+      "question_id": "EQ3031-VN",
+      "question": "Chuỗi nào xác thực các refresh token trên nhiều session?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Chỉ đăng nhập → đăng xuất",
+        "B": "Đăng nhập → làm mới token → đăng xuất → đăng nhập lại → xác nhận refresh token cũ không hợp lệ",
+        "C": "Làm mới token mà không đăng nhập",
+        "D": "Kiểm tra GET /status"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Đảm bảo xử lý session trên nhiều lần đăng nhập."
+    },
+    {
+      "question_id": "EQ3033-VN",
+      "question": "Ánh xạ nào là chính xác để ánh xạ lỗi nghiệp vụ INVALID_COUPON?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "403 Forbidden",
+        "C": "400 Bad Request",
+        "D": "201 Created"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Coupon không hợp lệ nên ánh xạ tới 400 Bad Request."
+    },
+    {
+      "question_id": "EQ3035-VN",
+      "question": "Kịch bản nào xác thực ánh xạ lỗi đa bước (multi-hop) chính xác trong quy trình thanh toán?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "API thanh toán trả về DECLINED → được ánh xạ tới HTTP 402",
+        "B": "API thanh toán trả về APPROVED → được ánh xạ tới HTTP 404",
+        "C": "API thanh toán trả về DECLINED → được ánh xạ tới HTTP 201",
+        "D": "API thanh toán trả về ERROR → được ánh xạ tới HTTP 200"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Thanh toán bị từ chối ánh xạ chính xác tới 402 Payment Required."
+    },
+    {
+      "question_id": "EQ3037-VN",
+      "question": "Ánh xạ nào là chính xác để ánh xạ RATE_LIMIT_EXCEEDED sang HTTP?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "403 Forbidden",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Vượt quá giới hạn tốc độ nên ánh xạ tới 429."
+    },
+    {
+      "question_id": "EQ3039-VN",
+      "question": "Kịch bản nào xác thực việc kiểm tra tiêu cực chuỗi trong quy trình đặt vé?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Đặt vé hợp lệ → 200 OK",
+        "B": "Đặt vé → hủy vé → thử hoàn tiền → mong đợi 400 Bad Request",
+        "C": "Xem các ghế có sẵn → 200 OK",
+        "D": "Kiểm tra GET /status → 200 OK"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Tiêu cực chuỗi: hoàn tiền sau khi hủy là không hợp lệ."
+    },
+    {
+      "question_id": "EQ3041-VN",
+      "question": "Chuỗi nào xác thực chính xác việc xoay vòng token với phát hiện việc sử dụng lại refresh token?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "Đăng nhập → gọi API một lần → đăng xuất",
+        "B": "Đăng nhập → làm mới token → thử sử dụng lại refresh token cũ → mong đợi 401 Unauthorized",
+        "C": "Chỉ đăng nhập",
+        "D": "Làm mới mà không đăng nhập"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Việc sử dụng lại token phải bị từ chối sau khi xoay vòng để ngăn chặn các cuộc tấn công replay."
+    },
+    {
+      "question_id": "EQ3043-VN",
+      "question": "Mã trạng thái HTTP nào nên được trả về khi một điều kiện tiên quyết If-Match thất bại do ETag cũ trong quá trình PUT /resource/{id}?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "412 Precondition Failed",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "ETag cũ nên ánh xạ tới 412 Precondition Failed."
+    },
+    {
+      "question_id": "EQ3045-VN",
+      "question": "Ánh xạ nào từ mã nghiệp vụ tới HTTP là phù hợp nhất cho RESOURCE_VERSION_CONFLICT trong quá trình cập nhật?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "404 Not Found",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Xung đột phiên bản ánh xạ chính xác tới 409 Conflict."
+    },
+    {
+      "question_id": "EQ3047-VN",
+      "question": "Mã trạng thái nào thể hiện rõ nhất một refresh token được trình bày cho một client_id sai trong một hệ thống đa người thuê (multi-tenant)?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "401 Unauthorized",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "OAuth2 chỉ định invalid_grant (400) cho việc sử dụng client/refresh sai."
+    },
+    {
+      "question_id": "EQ3049-VN",
+      "question": "Ánh xạ trạng thái nào là chính xác cho mã nghiệp vụ INSUFFICIENT_FUNDS từ cổng thanh toán?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "404 Not Found",
+        "C": "403 Forbidden",
+        "D": "402 Payment Required"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Không đủ tiền → 402 Payment Required."
+    },
+    {
+      "question_id": "EQ3051-VN",
+      "question": "Kịch bản nào xác thực chính xác chính sách backoff + thử lại trên các chuyển đổi 429 -> 200 của gateway?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Hard",
+      "options": {
+        "A": "API trả về 429 Too Many Requests → client thử lại với backoff → 200 OK",
+        "B": "API trả về 401 Unauthorized → thử lại thành công",
+        "C": "API trả về 404 Not Found → thử lại thành công",
+        "D": "API trả về 500 → thử lại mà không có backoff"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Thử lại với backoff lũy thừa là cần thiết để xử lý 429."
+    },
+    {
+      "question_id": "EQ3053-VN",
+      "question": "Mã HTTP nào nên ánh xạ tới BUSINESS_LIMIT_EXCEEDED khi hạn ngạch (quota) trên mỗi người dùng chặn một yêu cầu hợp lệ, đã xác thực?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "403 Forbidden",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Hạn ngạch cạn kiệt ánh xạ tới 429 Too Many Requests."
+    },
+    {
+      "question_id": "EQ3055-VN",
+      "question": "Ánh xạ nào là chính xác nhất cho mã lỗi SIGNATURE_INVALID trên xác minh giao hàng webhook?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "404 Not Found",
+        "C": "401 Unauthorized",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Chữ ký webhook không hợp lệ nên trả về 401 Unauthorized."
+    },
+    {
+      "question_id": "EQ3057-VN",
+      "question": "Mã HTTP nào thể hiện rõ nhất một tài nguyên đã bị xóa mềm (soft-deleted) được yêu cầu bởi GET /resource/{id} sau DELETE (với trạng thái có thể khôi phục)?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "404 Not Found",
+        "C": "403 Forbidden",
+        "D": "204 No Content"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Tài nguyên đã bị xóa mềm nên được coi là không tìm thấy."
+    },
+    {
+      "question_id": "EQ3059-VN",
+      "question": "Ánh xạ nào là chính xác khi sự cố phụ thuộc kích hoạt mạch ngắt (circuit breaker) MỞ, khiến gateway từ chối yêu cầu ngay lập tức?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "503 Service Unavailable",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Mạch ngắt MỞ ánh xạ tới 503 Service Unavailable."
+    },
+    {
+      "question_id": "EQ4001-VN",
+      "question": "Luồng **chained** nào xác thực chính xác vòng đời đơn hàng với tạo → ghi nhận → hoàn tiền, đảm bảo **idempotency** trên các lần **retry**?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Tạo đơn hàng → **retry** hoàn tiền hai lần → hoàn tiền thất bại",
+        "B": "Ghi nhận thanh toán mà không tạo đơn hàng",
+        "C": "Tạo đơn hàng → ghi nhận thanh toán → **retry** ghi nhận với cùng **idempotency key** → một lần ghi nhận duy nhất → hoàn tiền thành công",
+        "D": "Hoàn tiền trước khi tạo đơn hàng"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**Idempotency** phải đảm bảo các lần ghi nhận trùng lặp không tạo ra nhiều lần ghi nhận."
+    },
+    {
+      "question_id": "EQ4003-VN",
+      "question": "Ánh xạ nào là đúng để xử lý một giao dịch trùng lặp được phát hiện trong quá trình yêu cầu hoàn tiền?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "409 Conflict",
+        "C": "403 Forbidden",
+        "D": "500 Internal Server Error"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Giao dịch trùng lặp phải ánh xạ tới **409 Conflict**."
+    },
+    {
+      "question_id": "EQ4005-VN",
+      "question": "Kịch bản **chained** nào xác thực đúng việc truyền lỗi trong một giao dịch **distributed saga**?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Bắt đầu saga → tất cả các bước thành công",
+        "B": "Bắt đầu saga → bỏ qua lỗi ở bước 2",
+        "C": "Bắt đầu saga → **rollback** bị bỏ qua",
+        "D": "Bắt đầu saga → bước 3 thất bại → **rollback** bù trừ của các bước 1 & 2 được thực thi"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Mô hình **saga** đảm bảo các hành động bù trừ khi thất bại."
+    },
+    {
+      "question_id": "EQ4007-VN",
+      "question": "Kịch bản xử lý lỗi nào tốt nhất để xác thực các kiểm tra hợp lý trong **payment APIs**?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Gửi hoàn tiền > số tiền đã ghi nhận → **400 Bad Request**",
+        "B": "Gửi hoàn tiền = số tiền đã ghi nhận → **200 OK**",
+        "C": "Gửi hoàn tiền < số tiền đã ghi nhận → **200 OK**",
+        "D": "Hoàn tiền mà không ghi nhận → **200 OK**"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": false,
+      "explanation": "Số tiền hoàn tiền lớn hơn số tiền đã ghi nhận phải thất bại với **400**."
+    },
+    {
+      "question_id": "EQ4009-VN",
+      "question": "Ánh xạ nào tốt nhất để xác thực xử lý lỗi định dạng cho các tải trọng **JSON** bị định dạng sai?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "201 Created",
+        "B": "500 Internal Server Error",
+        "C": "400 Bad Request",
+        "D": "200 OK"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "**JSON** bị định dạng sai phải dẫn đến **400 Bad Request**."
+    },
+    {
+      "question_id": "EQ4011-VN",
+      "question": "Luồng **chained** nào xác thực trạng thái nhất quán trong quy trình đặt phòng phân tán?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Chỉ đặt khách sạn",
+        "B": "Đặt khách sạn → đặt chuyến bay → chuyến bay thất bại → đặt phòng khách sạn tự động bị hủy",
+        "C": "Chỉ đặt chuyến bay",
+        "D": "Đặt khách sạn và giữ đặt phòng ngay cả khi thanh toán thất bại"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Việc tự động hủy khách sạn đảm bảo trạng thái nhất quán trên các hệ thống."
+    },
+    {
+      "question_id": "EQ4013-VN",
+      "question": "**HTTP code** nào là đúng để xác thực kiểm tra hợp lý khi rút tiền > số dư tài khoản?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "403 Forbidden",
+        "D": "400 Bad Request"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Rút tiền quá số dư phải bị từ chối với **400 Bad Request**."
+    },
+    {
+      "question_id": "EQ4015-VN",
+      "question": "Kịch bản nào xác thực **rollback** trạng thái khi một API cập nhật thông tin người dùng một phần và giao dịch **DB** thất bại?",
+      "type": "MCQ",
+      "category": "Error Handling & Negative Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Cập nhật thất bại giữa chừng → không có thay đổi một phần nào tồn tại",
+        "B": "Cập nhật thất bại giữa chừng → thay đổi một phần vẫn còn",
+        "C": "Cập nhật thất bại giữa chừng → hệ thống bị lỗi",
+        "D": "Cập nhật thành công mặc dù **DB rollback**"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "**Rollback** thích hợp ngăn ngừa dữ liệu một phần/không nhất quán."
+    },
+    {
+      "question_id": "EQ4016-VN",
+      "question": "Kịch bản **chained** nào tốt nhất để xác thực **idempotency** của một **endpoint** ghi nhận thanh toán?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "POST /capture hai lần với các giá trị **Idempotency-Key** khác nhau → hai lần ghi nhận",
+        "B": "POST /capture hai lần với cùng một **Idempotency-Key** → một lần ghi nhận duy nhất được ghi lại",
+        "C": "POST /refund mà không ghi nhận → thành công",
+        "D": "GET /capture-status một lần"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "**Idempotency** đảm bảo các yêu cầu trùng lặp với cùng một khóa không tạo ra nhiều lần ghi nhận."
+    },
+    {
+      "question_id": "EQ4018-VN",
+      "question": "Ánh xạ nào là đúng để xử lý mã lỗi ứng dụng **LIMIT_EXCEEDED** cho hạn ngạch API mỗi tài khoản?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "400 Bad Request",
+        "C": "403 Forbidden",
+        "D": "429 Too Many Requests"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "Vượt quá giới hạn/hạn ngạch ánh xạ tới **429 Too Many Requests**."
+    },
+    {
+      "question_id": "EQ4020-VN",
+      "question": "Luồng **chained** nào xác thực việc phát hiện lạm dụng **OAuth2 token** trên các dịch vụ?",
+      "type": "MCQ",
+      "category": "Authentication & Authorization",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Đăng nhập một lần",
+        "B": "Làm mới **token** ngay lập tức",
+        "C": "Đăng nhập → lấy **token** → cố gắng sử dụng **token** trong một máy khách khác → **403 Forbidden**",
+        "D": "Chỉ đăng xuất"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Việc lạm dụng **token** chéo máy khách phải bị cấm."
+    },
+    {
+      "question_id": "EQ4022-VN",
+      "question": "Kịch bản nào tốt nhất để xác thực xử lý lỗi định dạng cho sự không khớp đầu vào **XML vs JSON**?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Gửi thân **XML** với **Content-Type: application/json** → **415 Unsupported Media Type**",
+        "B": "Gửi thân **JSON** với **application/json** → **200 OK**",
+        "C": "Gửi thân **XML** với **application/xml** → **200 OK**",
+        "D": "Gửi **YAML** → **200 OK**"
+      },
+      "gold_answer": "A",
+      "model_raw_answer": "A",
+      "model_normalized_answer": "A",
+      "correct": true,
+      "explanation": "Sự không khớp trong thân so với **header** phải dẫn đến **415**."
+    },
+    {
+      "question_id": "EQ4024-VN",
+      "question": "**HTTP status** nào là đúng khi xảy ra lỗi xác thực **schema** cho một trường lồng nhau?",
+      "type": "MCQ",
+      "category": "Contract & Schema Validation",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "201 Created",
+        "B": "500 Internal Server Error",
+        "C": "400 Bad Request",
+        "D": "404 Not Found"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Lỗi xác thực **schema** phải trả về **400**."
+    },
+    {
+      "question_id": "EQ4026-VN",
+      "question": "Kịch bản **chained** nào xác thực **rollback** thích hợp sau khi đặt phòng nhiều bước (chuyến bay + khách sạn) khi thanh toán thất bại?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Đặt chuyến bay → **200 OK**",
+        "B": "Đặt khách sạn → **200 OK**",
+        "C": "Đặt chuyến bay + khách sạn → thanh toán thành công",
+        "D": "Đặt chuyến bay + khách sạn → thanh toán thất bại → **rollback** cả hai đặt phòng"
+      },
+      "gold_answer": "D",
+      "model_raw_answer": "D",
+      "model_normalized_answer": "D",
+      "correct": true,
+      "explanation": "**Rollback** đảm bảo không còn đặt phòng không nhất quán."
+    },
+    {
+      "question_id": "EQ4028-VN",
+      "question": "Ánh xạ nào là đúng cho mã ứng dụng **TOKEN_REPLAY_DETECTED**?",
+      "type": "MCQ",
+      "category": "Security Testing",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "401 Unauthorized",
+        "D": "409 Conflict"
+      },
+      "gold_answer": "C",
+      "model_raw_answer": "C",
+      "model_normalized_answer": "C",
+      "correct": true,
+      "explanation": "Tái sử dụng **token** phải được xử lý như **401 Unauthorized**."
+    },
+    {
+      "question_id": "EQ4030-VN",
+      "question": "Luồng **chained** nào xác thực việc thanh toán không đồng bộ với đối chiếu?",
+      "type": "MCQ",
+      "category": "Advanced Testing Strategies",
+      "difficulty": "Very Hard",
+      "options": {
+        "A": "Chỉ tạo đơn hàng",
+        "B": "Tạo đơn hàng → ghi nhận thanh toán → đối chiếu không đồng bộ → trạng thái cuối cùng=đã đối chiếu",
+        "C": "Hoàn tiền mà không đối chiếu",
+        "D": "Kiểm tra tình trạng API"
+      },
+      "gold_answer": "B",
+      "model_raw_answer": "B",
+      "model_normalized_answer": "B",
+      "correct": true,
+      "explanation": "Thanh toán không đồng bộ phải đối chiếu chính xác."
+    }
+  ]
+}
