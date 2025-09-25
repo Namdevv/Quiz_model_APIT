@@ -1,0 +1,34 @@
+
+ISTQB TEST RESULTS SUMMARY REPORT
+=====================================
+
+Test Information:
+- Date: 2025-09-23T16:08:50.119726
+- Total Questions: 40
+- Correct Answers: 22
+- Overall Accuracy: 55.00%
+
+Performance by Knowledge Level:
+------------------------------
+K1: 7/11 (63.6%)
+K2: 13/23 (56.5%)
+K3: 2/6 (33.3%)
+
+
+Detailed Analysis:
+-----------------
+Best performing K-Level: K1
+Needs improvement: K3
+Overall Performance: Needs Improvement (<60%)
+
+
+Files Included in This Package:
+------------------------------
+- detailed_results_*.xlsx: Complete results in Excel format
+- results_*.csv: Results in CSV format for analysis
+- raw_results_*.json: Raw data in JSON format
+- full_report_*.html: Interactive HTML report
+- summary_*.txt: Text overview
+- charts/: HTML & PNG charts
+
+Report generated: 2025-09-25 02:48:28

@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ISTQB Test Results Report</title>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+    h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+    .summary-box { background: #ecf0f1; padding: 20px; border-radius: 5px; margin: 20px 0; }
+    .metric { display: inline-block; margin: 10px 20px 10px 0; }
+    .metric-value { font-size: 24px; font-weight: bold; color: #e74c3c; }
+    .metric-label { font-size: 14px; color: #7f8c8d; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #3498db; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    .correct { color: #27ae60; font-weight: bold; }
+    .incorrect { color: #e74c3c; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 ISTQB Test Results Report</h1>
+    <div class="summary-box">
+      <h2>📊 Executive Summary</h2>
+      <div class="metric"><div class="metric-value">40</div><div class="metric-label">Total Questions</div></div>
+      <div class="metric"><div class="metric-value">23</div><div class="metric-label">Correct Answers</div></div>
+      <div class="metric"><div class="metric-value">57.5%</div><div class="metric-label">Overall Accuracy</div></div>
+      <div class="metric"><div class="metric-value">2025-09-24</div><div class="metric-label">Test Date</div></div>
+    </div>
+
+    <h2>📈 Performance by Knowledge Level</h2>
+    <table>
+      <tr><th>K-Level</th><th>Total Questions</th><th>Correct Answers</th><th>Accuracy</th></tr>
+
+      <tr>
+        <td>K1</td>
+        <td>11</td>
+        <td>6</td>
+        <td>54.5%</td>
+      </tr>
+
+      <tr>
+        <td>K2</td>
+        <td>23</td>
+        <td>13</td>
+        <td>56.5%</td>
+      </tr>
+
+      <tr>
+        <td>K3</td>
+        <td>6</td>
+        <td>4</td>
+        <td>66.7%</td>
+      </tr>
+
+    </table>
+
+    <h2>📋 Detailed Results</h2>
+    <table>
+      <tr><th>Question ID</th><th>Question</th><th>Your Answer</th><th>Correct Answer</th><th>Result</th><th>K-Level</th></tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-01</td>
+        <td>Which of the following is a typical test objective?</td>
+        <td>A</td>
+        <td>B</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-02</td>
+        <td>Which of the following statements BEST describes the difference between testing and debugging?</td>
+        <td>D</td>
+        <td>C</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-03</td>
+        <td>The 'absence-of-defects fallacy' is one of the principles of testing. Which of the following is an e...</td>
+        <td>D</td>
+        <td>B</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-04</td>
+        <td>Which of the following test activities are MOST likely to involve the application of boundary value ...</td>
+        <td>B</td>
+        <td>B, E</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-05</td>
+        <td>Given the following testware:
+1. Coverage items
+2. Change requests
+3. Test execution schedule
+4. Pri...</td>
+        <td>B</td>
+        <td>A</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-06</td>
+        <td>Which of the following statements about the different testing roles is MOST likely to be CORRECT?</td>
+        <td>C</td>
+        <td>C</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-07</td>
+        <td>Which of the following is an advantage of the whole-team approach?</td>
+        <td>B</td>
+        <td>B</td>
+        <td class="correct">✓ Correct</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-08</td>
+        <td>Which of the following statements about the independence of testing is CORRECT?</td>
+        <td>A</td>
+        <td>A</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-09</td>
+        <td>Which of the following is a good testing practice that applies to all software development lifecycle...</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-10</td>
+        <td>Which of the following is an example of a test-first approach to development?</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-11</td>
+        <td>Which of the following provides the BEST description of shift-left?</td>
+        <td>B</td>
+        <td>B</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-12</td>
+        <td>Which of the following is LEAST likely to occur as a result of a retrospective?</td>
+        <td>A</td>
+        <td>C</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-13</td>
+        <td>Which of the following test levels is MOST likely being performed if the testing is focused on valid...</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-14</td>
+        <td>The navigation system software has been updated due to it suggesting routes that break traffic laws,...</td>
+        <td>B</td>
+        <td>B</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-15</td>
+        <td>Given the following example defects:
+i. Two different parts of the design specification disagree due...</td>
+        <td>C</td>
+        <td>D</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-16</td>
+        <td>Which of the following is a benefit of early and frequent stakeholder feedback?</td>
+        <td>A</td>
+        <td>A</td>
+        <td class="correct">✓ Correct</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-17</td>
+        <td>Given the following review types:
+1. Technical review
+2. Informal review
+3. Inspection
+4. Walkthroug...</td>
+        <td>D</td>
+        <td>B</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-18</td>
+        <td>Which of the following is a factor that contributes to a successful review?</td>
+        <td>C</td>
+        <td>B</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-19</td>
+        <td>What is the MAIN difference between black-box test techniques and experience-based test techniques?</td>
+        <td>model not answer</td>
+        <td>C</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-20</td>
+        <td>You are testing a PIN validator, which accepts valid PINs and rejects invalid PINs. A PIN is a seque...</td>
+        <td>A</td>
+        <td>A</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-21</td>
+        <td>A developer was asked to implement the following business rule: INPUT: value (integer number) IF (va...</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K3</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-22</td>
+        <td>You are working on a project to develop a system to analyze driving test results. You have been aske...</td>
+        <td>model not answer</td>
+        <td>D</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K3</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-23</td>
+        <td>You are designing test cases based on the following state transition diagram:From the START state:
+-...</td>
+        <td>A</td>
+        <td>A</td>
+        <td class="correct">✓ Correct</td>
+        <td>K3</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-24</td>
+        <td>You want to apply branch testing to the code represented by the following control flow graph.
+- From...</td>
+        <td>model not answer</td>
+        <td>C</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-25</td>
+        <td>How can white-box testing be useful in support of black-box testing?</td>
+        <td>A</td>
+        <td>A</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-26</td>
+        <td>Consider the following list: • Correct input not accepted • Incorrect input accepted • Wrong output ...</td>
+        <td>A</td>
+        <td>B</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-27</td>
+        <td>Which of the following BEST describes how using checklist-based testing can result in increased cove...</td>
+        <td>B</td>
+        <td>D</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-28</td>
+        <td>Which of the following provides the BEST example of a scenario-oriented acceptance criterion?</td>
+        <td>B</td>
+        <td>B</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-29</td>
+        <td>You are using acceptance test-driven development and designing test cases based on the following use...</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K3</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-30</td>
+        <td>Which of the following is NOT a purpose of a test plan?</td>
+        <td>D</td>
+        <td>A</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-31</td>
+        <td>At the beginning of each iteration, the team estimates the amount of work (in person-days) they will...</td>
+        <td>C</td>
+        <td>C</td>
+        <td class="correct">✓ Correct</td>
+        <td>K3</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-32</td>
+        <td>You are preparing a test execution schedule for executing seven test cases TC 1 to TC 7. The followi...</td>
+        <td>C</td>
+        <td>A</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-33</td>
+        <td>What does the test pyramid model show?</td>
+        <td>B</td>
+        <td>B</td>
+        <td class="correct">✓ Correct</td>
+        <td>K1</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-34</td>
+        <td>What is the relationship between the testing quadrants, test levels and test types?</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-35</td>
+        <td>Which of the following is an example of how product risk analysis may influence the thoroughness and...</td>
+        <td>C</td>
+        <td>C</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-36</td>
+        <td>Which of the following activities in the test process makes the MOST use of test progress reports?</td>
+        <td>B</td>
+        <td>B</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-37</td>
+        <td>Which of the following is NOT an example of how configuration management supports testing?</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-38</td>
+        <td>Consider the following defect report for a web-based shopping application: Application: WebShop v0.9...</td>
+        <td>D</td>
+        <td>B</td>
+        <td class="incorrect">✗ Incorrect</td>
+        <td>K3</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-39</td>
+        <td>Tools from which of the following categories help with the organization of test cases, detected defe...</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K2</td>
+      </tr>
+
+      <tr>
+        <td>ISTQB-C-v1.6-40</td>
+        <td>Which of the following is MOST likely to be a benefit of test automation?</td>
+        <td>D</td>
+        <td>D</td>
+        <td class="correct">✓ Correct</td>
+        <td>K1</td>
+      </tr>
+
+    </table>
+
+    <h2>📄 Report Generated</h2>
+    <p>This report was automatically generated on 2025-09-25 02:50:12</p>
+    <p>Interactive charts and additional data files are included in this package.</p>
+  </div>
+</body>
+</html>

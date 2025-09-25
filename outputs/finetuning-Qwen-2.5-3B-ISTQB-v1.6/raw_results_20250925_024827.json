@@ -1,0 +1,609 @@
+{
+  "timestamp": "2025-09-23T16:08:50.119726",
+  "total_questions": 40,
+  "results": [
+    {
+      "question_id": "ISTQB-C-v1.6-01",
+      "question": "Which of the following is a typical test objective?",
+      "correct_answer": "B",
+      "model_raw_answer": "The correct answer to the question is:\n\n**Option D: Verifying the test object meets user expectations**\n\nThis option best represents a typical test objective. Testing should aim to verify that the software or system being tested meets the user's needs and expectations. This ensures that the product delivered satisfies the user's requirements and functions as intended.",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K1",
+      "options": {
+        "A": "Validating that documented requirements are met",
+        "B": "Causing failures and identifying defects",
+        "C": "Initiating errors and identifying root causes",
+        "D": "Verifying the test object meets user expectations"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-02",
+      "question": "Which of the following statements BEST describes the difference between testing and debugging?",
+      "correct_answer": "C",
+      "model_raw_answer": "The correct statement describing the difference between testing and debugging is:\n\n**C: Testing determines that defects exist while debugging removes defects**\n\nHere's a brief explanation of why this is the best choice:\n\n- **Testing**: This process identifies defects or issues in a software system. It verifies that the software meets specified requirements through various types of tests.\n  \n- **Debugging**: This process involves identifying and correcting the identified defects or issues found during testing. It focuses on fixing the problems to make the software work correctly.\n\nThe other options are not as accurate:\n- **A**: While it's true that testing can reveal failures, it doesn't accurately describe what debugging does.\n- **B**: Neither testing nor debugging is inherently \"positive\" or \"negative.\" They are just different activities with different goals.\n- **D**: Debugging does involve finding the cause of defects, but it is not about fixing the cause; it is about fixing the problem itself.\n\nTherefore, **C** best captures the essence of the difference between testing and debugging.",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Testing causes failures while debugging fixes failures",
+        "B": "Testing is a negative activity while debugging is a positive activity",
+        "C": "Testing determines that defects exist while debugging removes defects",
+        "D": "Testing finds the cause of defects while debugging fixes the cause of defects"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-03",
+      "question": "The 'absence-of-defects fallacy' is one of the principles of testing. Which of the following is an example of addressing this principle in practice?",
+      "correct_answer": "B",
+      "model_raw_answer": "The \"absence-of-defects fallacy\" is a principle in software testing that emphasizes that it is impossible to prove that a system is completely free of defects. Instead, the focus is on reducing the number and severity of defects, rather than trying to prove that there are none.\n\nLet's analyze each option:\n\n- **Option A**: Explaining that it is not possible for testing to show the absence of defects.\n  - This option correctly reflects the core principle of the absence-of-defects fallacy. It acknowledges that proving the complete absence of defects is logically impossible but highlights the importance of minimizing defects through testing.\n\n- **Option B**: Supporting the end users to perform acceptance testing.\n  - While supporting end users in acceptance testing is important, it does not directly address the principle of the absence-of-defects fallacy. Acceptance testing involves user validation of functionality, which doesn't align with the testing goal of reducing defect presence.\n\n- **Option C**: Ensuring that no implementation defects remain in the delivered system.\n  - This option is close to being correct but is somewhat idealistic. It implies achieving zero defects, which is impossible as per the absence-of-defects fallacy. The principle more focuses on reducing defects rather than eliminating them entirely.\n\n- **Option D**: Modifying tests that cause no failures to ensure few defects remain.\n  - This option is closer to the practical application of the absence-of-defects fallacy. It suggests maintaining or improving tests that don't fail, thereby ensuring that known defects are addressed and minimized.\n\nGiven the options, both Option A and Option D are correct in addressing the principle of the absence-of-defects fallacy. However, since the instruction specifies that some questions may have multiple answers (which is not the case here), I'll choose the most direct and practical example:\n\n**Answer: D: Modifying tests that cause no failures to ensure few defects remain.**\n\nThis option best illustrates the practical application of the absence-of-defects fallacy by focusing on maintaining and improving tests that do not reveal new defects, thus ensuring that known issues are addressed and minimized.",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "Explaining that it is not possible for testing to show the absence of defects",
+        "B": "Supporting the end users to perform acceptance testing",
+        "C": "Ensuring that no implementation defects remain in the delivered system",
+        "D": "Modifying tests that cause no failures to ensure few defects remain"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-04",
+      "question": "Which of the following test activities are MOST likely to involve the application of boundary value analysis and equivalence partitioning?",
+      "correct_answer": "B, E",
+      "model_raw_answer": "The options provided include \"Test design\" as one that could be related to the application of boundary value analysis and equivalence partitioning. These techniques are primarily used in the test design phase, which involves creating test cases.\n\nTherefore, the correct answer is:\n\n**'B': Test design**\n\nBoundary value analysis and equivalence partitioning are typically applied during the test design phase to create effective test cases. While these techniques can sometimes influence other aspects of testing (such as test execution), their primary application lies in test design.",
+      "model_normalized_answer": "B",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "Test implementation",
+        "B": "Test design",
+        "C": "Test execution",
+        "D": "Test monitoring",
+        "E": "Test analysis"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-05",
+      "question": "Given the following testware:\n1. Coverage items\n2. Change requests\n3. Test execution schedule\n4. Prioritized test conditions\nAnd the following test activities\nA. Test analysis\nB. Test design\nC. Test implementation\nD. Test completion\nWhich of the following BEST shows the testware produced by the activities?",
+      "correct_answer": "A",
+      "model_raw_answer": "To determine which options correctly represent the testware produced by each test activity, we need to understand the sequence and nature of these activities in relation to the testware items:\n\n### Activities and Their Corresponding Testware Items\n- **Test Analysis (A):** This activity focuses on understanding the requirements and system under test, identifying coverage items, and prioritizing test conditions.\n- **Test Design (B):** This activity involves creating detailed test plans, including change requests, test execution schedules, and prioritized test conditions.\n- **Test Implementation (C):** This activity is about executing tests according to the test plan.\n- **Test Completion (D):** This activity involves reviewing and documenting the results of the tests.\n\nNow, let's match each activity with its corresponding testware item:\n\n1. **Coverage items:** This would typically be created during **Test Design (B)** as part of defining the scope and priorities of the tests.\n2. **Change requests:** These should be created during **Test Analysis (A)**, where issues and changes are identified and prioritized.\n3. **Test execution schedule:** This would be created during **Test Design (B)** as part of planning the test execution process.\n4. **Prioritized test conditions:** These should be developed during **Test Analysis (A)**, where requirements and priorities are established.\n\nSo, the correct order and mapping would look like this:\n\n- **Test Analysis (A):** 1, 2, 3, 4\n- **Test Design (B):** 1, 2, 3, 4\n- **Test Implementation (C):** 4, 3, 2, 1\n- **Test Completion (D):** 4, 3, 2, 1\n\nGiven the provided options, it seems there might be a slight confusion in how these are mapped. Let's check the given options:\n\n- Option A: \"1B, 2D, 3C, 4A\"\n- Option B: \"1B, 2D, 3A, 4C\"\n- Option C: \"1D, 2C, 3A, 4B\"\n- Option D: \"1D, 2C, 3B, 4A\"\n\nThe correct mapping based on our understanding is Option D: \"1D, 2C, 3B, 4A\".\n\nThus, the answer is **Option D**.",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "1B, 2D, 3C, 4A",
+        "B": "1B, 2D, 3A, 4C",
+        "C": "1D, 2C, 3A, 4B",
+        "D": "1D, 2C, 3B, 4A"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-06",
+      "question": "Which of the following statements about the different testing roles is MOST likely to be CORRECT?",
+      "correct_answer": "C",
+      "model_raw_answer": "Let's analyze each statement in the context of Agile software development:\n\n### Option A:\n\"In Agile software development, the test management role is the primary responsibility of the team, while the testing role is primarily the responsibility of a single individual from outside the team.\"\n\n**Analysis:** This statement is incorrect. In Agile methodologies, the test management responsibilities (test planning, test control, etc.) are often shared among the development team. It's not the case that the testing role (which includes both test analysis/design and test implementation) is solely carried out by an external individual.\n\n### Option B:\n\"The testing role is primarily responsible for test monitoring and test control, while the test management role is primarily responsible for test planning and test completion.\"\n\n**Analysis:** This is also incorrect. Test monitoring and test control are typically part of the testing role, but these are not distinct responsibilities. The testing role encompasses more than just monitoring and control; it includes test analysis, design, implementation, and sometimes even some aspects of test control. The test management role is more about the overall strategy, planning, and coordination, including test planning and test completion.\n\n### Option C:\n\"In Agile software development, test management activities that span multiple teams are handled by a test manager outside the team, while some test management tasks are handled by the team itself.\"\n\n**Analysis:** This statement is correct. In Agile environments, especially in larger projects or multi-team scenarios, test management tasks can indeed be distributed across the team and managed by a dedicated test manager. However, some aspects of test management might still be handled internally by the team members themselves.\n\n### Option D:\n\"The test management role is primarily responsible for test analysis and test design, while the testing role is primarily responsible for test implementation and test execution.\"\n\n**Analysis:** This is incorrect. While it's true that test analysis and design fall under the testing role, the test management role does include aspects such as test planning, test control, and sometimes even test analysis and design. The distinction between these roles is more nuanced.\n\n### Conclusion:\nThe most correct statement among the given options is:\n\n**Option C:** \"In Agile software development, test management activities that span multiple teams are handled by a test manager outside the team, while some test management tasks are handled by the team itself.\"",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "In Agile software development, the test management role is the primary responsibility of the team, while the testing role is primarily the responsibility of a single individual from outside the team",
+        "B": "The testing role is primarily responsible for test monitoring and test control, while the test management role is primarily responsible for test planning and test completion",
+        "C": "In Agile software development, test management activities that span multiple teams are handled by a test manager outside the team, while some test management tasks are handled by the team itself",
+        "D": "The test management role is primarily responsible for test analysis and test design, while the testing role is primarily responsible for test implementation and test execution"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-07",
+      "question": "Which of the following is an advantage of the whole-team approach?",
+      "correct_answer": "B",
+      "model_raw_answer": "The correct answer is:\n\n**B: Improved team dynamics**\n\nThe whole-team approach, also known as DevOps or Agile methodologies, emphasizes bringing all team members together to work on software development and deployment processes. This collaborative environment can lead to better communication, increased trust, and more effective problem-solving, which collectively contribute to improved team dynamics. \n\nWhile the other options may have their merits in different contexts, they do not specifically describe advantages of the whole-team approach:\n\n- **Option A (Teams with no testers):** This is not necessarily an advantage; it can lead to quality issues if there is no testing phase.\n- **Option C (Specialist team members):** While having specialists can be beneficial, this does not directly relate to the whole-team approach.\n- **Option D (Larger team sizes):** Larger teams can sometimes lead to communication difficulties and decreased efficiency, so this is not always an advantage.\n\nTherefore, the improvement in team dynamics is a key benefit of the whole-team approach.",
+      "model_normalized_answer": "B",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "Teams with no testers",
+        "B": "Improved team dynamics",
+        "C": "Specialist team members",
+        "D": "Larger team sizes"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-08",
+      "question": "Which of the following statements about the independence of testing is CORRECT?",
+      "correct_answer": "A",
+      "model_raw_answer": "Let's evaluate each statement one by one to determine which one correctly describes the independence of testing:\n\n**Option A:** \"Independent testers will find defects due to their different technical perspective from developers, but their independence may lead to an adversarial relationship with the developers.\"\n- This statement is partially correct. Independent testers often do bring different perspectives which can help them find defects that might otherwise be overlooked by developers. However, it doesn't necessarily mean there will be an adversarial relationship; sometimes, this difference can actually foster a collaborative environment.\n\n**Option B:** \"Developers' familiarity with their own code means they only find a few defects in it, however their shared software background with testers means these defects would also be found by the testers.\"\n- This statement is incorrect. Developers, being familiar with their own code, typically find fewer defects because they are more attuned to the nuances and complexities of their own work. Moreover, having a shared software background does not mean they would find the same defects as testers, as testers bring different perspectives and tools.\n\n**Option C:** \"Independent testing requires testers who are outside the developer's team and ideally from outside the organization, however these testers find it difficult to understand the application domain.\"\n- This statement is partially correct. Testing by external testers can indeed offer a fresh perspective and reduce bias. However, it's not necessarily true that external testers find it difficult to understand the application domain. In fact, many organizations use subject matter experts or domain specialists to ensure a deep understanding of the application's intricacies.\n\n**Option D:** \"Testers from outside the developer's team are more independent than testers from within the team, but the testers from within the team are more likely to be blamed for delays in product release.\"\n- This statement is incorrect. While testers from outside the team might indeed be seen as more independent, this does not mean they are always more independent than those from within the team. The independence of testers depends on how the testing process is structured and executed, not just the physical location of the tester.\n\nGiven the analysis, the correct answer is **Option A**. It accurately captures the idea that independent testers find defects due to their different perspectives but acknowledges that this independence can sometimes lead to an adversarial relationship, which is not always the case.\n\n**Answer: A**",
+      "model_normalized_answer": "A",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Independent testers will find defects due to their different technical perspective from developers, but their independence may lead to an adversarial relationship with the developers",
+        "B": "Developers' familiarity with their own code means they only find a few defects in it, however their shared software background with testers means these defects would also be found by the testers",
+        "C": "Independent testing requires testers who are outside the developer's team and ideally from outside the organization, however these testers find it difficult to understand the application domain",
+        "D": "Testers from outside the developer's team are more independent than testers from within the team, but the testers from within the team are more likely to be blamed for delays in product release"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-09",
+      "question": "Which of the following is a good testing practice that applies to all software development lifecycles?",
+      "correct_answer": "D",
+      "model_raw_answer": "The correct answer is:\n**D: For every development activity, there is a corresponding test activity**\n\nThis option aligns with good testing practices across all software development lifecycles. It emphasizes that each phase or activity in the development process should be followed by an equivalent phase or activity focused on testing. This ensures that issues are caught early and resolved, leading to higher quality software.\n\nTo break it down:\n\n- **Option A**: \"For each test level, there is a corresponding development level\" - This is not always the case because testing can occur at various levels (unit, integration, system), whereas development might happen sequentially.\n  \n- **Option B**: \"For each test objective, there is a corresponding development objective\" - This doesn't quite fit as well because testing objectives are often more specific and might not directly correspond to the broader development objectives.\n  \n- **Option C**: \"For every test activity, there is a corresponding user activity\" - While this could be true in certain contexts, it's not universally applicable. Testing activities focus on verifying the correctness of individual components or functionalities, while user activities relate to the actual use and experience of the software.\n\nTherefore, **Option D** best encapsulates a consistent and effective testing practice throughout the entire software development lifecycle.",
+      "model_normalized_answer": "D",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "For each test level, there is a corresponding development level",
+        "B": "For each test objective, there is a corresponding development objective",
+        "C": "For every test activity, there is a corresponding user activity",
+        "D": "For every development activity, there is a corresponding test activity"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-10",
+      "question": "Which of the following is an example of a test-first approach to development?",
+      "correct_answer": "D",
+      "model_raw_answer": "To determine which option is an example of a test-first approach to development, we need to understand what \"test-first\" means in the context of software development.\n\nThe test-driven development (TDD) method involves writing tests for a piece of code before writing the actual implementation. The tests are written first, and they guide the development process by specifying what the code should do.\n\nLet's look at each option:\n\nA: Component Test-Driven Development - This refers to testing individual components or modules within a system. It focuses on validating the functionality of specific parts of the system rather than the entire system as a whole.\n\nB: Integration Test-Driven Development - This involves testing how different components or modules interact with each other. It focuses on the integration and interoperability between different parts of the system, but it doesn't necessarily focus on the code itself as much as the interactions between components.\n\nC: System Test-Driven Development - This typically refers to testing the entire system, not just its components. However, it does not directly involve writing tests before implementing the code. It usually follows a different methodology where tests are written after the system is developed.\n\nD: Acceptance Test-Driven Development - This is a specific type of TDD that focuses on ensuring that the final product meets the requirements and specifications set by the stakeholders. It is similar to System Test-Driven Development but emphasizes acceptance criteria.\n\nAmong these options, only Component Test-Driven Development (Option A) aligns closely with the idea of \"test-first.\" The component-level tests can be written before the implementation of the corresponding components, thereby ensuring that the component functions as expected before integrating it into the larger system.\n\nTherefore, the correct answer is:\n**Option A: Component Test-Driven Development**",
+      "model_normalized_answer": "A",
+      "is_correct": false,
+      "k_level": "K1",
+      "options": {
+        "A": "Component Test-Driven Development",
+        "B": "Integration Test-Driven Development",
+        "C": "System Test-Driven Development",
+        "D": "Acceptance Test-Driven Development"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-11",
+      "question": "Which of the following provides the BEST description of shift-left?",
+      "correct_answer": "B",
+      "model_raw_answer": "The best description of \"shift-left\" is:\n\n**B: Where cost-effective, test activities are moved earlier in the software development lifecycle (SDLC) to reduce the total cost of quality by reducing the number of defects found later in the SDLC**\n\nShift-left is indeed about moving testing activities earlier in the SDLC to catch issues early, which helps in reducing the overall cost associated with fixing problems later in the process. This approach aligns well with the other options but most closely matches this definition.",
+      "model_normalized_answer": "B",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "When agreed by the developers, manual activities on the left-hand side of the test process are automated to support the principle of 'early testing saves time and money'",
+        "B": "Where cost-effective, test activities are moved earlier in the software development lifecycle (SDLC) to reduce the total cost of quality by reducing the number of defects found later in the SDLC",
+        "C": "When they have spare time available, testers are required to automate tests for regression testing, starting with component tests and component integration tests",
+        "D": "When available, testers are trained to perform tasks early in the SDLC to allow more test activities to be automated later in the SDLC"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-12",
+      "question": "Which of the following is LEAST likely to occur as a result of a retrospective?",
+      "correct_answer": "C",
+      "model_raw_answer": "The least likely option to occur as a result of a retrospective, based on the provided options, is:\n\n**C: End users' understanding of the development and test processes is improved**\n\nWhile retrospectives can lead to various positive outcomes like better quality of future test objects, increased test efficiency, or enhanced automated test scripts, improving end users' understanding of the development and test processes isn't typically one of the primary goals of a retrospective. Retrospectives are more focused on internal team dynamics, process improvements, and learning from past projects.",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "The quality of future test objects improves by identifying improvements in development practices",
+        "B": "Test efficiency improves by speeding up the configuration of test environments through automation",
+        "C": "End users' understanding of the development and test processes is improved",
+        "D": "Automated test scripts are enhanced through feedback from developers"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-13",
+      "question": "Which of the following test levels is MOST likely being performed if the testing is focused on validation and is not being performed by testers?",
+      "correct_answer": "D",
+      "model_raw_answer": "The correct answer is **D: Acceptance Testing**.\n\nHere's why:\n- **Component Testing (Option A)**: This level focuses on validating individual components or modules. It is usually performed by the development team rather than external testers.\n- **Component Integration Testing (Option B)**: This is typically performed by developers to ensure that different components work together as expected.\n- **System Integration Testing (Option C)**: This involves connecting various systems and components to check if they function correctly together. It is also often performed by the development team.\n- **Acceptance Testing (Option D)**: This is performed by stakeholders or customers to verify that the software meets all requirements and is ready for deployment. It is not typically conducted by the development team but rather by those who will use the system.\n\nTherefore, acceptance testing is the most fitting answer given that it is not being performed by testers.",
+      "model_normalized_answer": "D",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Component testing",
+        "B": "Component integration testing",
+        "C": "System integration testing",
+        "D": "Acceptance testing"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-14",
+      "question": "The navigation system software has been updated due to it suggesting routes that break traffic laws, such as driving the wrong way down one-way streets. Which of the following BEST describes the testing that will be performed?",
+      "correct_answer": "B",
+      "model_raw_answer": "The scenario you've described involves an update to a navigation system software that was previously making incorrect route suggestions, specifically ones that violate traffic laws (e.g., driving down one-way streets). To ensure the updated software functions correctly and meets new requirements, a thorough testing approach is necessary.\n\nGiven the situation:\n- **Initial Issue**: The old version of the software suggested routes that violated traffic laws.\n- **Update**: The software has been updated to correct this issue.\n\n### Testing Approach\n\n1. **Regression Testing**:\n   - This type of testing ensures that the existing functionalities (routes that don't violate traffic laws) continue to work as expected after the update.\n   \n2. **Confirmation Testing**:\n   - This step verifies that the new functionality (correctly suggesting routes that comply with traffic laws) works as intended.\n\n### Why the Correct Answer Is Option B: \"Confirmation Testing then Regression Testing\"\n\n1. **First (Confirmation Testing)**:\n   - Confirm that the new feature (correctly avoiding illegal routes) is implemented properly.\n   - Ensure that the navigation system now correctly avoids routes that violate traffic laws.\n\n2. **Second (Regression Testing)**:\n   - Verify that other features and functionalities of the software (which may not have been affected by the update) still work as they did before the update.\n   - This helps to catch any unintended changes or regressions in the software.\n\nBy performing both steps, you can ensure that the navigation system not only works correctly but also maintains its previous functionality. Therefore, the correct order of testing should be **\"Confirmation Testing then Regression Testing.\"**\n\nSo, the best answer is:\n**Option B: Confirmation testing then regression testing**.",
+      "model_normalized_answer": "B",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Only confirmation testing",
+        "B": "Confirmation testing then regression testing",
+        "C": "Only regression testing",
+        "D": "Regression testing then confirmation testing"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-15",
+      "question": "Given the following example defects:\ni. Two different parts of the design specification disagree due to the complexity of the design\nii. A response time is too long and so makes users lose patience\niii. A path in the code cannot be reached during execution\niv. A variable is declared but never subsequently used in the program\nv. The amount of memory needed by the program to generate a report is too high\nWhich of the following BEST identifies example defects that could be found by static testing (rather than dynamic testing)?",
+      "correct_answer": "D",
+      "model_raw_answer": "To determine which options best identify defects that could be found by static testing rather than dynamic testing, let's understand the differences between static and dynamic testing.\n\n### Static Testing\n- **Definition**: This type of testing involves analyzing the software without actually executing it. It checks the source code and documentation for errors and issues.\n- **Scope**: Can analyze the structure, design, and code for potential problems before any execution takes place.\n\n### Dynamic Testing\n- **Definition**: This type of testing involves running the software with actual data to check its behavior and performance under real-world conditions.\n- **Scope**: Focuses on verifying the software's behavior and functionality through execution.\n\nNow, let's analyze each example defect:\n\n1. **Two different parts of the design specification disagree due to the complexity of the design**  \n   - **Static Testing**: This can be identified during static analysis as the inconsistency between design specifications.\n   - **Dynamic Testing**: This is more likely to be caught after the system has been executed and the discrepancies are observed.\n\n2. **A response time is too long and so makes users lose patience**  \n   - **Static Testing**: This can be identified statically if the response time is a concern during the design phase or while reviewing the algorithm.\n   - **Dynamic Testing**: This would typically be caught dynamically when the system is executed and the user experience is monitored.\n\n3. **A path in the code cannot be reached during execution**  \n   - **Static Testing**: This can be identified statically using tools like static analyzers which can find unreachable code paths.\n   - **Dynamic Testing**: This is not possible to catch dynamically since the path is not executed.\n\n4. **A variable is declared but never subsequently used in the program**  \n   - **Static Testing**: This can be identified statically using static analyzers which detect unused variables.\n   - **Dynamic Testing**: This would only be detected dynamically if the program actually runs and the variable is never assigned a value.\n\n5. **The amount of memory needed by the program to generate a report is too high**  \n   - **Static Testing**: This can be identified statically using tools that measure memory usage, which can catch such issues early in development.\n   - **Dynamic Testing**: This would only be detected dynamically if the program is run and the memory usage is observed.\n\nBased on this analysis, the best options that identify defects that could be found by static testing are:\n- i, iii, iv\n\nTherefore, the correct answer is:\n**C: i, iii, iv**",
+      "model_normalized_answer": "C",
+      "is_correct": false,
+      "k_level": "K1",
+      "options": {
+        "A": "ii, v",
+        "B": "iii, v",
+        "C": "i, ii, iv",
+        "D": "i, iii, iv"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-16",
+      "question": "Which of the following is a benefit of early and frequent stakeholder feedback?",
+      "correct_answer": "A",
+      "model_raw_answer": "The benefits of early and frequent stakeholder feedback include several key advantages:\n\n- **Option A:** Changes to requirements are understood and implemented earlier. This is correct. Early feedback allows teams to make adjustments in the early stages of development, reducing the cost and complexity of making changes later.\n  \n- **Option B:** It ensures business stakeholders understand user requirements. This is also accurate. Frequent feedback helps ensure that the project aligns with the needs and expectations of the end-users or stakeholders, leading to more successful outcomes.\n\n- **Option C:** It allows product owners to change their requirements as often as they want. While it's true that frequent feedback enables constant changes, this is not necessarily beneficial. Too many changes can lead to scope creep and increased costs. However, controlled and timely changes can be beneficial.\n\n- **Option D:** End users are told which requirements will not be implemented prior to release. This is generally not a benefit. The primary purpose of feedback is to inform changes and improvements, not to inform about what won't be included in the final product.\n\nGiven these points, all options have merit, but Option A and Option B are most commonly recognized as significant benefits of early and frequent stakeholder feedback. Therefore, I would select both A and B as the best answers. However, if you must choose one, **Option A** (Changes to requirements are understood and implemented earlier) is perhaps the most universally beneficial and widely recognized benefit.",
+      "model_normalized_answer": "A",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "Changes to requirements are understood and implemented earlier",
+        "B": "It ensures business stakeholders understand user requirements",
+        "C": "It allows product owners to change their requirements as often as they want",
+        "D": "End users are told which requirements will not be implemented prior to release"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-17",
+      "question": "Given the following review types:\n1. Technical review\n2. Informal review\n3. Inspection\n4. Walkthrough\nAnd the following descriptions:\nA. Includes objectives such as gaining consensus, generating new ideas, and motivating authors to improve\nB. Includes objectives such as educating reviewers, gaining consensus, generating new ideas and detecting potential defects\nC. The main objective is detecting potential defects and it requires metrics collection to support process improvement\nD. The main objective is detecting potential defects and it generates no formal documented output\nWhich of the following BEST matches the review types and the descriptions?",
+      "correct_answer": "B",
+      "model_raw_answer": "To determine which option best matches the review types and descriptions, let's analyze each description and compare them with the given review types:\n\n### Review Types:\n1. **Technical review**\n   - Includes objectives such as gaining consensus, generating new ideas, and motivating authors to improve\n2. **Informal review**\n   - Includes objectives such as educating reviewers, gaining consensus, generating new ideas, and detecting potential defects\n3. **Inspection**\n   - The main objective is detecting potential defects and it requires metrics collection to support process improvement\n4. **Walkthrough**\n   - The main objective is detecting potential defects and it generates no formal documented output\n\n### Descriptions:\nA. Includes objectives such as gaining consensus, generating new ideas, and motivating authors to improve\nB. Includes objectives such as educating reviewers, gaining consensus, generating new ideas, and detecting potential defects\nC. The main objective is detecting potential defects and it requires metrics collection to support process improvement\nD. The main objective is detecting potential defects and it generates no formal documented output\n\nNow, let's match each description to its corresponding review type:\n\n- **Description A**: \"Includes objectives such as gaining consensus, generating new ideas, and motivating authors to improve\"\n  - This matches with the **Technical review** (Option 1A).\n\n- **Description B**: \"Includes objectives such as educating reviewers, gaining consensus, generating new ideas, and detecting potential defects\"\n  - This matches with the **Informal review** (Option 2B).\n\n- **Description C**: \"The main objective is detecting potential defects and it requires metrics collection to support process improvement\"\n  - This matches with the **Inspection** (Option 3C).\n\n- **Description D**: \"The main objective is detecting potential defects and it generates no formal documented output\"\n  - This matches with the **Walkthrough** (Option 4D).\n\nTherefore, the correct answer is:\n```\nD: '1C, 2D, 3A, 4B'\n```",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "1A, 2B, 3C, 4D",
+        "B": "1A, 2D, 3C, 4B",
+        "C": "1B, 2C, 3D, 4A",
+        "D": "1C, 2D, 3A, 4B"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-18",
+      "question": "Which of the following is a factor that contributes to a successful review?",
+      "correct_answer": "B",
+      "model_raw_answer": "To determine which factors contribute to a successful review, let's analyze each option:\n\nA. **Ensure management participate as reviewers**\n   - Management participation can be crucial for ensuring alignment with business objectives and addressing strategic issues. However, it's not always necessary for every review, depending on the type and scope of the review.\n\nB. **Split large work products into smaller parts**\n   - Breaking down large documents or projects into smaller, manageable pieces can make reviews more feasible and help catch errors more easily. This approach is particularly useful when dealing with extensive work products.\n\nC. **Set reviewer evaluation as an objective**\n   - Establishing clear, measurable goals for the review process helps ensure that the review is conducted effectively and efficiently. It also keeps all stakeholders aligned and motivated.\n\nD. **Plan to cover one document per review**\n   - Focusing on one document at a time can lead to more thorough and focused reviews. This method reduces the risk of missing important details that might be scattered across multiple documents.\n\nBased on the analysis, all four options can contribute to a successful review. However, they do so in different ways:\n\n- Option A focuses on the involvement of management.\n- Option B emphasizes breaking down large work products.\n- Option C stresses setting clear objectives.\n- Option D highlights the importance of focusing on one document at a time.\n\nSo, the correct answer would be that all these factors (A, B, C, and D) contribute to a successful review.",
+      "model_normalized_answer": "A",
+      "is_correct": false,
+      "k_level": "K1",
+      "options": {
+        "A": "Ensure management participate as reviewers",
+        "B": "Split large work products into smaller parts",
+        "C": "Set reviewer evaluation as an objective",
+        "D": "Plan to cover one document per review"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-19",
+      "question": "What is the MAIN difference between black-box test techniques and experience-based test techniques?",
+      "correct_answer": "C",
+      "model_raw_answer": "The main differences between black-box test techniques and experience-based test techniques lie more in their approach rather than in the options provided, but based on the given options:\n\n- **Option A: The test object** - This is not a significant difference. Both black-box and experience-based techniques focus on the system or software's external behavior.\n\n- **Option B: The test level at which the test technique is used** - This could be considered a difference, as black-box testing is often used at the system or integration level, while experience-based testing might be more focused on the requirements or user stories.\n\n- **Option C: The test basis** - Black-box testing is primarily based on the system's inputs and outputs without detailed knowledge of the internal workings, whereas experience-based testing relies heavily on the tester's previous experience with similar systems or software.\n\n- **Option D: The software development lifecycle (SDLC) in which the test technique can be used** - This is also not a significant difference. Both types of testing can be used across different phases of the SDLC.\n\nTherefore, based on the provided options, the most fitting answer would be:\n\n**Option C: The test basis**\n\nExperience-based test techniques are based on the tester's past experiences, whereas black-box test techniques are based on the system's external behavior and interfaces.",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "The test object",
+        "B": "The test level at which the test technique is used",
+        "C": "The test basis",
+        "D": "The software development lifecycle (SDLC) in which the test technique can be used"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-20",
+      "question": "You are testing a PIN validator, which accepts valid PINs and rejects invalid PINs. A PIN is a sequence of digits. A PIN is valid if it consists of four digits, which are not all the same digit. You have identified the following valid equivalence partitions:\nVariable: PIN code length\n- The partition “length correct” (four-digit PINs)\n- The partition “length incorrect” (PINs with length other than 4)\nVariable: Number of different digits\n- The partition “number of different digits correct” (PINs with at least two different digits)\n- The partition “number of different digits incorrect” (PINs with all digits being the same)\nWhich of the following is the BEST set of input test data to cover the identified equivalence partitions?",
+      "correct_answer": "A",
+      "model_raw_answer": "To effectively cover the identified equivalence partitions, we need to select test cases that span across the different partitions for both the PIN length and the number of different digits.\n\n### Equivalence Partitions\n\n#### PIN Length\n1. **Length Correct**: Four-digit PINs\n2. **Length Incorrect**: PINs with length other than 4\n\n#### Number of Different Digits\n1. **Number of Different Digits Correct**: PINs with at least two different digits\n2. **Number of Different Digits Incorrect**: PINs with all digits being the same\n\n### Best Set of Test Data\nLet's analyze each option:\n\n**Option A:** `'12, 1111, 1234, 12345'`\n- `'12'` is a four-digit PIN but has only one unique digit.\n- `'1111'` is a four-digit PIN but all digits are the same.\n- `'1234'` is a four-digit PIN and has four different digits.\n- `'12345'` is a five-digit PIN but has four different digits.\n\nThis option covers:\n- **Length Correct**: `'1234'`\n- **Length Incorrect**: `'12345'`\n\nBut it does not fully cover:\n- **Number of Different Digits Correct**: Only `'1234'` has at least two different digits, while `'1111'` does not.\n- **Number of Different Digits Incorrect**: No PIN in this set has all digits the same.\n\n**Option B:** `'1, 123, 1111, 1234'`\n- `'1'` is a one-digit PIN and thus not a valid PIN.\n- `'123'` is a three-digit PIN and has only one unique digit.\n- `'1111'` is a four-digit PIN but all digits are the same.\n- `'1234'` is a four-digit PIN and has four different digits.\n\nThis option covers:\n- **Length Correct**: `'1234'`\n- **Length Incorrect**: `'1111'`\n- **Number of Different Digits Correct**: `'1234'`\n- **Number of Different Digits Incorrect**: `'1111'`\n\nThis option fully covers all the partitions.\n\n**Option C:** `'11, 12, 1111, 123",
+      "model_normalized_answer": "C",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "12, 1111, 1234, 12345",
+        "B": "1, 123, 1111, 1234",
+        "C": "11, 12, 1111, 12345",
+        "D": "123, 1222, 12345"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-21",
+      "question": "A developer was asked to implement the following business rule: INPUT: value (integer number) IF (value ≤ 100 OR value ≥ 200) THEN write “value incorrect” ELSE write “value OK” You design the test cases using 2-value boundary value analysis. Which of the following sets of test inputs achieves the greatest coverage?",
+      "correct_answer": "D",
+      "model_raw_answer": "To determine which set of test inputs achieves the greatest coverage according to 2-value boundary value analysis, let's first understand what boundary value analysis is. This method selects test inputs that are at the boundaries of the input domain and also at the extreme values within the input domain.\n\nThe business rule states:\n- If \\( \\text{value} \\leq 100 \\) or \\( \\text{value} \\geq 200 \\), then \"value incorrect\".\n- Otherwise, \"value OK\".\n\n### Boundary Value Analysis\nIn this context, the boundaries for the value are 100 and 200. We should consider values just below and above these boundaries as well as some typical values in the middle range.\n\n### Options\n\n**Option A:** `100, 150, 200, 201`\n- **100**: This is on the lower boundary.\n- **150**: This is a typical value in the middle range.\n- **200**: This is on the upper boundary.\n- **201**: This is just above the upper boundary.\n\n**Option B:** `99, 100, 200, 201`\n- **99**: This is just below the lower boundary.\n- **100**: This is on the lower boundary.\n- **200**: This is on the upper boundary.\n- **201**: This is just above the upper boundary.\n\n**Option C:** `98, 99, 100, 101`\n- **98**: This is just below the lower boundary.\n- **99**: This is just below the lower boundary.\n- **100**: This is on the lower boundary.\n- **101**: This is just above the lower boundary.\n\n**Option D:** `101, 150, 199, 200`\n- **101**: This is just above the lower boundary.\n- **150**: This is a typical value in the middle range.\n- **199**: This is just below the upper boundary.\n- **200**: This is on the upper boundary.\n\n### Analysis\n\nLet's analyze each option:\n\n- **Option A** covers:\n  - Lower boundary: 100\n  - Upper boundary: 200\n  - Typical middle value: 150",
+      "model_normalized_answer": "A",
+      "is_correct": false,
+      "k_level": "K3",
+      "options": {
+        "A": "100, 150, 200, 201",
+        "B": "99, 100, 200, 201",
+        "C": "98, 99, 100, 101",
+        "D": "101, 150, 199, 200"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-22",
+      "question": "You are working on a project to develop a system to analyze driving test results. You have been asked to design test cases based on the following decision table.\n||R1|R2|R3|\n|-------------:|:-------------:|:-------------:|:-------------:|\n|C1: First attempt at the exam?|-|-|F|\n| C2: Theoretical exam passed?|T|F|-|\n| C3: Practical exam passed?|T|-|F|\n| Issue a driving license?|X|||\n| Request additional driving lessons?|||X|\n| Request to take the exam again?||X||\n\nWhat test data will show that there are contradictory rules in the decision table?",
+      "correct_answer": "D",
+      "model_raw_answer": "To identify contradictory rules in the decision table, we need to look for rows where different actions (like issuing a license, requesting lessons, or taking another test) are suggested by different combinations of conditions. \n\nLooking at the decision table:\n\n||R1|R2|R3|\n|-------------:|:-------------:|:-------------:|:-------------:|\n|C1: First attempt at the exam?|-|-|F|\n| C2: Theoretical exam passed?|T|F|-|\n| C3: Practical exam passed?|T|-|F|\n| Issue a driving license?|X|||\n| Request additional driving lessons?|||X|\n| Request to take the exam again?||X||\n\nWe can see:\n- When `C1` is `T`, `C3` is `F`, and `C2` is `T`, it states \"Issue a driving license\" (`X`). However, when `C1` is `T`, `C2` is `T`, and `C3` is `F`, it also states \"Issue a driving license\" (`X`). This creates a contradiction because if `C1` is `T` and both `C2` and `C3` are `T`, then according to the decision table, it should issue a driving license. But with `C3` being `F`, it suggests not issuing a license.\n\nSo, the test data that shows contradictory rules would be:\n\n**Option A: C1 = T, C2 = T, C3 = F**\n\nWith this combination, the decision table suggests issuing a driving license, but with the same combination but `C3` as `T` (Option C1 = T, C2 = T, C3 = T), the decision table also suggests issuing a driving license. This creates a contradiction.\n\nTherefore, the answer is **Option A**.",
+      "model_normalized_answer": "A",
+      "is_correct": false,
+      "k_level": "K3",
+      "options": {
+        "A": "C1 = T, C2 = T, C3 = F",
+        "B": "C1 = T, C2 = F, C3 = T",
+        "C": "C1 = T, C2 = T, C3 = T and C1 = F, C2 = T, C3 = T",
+        "D": "C1 = F, C2 = F, C3 = F"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-23",
+      "question": "You are designing test cases based on the following state transition diagram:From the START state:\n- A “Room request” event leads to the REQUESTING state.\n\nFrom the REQUESTING state:\n- If the room is “Available”, the system transitions to the CONFIRMED state.\n- If the room is “Not available”, the system transitions to the WAITING LIST state.\n\nFrom the WAITING LIST state:\n- If the room becomes “Available”, the system transitions to the CONFIRMED state.\n- If the user “Cancel”s the request, the system transitions to the END state.\n\nFrom the CONFIRMED state:\n- A “Pay” event leads to the END state.\n\nFrom the END state, there are no further transitions.\n\nWhat is the MINIMUM number of test cases required to achieve 100% valid transitions coverage?",
+      "correct_answer": "A",
+      "model_raw_answer": "To achieve 100% valid transitions coverage, we need to ensure that every possible state transition is tested at least once. Let's analyze the state transition diagram and identify all the transitions:\n\n### States and Events:\n- **States**: START, REQUESTING, WAITING LIST, CONFIRMED, END\n- **Events**: Room request, Available, Not available, Cancel, Pay\n\n### Transitions:\n1. **START -> REQUESTING (Room request)**\n2. **REQUESTING -> CONFIRMED (Available)**\n3. **REQUESTING -> WAITING LIST (Not available)**\n4. **WAITING LIST -> CONFIRMED (Available)**\n5. **WAITING LIST -> END (Cancel)**\n6. **CONFIRMED -> END (Pay)**\n7. **END**\n\n### Valid Transitions:\n- **START -> REQUESTING** (1)\n- **REQUESTING -> CONFIRMED** (2)\n- **REQUESTING -> WAITING LIST** (3)\n- **WAITING LIST -> CONFIRMED** (4)\n- **WAITING LIST -> END** (5)\n- **CONFIRMED -> END** (6)\n\nEach state has at least one outgoing transition, and all these transitions must be covered to achieve 100% valid transitions coverage. Thus, we need to test each of these transitions:\n\n1. **Test START -> REQUESTING**\n2. **Test REQUESTING -> CONFIRMED**\n3. **Test REQUESTING -> WAITING LIST**\n4. **Test WAITING LIST -> CONFIRMED**\n5. **Test WAITING LIST -> END**\n6. **Test CONFIRMED -> END**\n\nTherefore, the minimum number of test cases required is 6.\n\nThe correct answer is **D: 6**.",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K3",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "5",
+        "D": "6"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-24",
+      "question": "You want to apply branch testing to the code represented by the following control flow graph.\n- From A to B\n- From B to C\n- From C: If True, go to D. If False, go to I.\n- From D to E\n- From E to F\n- From F: If True, go to G. If False, go to H.\n- From G to C\n- From H to C\n\nHow many coverage items do you need to test?",
+      "correct_answer": "C",
+      "model_raw_answer": "To determine the number of coverage items needed for branch testing in this control flow graph, we need to consider all possible paths through the graph and the branches within those paths.\n\nThe control flow graph can be visualized as follows:\n```\nA -> B -> C\n|\nV\nD -> E -> F -> G -> C\n   |\n   V\n   H -> C\n```\n\nLet's analyze each path:\n\n1. **Path A -> B -> C**\n   - Branch at C: (True, False) → 2 branches\n\n2. **Path D -> E -> F -> G -> C**\n   - Branch at F: (True, False) → 2 branches\n   - Branch at C: (True, False) → 2 branches\n\n3. **Path H -> C**\n   - Branch at C: (True, False) → 2 branches\n\nNow, let's count the total number of branches:\n- Path A -> B -> C: 2 branches\n- Path D -> E -> F -> G -> C: 2 (F) + 2 (C) = 4 branches\n- Path H -> C: 2 branches\n\nTotal branches: 2 (A-B-C) + 4 (D-E-F-G-C) + 2 (H-C) = 8 branches\n\nTherefore, the answer is 'C' with 8 coverage items needed to test the branches.",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "7"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-25",
+      "question": "How can white-box testing be useful in support of black-box testing?",
+      "correct_answer": "A",
+      "model_raw_answer": "The options provided do not fully capture how white-box testing can specifically benefit black-box testing, but they do offer relevant insights into its potential uses. Here’s an analysis of the options:\n\n- **Option A**: This suggests that white-box coverage measures can help testers evaluate black-box tests in terms of the code coverage achieved by these black-box tests. While this is true, it doesn’t directly connect the two types of testing.\n\n- **Option B**: This indicates that white-box coverage analysis can help testers identify unreachable fragments of the source code. This is more related to static analysis rather than the mutual benefit between white-box and black-box testing.\n\n- **Option C**: This suggests that branch testing subsumes black-box test techniques and that achieving full branch coverage guarantees achieving full coverage of any black-box technique. This is not accurate; branch coverage (or path coverage) is a measure of white-box testing, not black-box testing.\n\n- **Option D**: This states that white-box test techniques can provide coverage items for black-box techniques. This is the most accurate and relevant option. White-box testing provides detailed information about the code structure and internal logic, which can be used to enhance or complement black-box testing efforts.\n\nGiven these analyses, the most appropriate answer is:\n\n**Option D: White-box test techniques can provide coverage items for black-box techniques.**",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "White-box coverage measures can help testers evaluate black-box tests in terms of the code coverage achieved by these black-box tests",
+        "B": "White-box coverage analysis can help testers identify unreachable fragments of the source code",
+        "C": "Branch testing subsumes black-box test techniques, so achieving full branch coverage guarantees achieving full coverage of any black-box technique",
+        "D": "White-box test techniques can provide coverage items for black-box techniques"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-26",
+      "question": "Consider the following list: • Correct input not accepted • Incorrect input accepted • Wrong output format • Division by zero\nWhat test technique is MOST PROBABLY used by the tester who uses this list when performing testing?",
+      "correct_answer": "B",
+      "model_raw_answer": "The correct answer is **'C' Checklist-based testing**.\n\nA checklist-based testing approach involves using predefined lists or checklists to systematically verify various aspects of a system or component. This method is particularly useful for identifying specific issues or defects that can be categorized into distinct categories, such as those listed in the question.\n\nHere's why the other options are less likely:\n\n- **A. Exploratory Testing**: This type of testing is more focused on discovering new issues through a series of exploratory sessions rather than following a structured list. It often relies on the tester's intuition and experience.\n  \n- **B. Fault Attack**: This method involves deliberately causing faults or failures in software to see how it behaves under stress. It is not typically used with a predefined list of potential issues.\n\n- **D. Boundary Value Analysis (BVA)**: BVA focuses on testing at the boundaries of input ranges to find errors. While it does involve a systematic process, it does not rely on a predefined list of specific types of issues like the one provided.\n\nTherefore, the most probable method used by the tester is **Checklist-based testing**, where the list serves as a structured way to verify different types of defects or issues.",
+      "model_normalized_answer": "C",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "Exploratory testing",
+        "B": "Fault attack",
+        "C": "Checklist-based testing",
+        "D": "Boundary value analysis"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-27",
+      "question": "Which of the following BEST describes how using checklist-based testing can result in increased coverage?",
+      "correct_answer": "D",
+      "model_raw_answer": "The best answer that describes how using checklist-based testing can result in increased coverage is:\n\n**A: Checklist items can be defined at a sufficiently low level of detail, so the tester can implement and execute detailed test cases based on these items.**\n\nThis option is correct because a well-defined checklist allows testers to create detailed test cases, which in turn increases the coverage of the software. Each checklist item can be broken down into specific test scenarios or steps, ensuring comprehensive testing.\n\nLet's briefly consider why the other options are not as strong:\n\n**B: Checklists can be automated, so each time an automated test execution covers the checklist items, it results in additional coverage.**\n- While checklists can indeed be automated, this does not inherently increase coverage. Automated checklists only execute the items they contain; they don't necessarily add new layers of testing.\n\n**C: Each checklist item should be tested separately and independently, so the elements cover different areas of the software.**\n- This statement is true but doesn't fully explain the benefit of checklist-based testing. It merely states a consequence rather than the primary reason for increased coverage.\n\n**D: Two testers designing and executing tests based on the same high-level checklist items will typically perform the testing in slightly different ways.**\n- This option highlights variability in testing approaches, which is not a direct benefit of checklist-based testing. It doesn't directly contribute to increased coverage.\n\nTherefore, **Option A** best explains how checklist-based testing can lead to increased coverage by enabling detailed and comprehensive testing through well-defined checklist items.",
+      "model_normalized_answer": "A",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "Checklist items can be defined at a sufficiently low level of detail, so the tester can implement and execute detailed test cases based on these items",
+        "B": "Checklists can be automated, so each time an automated test execution covers the checklist items, it results in additional coverage",
+        "C": "Each checklist item should be tested separately and independently, so the elements cover different areas of the software",
+        "D": "Two testers designing and executing tests based on the same high-level checklist items will typically perform the testing in slightly different ways"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-28",
+      "question": "Which of the following provides the BEST example of a scenario-oriented acceptance criterion?",
+      "correct_answer": "B",
+      "model_raw_answer": "In this case, the best example of a scenario-oriented acceptance criterion would be:\n\n**Option B: \"When a customer adds an item to their cart and proceeds to checkout, they should be prompted to log in or create an account if they haven’t already done so.\"**\n\nThis example describes a specific use case (a customer adding an item to a cart and proceeding to checkout) and includes a clear action step (being prompted to log in or create an account). This type of criterion helps developers understand the behavior they need to implement in a specific scenario, which makes it a good example of a scenario-oriented acceptance criterion.\n\nTo break it down:\n- **Option A** is about user permissions and account management, which is more general and not specifically tied to a scenario.\n- **Option C** uses logical conditionals, which might be used in code but doesn't describe a scenario or its outcome.\n- **Option D** refers to compliance with standards, which is important but more of a broad requirement rather than a specific scenario.\n\nTherefore, **Option B** stands out as the best example of a scenario-oriented acceptance criterion.",
+      "model_normalized_answer": "B",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "The application must allow users to delete their account and all associated data upon request",
+        "B": "When a customer adds an item to their cart and proceeds to checkout, they should be prompted to log in or create an account if they haven’t already done so",
+        "C": "IF (contain(product(23).Name, cart.products())) THEN return FALSE",
+        "D": "The website must comply with the ICT Accessibility 508 Standards and ensure that all content is accessible to users with disabilities"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-29",
+      "question": "You are using acceptance test-driven development and designing test cases based on the following user story:\n\nAs a Regular or Special user, I want to be able to use my electronic floor card, to access specific floors.\nAcceptance Criteria:\n- AC1: Regular users have access to floors 1 to 3\n- AC2: Floor 4 is only accessible to Special users\n- AC3: Special users have all the access rights of Regular users\n\nWhich test case is the MOST reasonable one to test AC3?",
+      "correct_answer": "D",
+      "model_raw_answer": "The most reasonable test case to test AC3 (which states that Special users have all the access rights of Regular users) is:\n\n**Option D: Check that a Special user can access floors 1, 2, and 3**\n\nThis test case aligns directly with the requirement that Special users should have all the same access rights as Regular users, specifically access to floors 1, 2, and 3. This ensures that Special users have the comprehensive set of permissions that Regular users have, fulfilling AC3.\n\nHere’s a brief explanation of why the other options are less suitable:\n\n- **Option A:** This tests part of AC1 but not AC3.\n- **Option B:** This tests AC1 but does not address AC3 at all.\n- **Option C:** This is unrealistic because it assumes that Special users can access a higher floor (floor 5) than they should according to the criteria. It also does not test AC3 since it doesn't involve Special users.\n\nTherefore, Option D is the best choice for testing AC3.",
+      "model_normalized_answer": "D",
+      "is_correct": true,
+      "k_level": "K3",
+      "options": {
+        "A": "Check that a Regular user can access floors 1 and 3",
+        "B": "Check that a Regular user cannot access floor 4",
+        "C": "Check that a Special user can access floor 5",
+        "D": "Check that a Special user can access floors 1, 2 and 3"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-30",
+      "question": "Which of the following is NOT a purpose of a test plan?",
+      "correct_answer": "A",
+      "model_raw_answer": "The correct answer to this question is:\n\n**D: To explain why system integration testing will be excluded from testing, although the test strategy requires this test level**\n\nExplanation:\n- **Option A**: This is a valid purpose of a test plan. It helps in defining the test data, expected results, and how these will be used for component and component integration tests.\n- **Option B**: This is also a valid purpose. It defines clear exit criteria for achieving certain levels of coverage (100% statement coverage and 100% branch coverage) in component tests.\n- **Option C**: This is another valid purpose. The test progress report's content and format are typically defined in the test plan.\n- **Option D**: This is not a typical purpose of a test plan. Test plans do not typically explain why specific test levels (like system integration testing) are excluded. The reason for excluding such testing would usually be documented separately or included in other sections of the documentation.\n\nTherefore, Option D is not a purpose of a test plan.",
+      "model_normalized_answer": "A",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "To define test data and expected results for component tests and component integration tests",
+        "B": "To define as exit criteria from the component test level that “100% statement coverage and 100% branch coverage must be achieved”",
+        "C": "To describe what fields the test progress report shall contain and what should be the form of this report",
+        "D": "To explain why system integration testing will be excluded from testing, although the test strategy requires this test level"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-31",
+      "question": "At the beginning of each iteration, the team estimates the amount of work (in person-days) they will need to complete during the iteration. Let E(n) be the estimated amount of work for iteration n, and let A(n) be the actual amount of work done in iteration n. From the third iteration, the team uses the following estimation model based on extrapolation: $E(n)=rac{3*A(n-1)+A(n-2)}{4}$ The graph shows the estimated and actual amount of work for the first four iterations.\n\n- Iteration 1: Estimated = 8, Actual = 7\n- Iteration 2: Estimated = 7, Actual = 12\n- Iteration 3: Estimated = 10.8, Actual = 8\n- Iteration 4: Estimated = 9, Actual = 6\n\n What is the estimated amount of work for iteration #5?",
+      "correct_answer": "C",
+      "model_raw_answer": "To estimate the amount of work for iteration 5, we can use the given formula for extrapolation:\n\n\\[ E(n) = \\frac{3A(n-1) + A(n-2)}{4} \\]\n\nGiven:\n- Iteration 3: \\( A(3) = 8 \\)\n- Iteration 4: \\( A(4) = 6 \\)\n\nWe need to find \\( E(5) \\):\n\n\\[ E(5) = \\frac{3A(4) + A(3)}{4} \\]\n\nSubstitute the values:\n\n\\[ E(5) = \\frac{3 \\times 6 + 8}{4} \\]\n\\[ E(5) = \\frac{18 + 8}{4} \\]\n\\[ E(5) = \\frac{26}{4} \\]\n\\[ E(5) = 6.5 \\]\n\nSo, the estimated amount of work for iteration 5 is 6.5 person-days.\n\nTherefore, the correct answer is **C: 6.5 person-days**.",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K3",
+      "options": {
+        "A": "10.5 person-days",
+        "B": "8.25 person-days",
+        "C": "6.5 person-days",
+        "D": "9.4 person-days"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-32",
+      "question": "You are preparing a test execution schedule for executing seven test cases TC 1 to TC 7. The following figure includes the priorities of these test cases (1=highest priority, 3 = lowest priority). The figure also shows the dependencies between test cases using arrows. For instance, the arrow from TC 4 to TC 5 means that TC 5 can only be executed if TC 4 was previously executed.\n\n- TC 1 (priority=2) -> TC 2 (priority=3) -> TC 5 (priority=1) -> TC 6 (priority=3)\n- TC 4 (priority=2) -> TC 5 (priority=1) -> TC 6 (priority=3)\n- TC 4 (priority=2) -> TC 7 (priority=1)\n-TC 3 (priority=2)\n\nWhich test case should be executed sixth?",
+      "correct_answer": "A",
+      "model_raw_answer": "To determine which test case should be executed sixth, we need to follow the dependencies and execute the test cases in the order specified by their dependencies. Let's look at the dependencies:\n\n1. TC 1 -> TC 2 -> TC 5 -> TC 6\n2. TC 4 -> TC 5 -> TC 6\n3. TC 4 -> TC 7\n\nWe can start with the highest priority test cases and work our way down. Here’s the step-by-step process:\n\n1. **TC 1 (priority=2)**: This is the first test case.\n   - Dependencies: None\n\n2. **TC 2 (priority=3)**: This test case depends on TC 1.\n   - Dependencies: TC 1\n\n3. **TC 5 (priority=1)**: This test case depends on TC 2.\n   - Dependencies: TC 2\n\n4. **TC 6 (priority=3)**: This test case depends on TC 5.\n   - Dependencies: TC 5\n\n5. **TC 4 (priority=2)**: This test case depends on TC 1.\n   - Dependencies: TC 1\n\n6. **TC 7 (priority=1)**: This test case depends on TC 4.\n   - Dependencies: TC 4\n\nNow, let's execute them according to their dependencies:\n\n1. **Execute TC 1**\n2. **Execute TC 2**\n3. **Execute TC 5**\n4. **Execute TC 6**\n5. **Execute TC 4**\n6. **Execute TC 7**\n\nSince TC 4 and TC 7 are dependent on TC 4, they must be executed together. However, based on the sequence, TC 4 will be executed before TC 7.\n\nGiven this order:\n- TC 1 (6th position)\n- TC 2 (5th position)\n- TC 5 (4th position)\n- TC 6 (3rd position)\n- TC 4 (2nd position)\n- TC 7 (1st position)\n\nTherefore, the sixth test case to be executed would be **TC 4**.\n\nSo the correct answer is:\n**D: TC 2** (This was a misinterpretation, it should be TC 4 as per the correct dependency execution order).",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "TC 3",
+        "B": "TC 5",
+        "C": "TC 6",
+        "D": "TC 2"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-33",
+      "question": "What does the test pyramid model show?",
+      "correct_answer": "B",
+      "model_raw_answer": "The test pyramid model shows that:\n\n**Option B: That tests may have different granularity**\n\nIn a test pyramid, the idea is to ensure that testing efforts are distributed across three layers of tests, each with a different scale and focus:\n\n1. **Unit Tests (Bottom Layer):** These are small, simple tests that check individual units or components of the code. They are fast and can be run frequently.\n2. **Integration Tests (Middle Layer):** These tests check how different parts of the system interact with each other. They are typically more complex and time-consuming than unit tests.\n3. **System Tests (Top Layer):** These are the most comprehensive tests, often involving end-to-end testing. They simulate real-world usage scenarios and can take the longest to execute.\n\nThis distribution ensures that the system is thoroughly tested at various levels of complexity, which aligns with the principle of testing different granularities. Thus, the test pyramid model emphasizes the need for tests with varying levels of detail and scope.",
+      "model_normalized_answer": "B",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "That tests may have different priorities",
+        "B": "That tests may have different granularity",
+        "C": "That tests may require different coverage criteria",
+        "D": "That tests may depend on other tests"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-34",
+      "question": "What is the relationship between the testing quadrants, test levels and test types?",
+      "correct_answer": "D",
+      "model_raw_answer": "The correct answer is:\nD: Testing quadrants group test levels and test types by several criteria such as targeting specific stakeholders.\n\nTo elaborate further:\n\n- **Testing Quadrants**: These are a way to categorize and group different aspects of testing into a matrix or grid, based on specific criteria. The primary goal of testing quadrants is to help organize and understand the various types of tests (test types) and their corresponding test levels (where these tests are executed in the software development lifecycle).\n\n- **Test Levels**: These refer to the stages in the software development process where testing occurs. Common test levels include Unit Testing, Integration Testing, System Testing, Acceptance Testing, etc.\n\n- **Test Types**: These are different kinds of tests that can be performed at various levels. Examples include Functional Testing, Performance Testing, Security Testing, Usability Testing, etc.\n\nThe testing quadrants help visualize and coordinate these different aspects by grouping them based on certain criteria. For example, you might have quadrants for each stakeholder group (such as Business Stakeholders, Development Team, Quality Assurance, etc.), each type of test (functional, performance, security), and each phase of the development lifecycle (planning, design, implementation, testing, deployment).\n\nEach quadrant represents a combination of test levels and test types, allowing developers and testers to see how different types of tests should be conducted at different points in the development process, depending on who needs to be tested and what kind of testing is required. This helps ensure comprehensive testing while maintaining efficiency in the testing process.",
+      "model_normalized_answer": "D",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Testing quadrants represent particular combinations of test levels and test types, defining their location in the software development lifecycle",
+        "B": "Testing quadrants describe the degree of granularity of individual test types performed at each test level",
+        "C": "Testing quadrants assign the test types that can be performed to the test levels",
+        "D": "Testing quadrants group test levels and test types by several criteria such as targeting specific stakeholders"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-35",
+      "question": "Which of the following is an example of how product risk analysis may influence the thoroughness and scope of testing?",
+      "correct_answer": "C",
+      "model_raw_answer": "All the given options can be related to how product risk analysis influences the thoroughness and scope of testing, but let's focus on the most direct and impactful one:\n\nOption C: \"The assessed risk level helps us to select the rigor of testing.\"\n\nThis option directly addresses how product risk analysis can influence the thoroughness and scope of testing. When risks are assessed, it guides the decision-making process about how much effort and resources should be devoted to testing. Higher-risk areas will typically require more detailed and extensive testing compared to lower-risk areas.\n\nSo, the answer is:\n**C: The assessed risk level helps us to select the rigor of testing.**",
+      "model_normalized_answer": "C",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Continuous risk monitoring allows us to identify an emerging risk as soon as possible",
+        "B": "Risk identification allows us to implement risk mitigation activities and reduce the risk level",
+        "C": "The assessed risk level helps us to select the rigor of testing",
+        "D": "Risk analysis allows us to derive coverage items"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-36",
+      "question": "Which of the following activities in the test process makes the MOST use of test progress reports?",
+      "correct_answer": "B",
+      "model_raw_answer": "The activity that makes the most use of test progress reports is:\n\n**B: Test completion**\n\nTest progress reports (also known as test status reports or TSBs) are typically used to track and document the progress of tests throughout the testing phase. They are especially important during the test completion phase because they provide a comprehensive overview of what has been tested, what has not, and where the project stands in relation to its goals. These reports help ensure that all necessary work is completed on time and that the quality of the software meets the required standards.",
+      "model_normalized_answer": "B",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Test design",
+        "B": "Test completion",
+        "C": "Test analysis",
+        "D": "Test planning"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-37",
+      "question": "Which of the following is NOT an example of how configuration management supports testing?",
+      "correct_answer": "D",
+      "model_raw_answer": "The options provided all describe aspects that configuration management can support in testing, but they don't directly address which one specifically is **not** an example of how configuration management supports testing. \n\nLet's analyze each option:\n\n- **Option A**: \"All commits to the repository are uniquely identified and version controlled.\" This is related to source code management, which is a part of configuration management, and it helps track changes. However, this doesn't directly relate to testing.\n  \n- **Option B**: \"All changes in the test environment elements are tracked.\" This is directly related to configuration management as it involves keeping track of changes in the test environment, which is crucial for managing tests.\n\n- **Option C**: \"All requirement specifications are referenced unambiguously in test plans.\" This is also directly related to configuration management as it ensures that requirements are clearly linked to test plans.\n\n- **Option D**: \"All identified defects have an assigned status.\" This is more related to defect tracking and management rather than configuration management per se, although it does involve some aspects of configuration management.\n\nGiven the context, **Option A** is not necessarily an example of how configuration management supports testing. It pertains to version control and source code management, which while important, are not primarily about testing itself.\n\nThus, the correct answer would be:\n\nAnswer: **A**",
+      "model_normalized_answer": "A",
+      "is_correct": false,
+      "k_level": "K2",
+      "options": {
+        "A": "All commits to the repository are uniquely identified and version controlled",
+        "B": "All changes in the test environment elements are tracked",
+        "C": "All requirement specifications are referenced unambiguously in test plans",
+        "D": "All identified defects have an assigned status"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-38",
+      "question": "Consider the following defect report for a web-based shopping application: Application: WebShop v0.99 Defect: Login button not working Steps to Reproduce: Launch the website Click on the login button Expected result: The user should be redirected to the login page. Actual result: The login button does not respond when clicked. Severity: High Priority: Urgent What is the MOST important information that is missing from this defect report?",
+      "correct_answer": "B",
+      "model_raw_answer": "The most important information that is missing from the defect report is:\n\n**D: Impact on the interests of stakeholders**\n\nThis information is crucial because it helps determine how the defect will affect the users, the company's reputation, and overall business operations. Understanding its impact can guide more effective resolution strategies and prioritize the defect appropriately.\n\nTo provide a complete defect report, it would also be helpful to include details such as the name of the tester and the date, as well as the test environment elements and their version numbers. However, the impact on stakeholders is particularly critical in terms of prioritizing the defect and understanding its broader implications.",
+      "model_normalized_answer": "D",
+      "is_correct": false,
+      "k_level": "K3",
+      "options": {
+        "A": "Name of the tester and date",
+        "B": "Test environment elements and their version numbers",
+        "C": "Identification of the test object",
+        "D": "Impact on the interests of stakeholders"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-39",
+      "question": "Tools from which of the following categories help with the organization of test cases, detected defects and configuration management?",
+      "correct_answer": "D",
+      "model_raw_answer": "The correct answer is:\n\n**D: Test management tools**\n\nTest management tools are specifically designed to handle various aspects of software testing, including the organization of test cases, defect management, and configuration management. These tools often provide integrated solutions for managing the entire testing process, making it easier to track and manage different components of a testing effort.\n\n- **Option A (Test execution and coverage tools)**: These tools focus on executing tests and monitoring their coverage. They do not primarily handle the organizational aspects like test case management or defect tracking.\n- **Option B (Test design and implementation tools)**: These tools assist in designing and implementing tests. They are more focused on the technical aspects of creating and running tests rather than the overall management of these processes.\n- **Option C (Defect management tools)**: These tools are used to manage defects throughout the software development lifecycle. They can be part of a larger test management solution but are not exclusive to defect management alone.\n- **Option D (Test management tools)**: This category includes all the functionalities mentioned above. They are comprehensive tools that manage all aspects of software testing, including organizing test cases, managing defects, and handling configuration management.\n\nTherefore, test management tools encompass all the necessary features for the organization of test cases, detected defects, and configuration management.",
+      "model_normalized_answer": "D",
+      "is_correct": true,
+      "k_level": "K2",
+      "options": {
+        "A": "Test execution and coverage tools",
+        "B": "Test design and implementation tools",
+        "C": "Defect management tools",
+        "D": "Test management tools"
+      }
+    },
+    {
+      "question_id": "ISTQB-C-v1.6-40",
+      "question": "Which of the following is MOST likely to be a benefit of test automation?",
+      "correct_answer": "D",
+      "model_raw_answer": "Based on the options provided, the most likely benefit of test automation is:\n\n**D: The prevention of human errors through greater consistency and repeatability**\n\nTest automation can significantly reduce the risk of human errors that can occur during manual testing. By automating tests, the system can execute them repeatedly with consistent results, which helps in maintaining high quality and reliability in software testing. This reduces the likelihood of human mistakes, such as forgetting to test a specific feature or misinterpreting test results.",
+      "model_normalized_answer": "D",
+      "is_correct": true,
+      "k_level": "K1",
+      "options": {
+        "A": "The capability of generating test cases without access to the test basis",
+        "B": "The achievement of increased coverage through more objective assessment",
+        "C": "The increase in test execution times available with higher processing power",
+        "D": "The prevention of human errors through greater consistency and repeatability"
+      }
+    }
+  ],
+  "correct_answers": 22,
+  "accuracy": 0.55
+}
